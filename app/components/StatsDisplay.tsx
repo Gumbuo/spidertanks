@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { TankBuild } from "./TankBuilder";
 
 interface StatsDisplayProps {
@@ -8,13 +9,20 @@ interface StatsDisplayProps {
 
 export function StatsDisplay({ build }: StatsDisplayProps) {
   const { body, weapon, ability1, ability2 } = build;
+  const [level, setLevel] = useState(10);
 
-  // Calculate total stats
-  const totalArmor = body?.armor || 0;
-  const totalSpeed = body?.speed || 0;
-  const totalEnergy = body?.energy || 0;
-  const weaponDamage = weapon?.damage || 0;
-  const weaponRange = weapon?.range || 0;
+  // Scale stat based on level (assuming data is level 10)
+  // Level 1 = 50% of stats, Level 10 = 100% of stats
+  const scaleStat = (baseStat: number) => {
+    return baseStat * (0.5 + (level / 10) * 0.5);
+  };
+
+  // Calculate total stats with level scaling
+  const totalArmor = scaleStat(body?.armor || 0);
+  const totalSpeed = scaleStat(body?.speed || 0);
+  const totalEnergy = scaleStat(body?.energy || 0);
+  const weaponDamage = scaleStat(weapon?.damage || 0);
+  const weaponRange = scaleStat(weapon?.range || 0);
 
   const ability1Energy = ability1?.energy || 0;
   const ability2Energy = ability2?.energy || 0;
@@ -22,7 +30,51 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
 
   return (
     <div className="bg-black/50 border border-cyan-500/30 rounded-lg p-6">
+      <style jsx>{`
+        input[type="range"]::-webkit-slider-thumb {
+          appearance: none;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #06b6d4;
+          cursor: pointer;
+          border: 2px solid #0e7490;
+        }
+        input[type="range"]::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #06b6d4;
+          cursor: pointer;
+          border: 2px solid #0e7490;
+        }
+      `}</style>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Build Stats</h2>
+
+      {/* Level Slider */}
+      {body && (
+        <div className="mb-6 pb-4 border-b border-cyan-500/20">
+          <div className="flex items-center justify-between mb-2">
+            <label className="text-sm font-bold text-gray-400">LEVEL</label>
+            <span className="text-2xl font-bold text-cyan-400">{level}</span>
+          </div>
+          <input
+            type="range"
+            min="1"
+            max="10"
+            value={level}
+            onChange={(e) => setLevel(Number(e.target.value))}
+            className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer slider-thumb"
+            style={{
+              background: `linear-gradient(to right, #06b6d4 0%, #06b6d4 ${(level - 1) * 11.11}%, #1f2937 ${(level - 1) * 11.11}%, #1f2937 100%)`
+            }}
+          />
+          <div className="flex justify-between text-xs text-gray-500 mt-1">
+            <span>1</span>
+            <span>10</span>
+          </div>
+        </div>
+      )}
 
       {!body ? (
         <div className="text-center text-gray-500 py-8">
