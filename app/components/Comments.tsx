@@ -34,12 +34,26 @@ export default function Comments({ url, identifier, title }: CommentsProps) {
 
   return (
     <div className="max-w-4xl mx-auto mt-16 mb-8">
-      {/* Reset modern CSS for Disqus compatibility */}
+      {/* Custom Disqus styling */}
       <style>{`
-        #disqus_thread * {
-          color: inherit !important;
-          background-color: transparent !important;
-          border-color: rgba(255, 255, 255, 0.1) !important;
+        #disqus_thread {
+          color: #22d3ee !important;
+        }
+        #disqus_thread iframe {
+          color-scheme: dark !important;
+        }
+        #disqus_thread .post-content,
+        #disqus_thread .post-message,
+        #disqus_thread .post-message p,
+        #disqus_thread article,
+        #disqus_thread .publisher-anchor-color {
+          color: #67e8f9 !important;
+        }
+        #disqus_thread a {
+          color: #22d3ee !important;
+        }
+        #disqus_thread .author {
+          color: #06b6d4 !important;
         }
       `}</style>
 
