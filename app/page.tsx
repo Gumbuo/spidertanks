@@ -46,19 +46,44 @@ export default function Home() {
               <h1 className="text-2xl font-bold text-cyan-400">Spider Tanks Guide</h1>
               <p className="text-xs text-gray-400">Community Guide - Not affiliated with GAMEDIA</p>
             </div>
-            <nav className="hidden md:flex gap-6">
+            <nav className="hidden md:flex gap-3">
               <a
                 href="https://gamedia.nl/spider-tanks-cores-of-chaos"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+                onMouseEnter={playHoverSound}
+                className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition-all font-semibold"
               >
                 Official Site ↗
               </a>
-              <a href="/builder" className="text-gray-300 hover:text-cyan-400 transition-colors">Tank Builder</a>
-              <a href="/maps" className="text-gray-300 hover:text-cyan-400 transition-colors">Maps</a>
-              <a href="/guides" className="text-gray-300 hover:text-cyan-400 transition-colors">Guides</a>
-              <a href="/streams" className="text-gray-300 hover:text-cyan-400 transition-colors">Streams</a>
+              <a
+                href="/builder"
+                onMouseEnter={playHoverSound}
+                className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/20 transition-all"
+              >
+                Tank Builder
+              </a>
+              <a
+                href="/maps"
+                onMouseEnter={playHoverSound}
+                className="px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 hover:bg-green-500/20 transition-all"
+              >
+                Maps
+              </a>
+              <a
+                href="/guides"
+                onMouseEnter={playHoverSound}
+                className="px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-lg text-purple-400 hover:bg-purple-500/20 transition-all"
+              >
+                Guides
+              </a>
+              <a
+                href="/streams"
+                onMouseEnter={playHoverSound}
+                className="px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-400 hover:bg-orange-500/20 transition-all"
+              >
+                Streams
+              </a>
             </nav>
           </div>
         </div>
