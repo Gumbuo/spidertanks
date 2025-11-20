@@ -61,11 +61,11 @@ export default function Comments({ url, identifier, title }: CommentsProps) {
       {/* Disqus embed - isolated from modern CSS colors */}
       <div
         id="disqus_thread"
-        className="rounded-lg p-6"
+        className="rounded-lg p-6 bg-gradient-to-br from-cyan-900/40 via-blue-900/40 to-cyan-900/40"
         style={{
-          backgroundColor: 'rgba(0, 0, 0, 0.3)',
-          border: '1px solid rgba(6, 182, 212, 0.2)',
-          color: '#ffffff'
+          border: '1px solid rgba(6, 182, 212, 0.3)',
+          color: '#ffffff',
+          backgroundColor: 'rgba(8, 47, 73, 0.6)'
         }}
       ></div>
 
