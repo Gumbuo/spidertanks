@@ -50,11 +50,23 @@ export default function MapsPage() {
               <span className="text-2xl">💎</span>
               <h3 className="text-xl font-bold text-purple-400">Player-Owned NFT Maps</h3>
             </div>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-sm mb-4">
               5 maps are available as NFTs on <span className="text-purple-400 font-semibold">Immutable X</span>:
               Safe Haven, Arctic Base, Dragon Cave, Jungle Temple, and Death Canyon.
               Map owners earn rewards when matches are played on their maps!
             </p>
+            <div className="text-center">
+              <a
+                href="https://market.immutable.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition-colors"
+              >
+                <span>🛒</span>
+                View on Immutable Marketplace
+              </a>
+              <p className="text-xs text-purple-300 mt-2">Available after December 8th launch</p>
+            </div>
           </div>
         </div>
 
