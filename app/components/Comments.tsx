@@ -10,12 +10,24 @@ interface CommentsProps {
 
 export default function Comments({ url, identifier, title }: CommentsProps) {
   useEffect(() => {
-    // Configure Disqus
+    // Configure Disqus with dark mode
     (window as any).disqus_config = function () {
       this.page.url = url;
       this.page.identifier = identifier;
       this.page.title = title;
     };
+
+    // Add dark mode CSS for Disqus
+    const style = document.createElement("style");
+    style.innerHTML = `
+      #disqus_thread {
+        color-scheme: dark;
+      }
+      #disqus_thread iframe {
+        color-scheme: dark !important;
+      }
+    `;
+    document.head.appendChild(style);
 
     // Load Disqus script
     const script = document.createElement("script");
@@ -23,29 +35,30 @@ export default function Comments({ url, identifier, title }: CommentsProps) {
     script.setAttribute("data-timestamp", String(+new Date()));
     (document.head || document.body).appendChild(script);
 
+    // Force dark mode after Disqus loads
+    const checkDisqus = setInterval(() => {
+      const iframe = document.querySelector('#disqus_thread iframe');
+      if (iframe) {
+        (iframe as HTMLElement).style.colorScheme = 'dark';
+        clearInterval(checkDisqus);
+      }
+    }, 100);
+
     // Cleanup
     return () => {
       const disqusThread = document.getElementById("disqus_thread");
       if (disqusThread) {
         disqusThread.innerHTML = "";
       }
+      clearInterval(checkDisqus);
+      if (style.parentNode) {
+        style.parentNode.removeChild(style);
+      }
     };
   }, [url, identifier, title]);
 
   return (
     <div className="max-w-4xl mx-auto mt-16 mb-8">
-      {/* Custom Disqus styling - only comment text in blue */}
-      <style>{`
-        #disqus_thread iframe {
-          color-scheme: dark;
-        }
-      `}</style>
-      <style dangerouslySetInnerHTML={{__html: `
-        #disqus_thread iframe[src*="disqus"] {
-          color-scheme: dark !important;
-        }
-      `}} />
-
       {/* Header with clear messaging */}
       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-6 mb-6">
         <h3 className="text-2xl font-bold text-cyan-400 mb-2">Join the Discussion</h3>
