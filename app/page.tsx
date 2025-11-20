@@ -98,8 +98,18 @@ export default function Home() {
         </div>
 
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-cyan-400 text-center mb-6">Launch Countdown</h3>
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-8 relative overflow-hidden">
+            {/* Background Logo */}
+            <div
+              className="absolute inset-0 bg-center bg-no-repeat opacity-5"
+              style={{
+                backgroundImage: "url('/images/weapons/bouncer-gun.png')",
+                backgroundSize: "400px"
+              }}
+            ></div>
+
+            <div className="relative z-10">
+              <h3 className="text-2xl font-bold text-cyan-400 text-center mb-6">Launch Countdown</h3>
             <div className="grid grid-cols-4 gap-4">
               <div className="text-center">
                 <div className="bg-black/50 rounded-lg p-4 border border-cyan-500/20">
@@ -146,6 +156,7 @@ export default function Home() {
                   <div className="text-xs text-gray-400 font-normal">Free-to-Play • Available December 8th</div>
                 </div>
               </a>
+            </div>
             </div>
           </div>
         </div>
