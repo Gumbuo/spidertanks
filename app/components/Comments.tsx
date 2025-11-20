@@ -34,6 +34,15 @@ export default function Comments({ url, identifier, title }: CommentsProps) {
 
   return (
     <div className="max-w-4xl mx-auto mt-16 mb-8">
+      {/* Reset modern CSS for Disqus compatibility */}
+      <style>{`
+        #disqus_thread * {
+          color: inherit !important;
+          background-color: transparent !important;
+          border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+      `}</style>
+
       {/* Header with clear messaging */}
       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-6 mb-6">
         <h3 className="text-2xl font-bold text-cyan-400 mb-2">Join the Discussion</h3>
@@ -46,8 +55,16 @@ export default function Comments({ url, identifier, title }: CommentsProps) {
         </p>
       </div>
 
-      {/* Disqus embed */}
-      <div id="disqus_thread" className="bg-black/30 border border-cyan-500/20 rounded-lg p-6"></div>
+      {/* Disqus embed - isolated from modern CSS colors */}
+      <div
+        id="disqus_thread"
+        className="rounded-lg p-6"
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.3)',
+          border: '1px solid rgba(6, 182, 212, 0.2)',
+          color: '#ffffff'
+        }}
+      ></div>
 
       <noscript>
         <p className="text-gray-400 text-sm text-center mt-4">
