@@ -55,9 +55,10 @@ export default function Home() {
               >
                 Official Site ↗
               </a>
-              <a href="#tanks" className="text-gray-300 hover:text-cyan-400 transition-colors">Tanks</a>
-              <a href="#builds" className="text-gray-300 hover:text-cyan-400 transition-colors">Builds</a>
-              <a href="#guides" className="text-gray-300 hover:text-cyan-400 transition-colors">Guides</a>
+              <a href="/builder" className="text-gray-300 hover:text-cyan-400 transition-colors">Builder</a>
+              <a href="/maps" className="text-gray-300 hover:text-cyan-400 transition-colors">Maps</a>
+              <a href="/guides" className="text-gray-300 hover:text-cyan-400 transition-colors">Guides</a>
+              <a href="/streams" className="text-gray-300 hover:text-cyan-400 transition-colors">Streams</a>
             </nav>
           </div>
         </div>
