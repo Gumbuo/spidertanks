@@ -138,12 +138,12 @@ export default function Home() {
             <div className="mt-4 inline-block px-3 py-1 bg-purple-500 text-black text-sm rounded-full font-bold">Read Guides</div>
           </a>
 
-          <div className="bg-gradient-to-b from-cyan-500/10 to-transparent border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/40 transition-all">
-            <div className="text-4xl mb-4">🕷️</div>
-            <h3 className="text-xl font-bold text-cyan-400 mb-3">Tank Database</h3>
-            <p className="text-gray-400 text-sm">Complete searchable database with all tank parts, stats, and detailed information.</p>
-            <div className="mt-4 inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">Coming Soon</div>
-          </div>
+          <a href="/streams" onMouseEnter={playHoverSound} className="bg-gradient-to-b from-orange-500/10 to-transparent border border-orange-500/20 rounded-lg p-6 hover:border-orange-500/40 transition-all hover:scale-105 block">
+            <div className="text-4xl mb-4">📹</div>
+            <h3 className="text-xl font-bold text-orange-400 mb-3">Community Streams</h3>
+            <p className="text-gray-400 text-sm">Watch and share Spider Tanks gameplay. Submit your best moments and epic battles!</p>
+            <div className="mt-4 inline-block px-3 py-1 bg-orange-500 text-black text-sm rounded-full font-bold">Watch Streams</div>
+          </a>
         </div>
 
         <div className="max-w-3xl mx-auto bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-lg p-8">
