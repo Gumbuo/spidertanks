@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Comments from "./components/Comments";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -147,12 +148,7 @@ export default function Home() {
         />
       </main>
 
-      <footer className="border-t border-cyan-500/20 mt-16 py-8">
-        <div className="container mx-auto px-4 text-center text-gray-400 text-sm">
-          <p className="mb-2">This is a community-created fan site and is not affiliated with, endorsed by, or associated with GAMEDIA or Spider Tanks.</p>
-          <p>All trademarks and copyrights belong to their respective owners.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

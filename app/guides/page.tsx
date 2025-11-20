@@ -1,6 +1,7 @@
 "use client";
 
 import Comments from "../components/Comments";
+import Footer from "../components/Footer";
 
 export default function GuidesPage() {
   const guideCategories = [
@@ -131,6 +132,8 @@ export default function GuidesPage() {
           title="Spider Tanks Guide - Strategy Guides"
         />
       </div>
+
+      <Footer />
     </div>
   );
 }

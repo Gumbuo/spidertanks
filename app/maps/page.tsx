@@ -2,6 +2,7 @@
 
 import maps from "../data/maps.json";
 import Comments from "../components/Comments";
+import Footer from "../components/Footer";
 
 export default function MapsPage() {
   // Group maps by planet
@@ -100,6 +101,8 @@ export default function MapsPage() {
           title="Spider Tanks Guide - Battle Maps"
         />
       </div>
+
+      <Footer />
     </div>
   );
 }

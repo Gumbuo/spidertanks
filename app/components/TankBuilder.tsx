@@ -9,6 +9,7 @@ import { DraggablePart } from "./DraggablePart";
 import { BuildSlot } from "./BuildSlot";
 import { StatsDisplay } from "./StatsDisplay";
 import Comments from "./Comments";
+import Footer from "./Footer";
 
 export interface TankBuild {
   body: typeof bodies[0] | null;
@@ -181,6 +182,8 @@ export default function TankBuilder() {
           title="Spider Tanks Guide - Tank Builder"
         />
       </div>
+
+      <Footer />
 
       <DragOverlay dropAnimation={null}>
         {activeId && activeItem ? (
