@@ -14,16 +14,12 @@ import Footer from "./Footer";
 export interface TankBuild {
   body: typeof bodies[0] | null;
   weapon: typeof weapons[0] | null;
-  ability1: typeof abilities[0] | null;
-  ability2: typeof abilities[0] | null;
 }
 
 export default function TankBuilder() {
   const [build, setBuild] = useState<TankBuild>({
     body: null,
     weapon: null,
-    ability1: null,
-    ability2: null,
   });
 
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -56,17 +52,12 @@ export default function TankBuilder() {
     // Find the item being dragged
     const body = bodies.find((b) => b.id === itemId);
     const weapon = weapons.find((w) => w.id === itemId);
-    const ability = abilities.find((a) => a.id === itemId);
 
     // Update build based on slot
     if (slotId === "body-slot" && body) {
       setBuild({ ...build, body });
     } else if (slotId === "weapon-slot" && weapon) {
       setBuild({ ...build, weapon });
-    } else if (slotId === "ability1-slot" && ability) {
-      setBuild({ ...build, ability1: ability });
-    } else if (slotId === "ability2-slot" && ability) {
-      setBuild({ ...build, ability2: ability });
     }
 
     setActiveId(null);
@@ -150,7 +141,7 @@ export default function TankBuilder() {
                         : "bg-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30"
                     }`}
                   >
-                    Abilities ({abilities.length})
+                    Abilities Reference ({abilities.length})
                   </button>
                 </div>
 
@@ -164,10 +155,37 @@ export default function TankBuilder() {
                     weapons.map((weapon) => (
                       <DraggablePart key={weapon.id} id={weapon.id} data={weapon} type="weapon" />
                     ))}
-                  {activeTab === "abilities" &&
-                    abilities.map((ability) => (
-                      <DraggablePart key={ability.id} id={ability.id} data={ability} type="ability" />
-                    ))}
+                  {activeTab === "abilities" && (
+                    <div className="col-span-full space-y-3">
+                      {abilities.map((ability) => (
+                        <div
+                          key={ability.id}
+                          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-lg p-4"
+                        >
+                          <div className="flex items-start gap-4">
+                            <div className="w-16 h-16 bg-black/50 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                              <img
+                                src={ability.image}
+                                alt={ability.name}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-lg font-bold text-purple-400 mb-1">{ability.name}</h4>
+                              <p className="text-sm text-gray-300 mb-2">{ability.description}</p>
+                              <div className="flex gap-3 text-xs text-gray-400">
+                                <span>⚡ Energy: <span className="text-cyan-400 font-bold">{ability.energy}</span></span>
+                                <span>⏱️ Duration: <span className="text-cyan-400 font-bold">{ability.lifetime}s</span></span>
+                                {ability.damage > 0 && (
+                                  <span>💥 Damage: <span className="text-orange-400 font-bold">{ability.damage}</span></span>
+                                )}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -181,12 +199,10 @@ export default function TankBuilder() {
                 <div className="space-y-4">
                   <BuildSlot id="body-slot" label="Body" item={build.body} type="body" />
                   <BuildSlot id="weapon-slot" label="Weapon" item={build.weapon} type="weapon" />
-                  <BuildSlot id="ability1-slot" label="Ability 1" item={build.ability1} type="ability" />
-                  <BuildSlot id="ability2-slot" label="Ability 2" item={build.ability2} type="ability" />
                 </div>
 
                 <button
-                  onClick={() => setBuild({ body: null, weapon: null, ability1: null, ability2: null })}
+                  onClick={() => setBuild({ body: null, weapon: null })}
                   className="w-full mt-4 px-4 py-2 bg-red-500/20 text-red-400 border border-red-500/30 rounded-lg hover:bg-red-500/30 transition-colors"
                 >
                   Clear Build

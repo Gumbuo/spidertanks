@@ -8,7 +8,7 @@ interface StatsDisplayProps {
 }
 
 export function StatsDisplay({ build }: StatsDisplayProps) {
-  const { body, weapon, ability1, ability2 } = build;
+  const { body, weapon } = build;
   const [level, setLevel] = useState(10);
 
   // Scale stat based on level (assuming data is level 10)
@@ -23,10 +23,6 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
   const totalEnergy = scaleStat(body?.energy || 0);
   const weaponDamage = scaleStat(weapon?.damage || 0);
   const weaponRange = scaleStat(weapon?.range || 0);
-
-  const ability1Energy = ability1?.energy || 0;
-  const ability2Energy = ability2?.energy || 0;
-  const totalAbilityEnergy = ability1Energy + ability2Energy;
 
   return (
     <div className="bg-black/50 border border-cyan-500/30 rounded-lg p-6">
@@ -107,36 +103,11 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
             </div>
           )}
 
-          {/* Ability Stats */}
-          {(ability1 || ability2) && (
-            <div>
-              <h3 className="text-sm font-bold text-gray-400 mb-2">ABILITIES</h3>
-              <div className="space-y-2">
-                {ability1 && (
-                  <div className="text-xs bg-cyan-500/10 border border-cyan-500/20 rounded p-2">
-                    <div className="font-bold text-cyan-400">{ability1.name}</div>
-                    <div className="text-gray-400">Energy: {ability1.energy} | Duration: {ability1.lifetime}s</div>
-                  </div>
-                )}
-                {ability2 && (
-                  <div className="text-xs bg-cyan-500/10 border border-cyan-500/20 rounded p-2">
-                    <div className="font-bold text-cyan-400">{ability2.name}</div>
-                    <div className="text-gray-400">Energy: {ability2.energy} | Duration: {ability2.lifetime}s</div>
-                  </div>
-                )}
-                <div className="text-xs text-gray-400 font-bold">
-                  Total Ability Energy: {totalAbilityEnergy}
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Build Summary */}
           <div className="pt-4 border-t border-cyan-500/20">
             <div className="text-xs text-gray-400 space-y-1">
               <div><span className="font-bold">Body Type:</span> {body.type}</div>
               {weapon && <div><span className="font-bold">Weapon:</span> {weapon.name}</div>}
-              <div><span className="font-bold">Abilities:</span> {ability1 && ability2 ? 2 : ability1 || ability2 ? 1 : 0}/2</div>
             </div>
           </div>
         </div>
