@@ -1,0 +1,262 @@
+[
+  {
+    "id": "beat-blaster",
+    "name": "Beat Blaster",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 750,
+    "range": 19,
+    "description": "Shoots bursts of sound waves, pushes enemies with BASS",
+    "image": "/images/weapons/beat-blaster.png"
+  },
+  {
+    "id": "blade-spinner",
+    "name": "Blade Spinner",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 2100,
+    "range": 25,
+    "description": "Spinning blades return after firing",
+    "image": "/images/weapons/blade-spinner.png"
+  },
+  {
+    "id": "bouncer-gun",
+    "name": "Bouncer Gun",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 1200,
+    "range": 20,
+    "description": "Bullets bounce off enemies, get stronger when they do",
+    "image": "/images/weapons/bouncer-gun.png"
+  },
+  {
+    "id": "cannon",
+    "name": "Cannon",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 1450,
+    "range": 20,
+    "description": "Burst-fire capability",
+    "image": "/images/weapons/cannon.png"
+  },
+  {
+    "id": "crossbow",
+    "name": "Crossbow",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 2400,
+    "range": 28,
+    "description": "Can pierce through enemies, more powerful when drawn back",
+    "image": "/images/weapons/crossbow.png"
+  },
+  {
+    "id": "eggxecutioner",
+    "name": "Eggxecutioner",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 1250,
+    "range": 19,
+    "description": "Eggxplosive projectiles detonate on impact",
+    "image": "/images/weapons/eggxecutioner.png"
+  },
+  {
+    "id": "finisher",
+    "name": "Finisher",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 2000,
+    "range": 30,
+    "description": "Automatically targets nearby enemies with explosive drill torpedoes",
+    "image": "/images/weapons/finisher.png"
+  },
+  {
+    "id": "gatling-gun",
+    "name": "Gatling Gun",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 525,
+    "range": 22,
+    "description": "Storm of bullets, requires warmup, slows while firing",
+    "image": "/images/weapons/gatling-gun.png"
+  },
+  {
+    "id": "laser-blaster",
+    "name": "Laser Blaster",
+    "type": "projectile",
+    "damageType": "elemental",
+    "damage": 500,
+    "range": 24,
+    "description": "Projectiles get increasingly powerful per clip",
+    "image": "/images/weapons/laser-blaster.png"
+  },
+  {
+    "id": "lava-launcher",
+    "name": "Lava Launcher",
+    "type": "projectile",
+    "damageType": "elemental",
+    "damage": 900,
+    "range": 20,
+    "description": "Causes damage on impact plus additional damage over time",
+    "image": "/images/weapons/lava-launcher.png"
+  },
+  {
+    "id": "railgun",
+    "name": "Railgun",
+    "type": "projectile",
+    "damageType": "elemental",
+    "damage": 6500,
+    "range": 24,
+    "description": "Very powerful charged shot, must stop moving to charge",
+    "image": "/images/weapons/railgun.png"
+  },
+  {
+    "id": "repair-gun",
+    "name": "Repair Gun",
+    "type": "projectile",
+    "damageType": "elemental",
+    "damage": 750,
+    "range": 19,
+    "description": "Fires healing energy at allies, deals light enemy damage",
+    "image": "/images/weapons/repair-gun.png"
+  },
+  {
+    "id": "ripper",
+    "name": "Ripper",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 1300,
+    "range": 20,
+    "description": "Projectiles split into three after delay",
+    "image": "/images/weapons/ripper.png"
+  },
+  {
+    "id": "shocker",
+    "name": "Shocker",
+    "type": "projectile",
+    "damageType": "elemental",
+    "damage": 1700,
+    "range": 20,
+    "description": "Slow-moving lightning ball with expanding damage zone",
+    "image": "/images/weapons/shocker.png"
+  },
+  {
+    "id": "shotgun",
+    "name": "Shotgun",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 380,
+    "range": 13,
+    "description": "Spread of bullets, very effective at close range",
+    "image": "/images/weapons/shotgun.png"
+  },
+  {
+    "id": "sniper-rifle",
+    "name": "Sniper Rifle",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 4000,
+    "range": 26,
+    "description": "Long distance, slow reload, powerful punch",
+    "image": "/images/weapons/sniper-rifle.png"
+  },
+  {
+    "id": "snowballer",
+    "name": "Snowballer",
+    "type": "projectile",
+    "damageType": "elemental",
+    "damage": 1500,
+    "range": 20,
+    "description": "Slows enemies, speeds allies",
+    "image": "/images/weapons/snowballer.png"
+  },
+  {
+    "id": "stinger",
+    "name": "Stinger",
+    "type": "projectile",
+    "damageType": "elemental",
+    "damage": 1700,
+    "range": 18,
+    "description": "Acid blobs slow and damage over time",
+    "image": "/images/weapons/stinger.png"
+  },
+  {
+    "id": "twin-guns",
+    "name": "Twin Guns",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 625,
+    "range": 19,
+    "description": "Short bursts, less damage per bullet, better hit chance",
+    "image": "/images/weapons/twin-guns.png"
+  },
+  {
+    "id": "brambler",
+    "name": "Brambler",
+    "type": "arced",
+    "damageType": "elemental",
+    "damage": 1200,
+    "range": 19,
+    "description": "Thorny patch hurts and slows enemies in area",
+    "image": "/images/weapons/brambler.png"
+  },
+  {
+    "id": "fire-artillery",
+    "name": "Fire Artillery",
+    "type": "arced",
+    "damageType": "elemental",
+    "damage": 1200,
+    "range": 21,
+    "description": "Explosive shell sets fire to ground around it",
+    "image": "/images/weapons/fire-artillery.png"
+  },
+  {
+    "id": "repair-artillery",
+    "name": "Repair Artillery",
+    "type": "arced",
+    "damageType": "elemental",
+    "damage": 1500,
+    "range": 19,
+    "description": "Can repair allies, causes light enemy damage",
+    "image": "/images/weapons/repair-artillery.png"
+  },
+  {
+    "id": "rocket-artillery",
+    "name": "Rocket Artillery",
+    "type": "arced",
+    "damageType": "physical",
+    "damage": 630,
+    "range": 19,
+    "description": "Barrage of explosive rockets in arc",
+    "image": "/images/weapons/rocket-artillery.png"
+  },
+  {
+    "id": "brainstormer",
+    "name": "Brainstormer",
+    "type": "cone",
+    "damageType": "elemental",
+    "damage": 0,
+    "range": 12,
+    "description": "Shoots brainpower, siphon/steal health from targets",
+    "image": "/images/weapons/brainstormer.png"
+  },
+  {
+    "id": "flamethrower",
+    "name": "Flamethrower",
+    "type": "cone",
+    "damageType": "elemental",
+    "damage": 0,
+    "range": 8,
+    "description": "Sprays flames at wide angle, additional damage over time",
+    "image": "/images/weapons/flamethrower.png"
+  },
+  {
+    "id": "t-ray",
+    "name": "T-Ray",
+    "type": "cone",
+    "damageType": "elemental",
+    "damage": 0,
+    "range": 22,
+    "description": "Penetrating ray of pure prehistoric anti-matter",
+    "image": "/images/weapons/t-ray.png"
+  }
+]

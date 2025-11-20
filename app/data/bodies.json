@@ -1,0 +1,232 @@
+[
+  {
+    "id": "bandit",
+    "name": "Bandit",
+    "armor": 7350,
+    "speed": 693,
+    "energy": 0.2727,
+    "description": "Light weight may sacrifice some health for quickness",
+    "type": "light",
+    "image": "/images/bodies/bandit.png"
+  },
+  {
+    "id": "blink",
+    "name": "Blink",
+    "armor": 6540,
+    "speed": 726,
+    "energy": 0.259,
+    "description": "Sacrificed much of its health for speed",
+    "type": "light",
+    "image": "/images/bodies/blink.png"
+  },
+  {
+    "id": "chicken",
+    "name": "Chicken",
+    "armor": 6810,
+    "speed": 715,
+    "energy": 0.2635,
+    "description": "Light frame prioritizing velocity",
+    "type": "light",
+    "image": "/images/bodies/chicken.png"
+  },
+  {
+    "id": "crab",
+    "name": "Crab",
+    "armor": 8430,
+    "speed": 649,
+    "energy": 0.2905,
+    "description": "Medium body balancing health and speed",
+    "type": "medium",
+    "image": "/images/bodies/crab.png"
+  },
+  {
+    "id": "flea",
+    "name": "Flea",
+    "armor": 6000,
+    "speed": 748,
+    "energy": 0.25,
+    "description": "Fastest on the battlefield",
+    "type": "light",
+    "image": "/images/bodies/flea.png"
+  },
+  {
+    "id": "hurricane",
+    "name": "Hurricane",
+    "armor": 7890,
+    "speed": 671,
+    "energy": 0.2815,
+    "description": "Hovers above the battlefield",
+    "type": "medium",
+    "image": "/images/bodies/hurricane.png"
+  },
+  {
+    "id": "jacked-o-lantern",
+    "name": "Jacked O'Lantern",
+    "armor": 6270,
+    "speed": 737,
+    "energy": 0.2545,
+    "description": "Seasonal variant with special animations",
+    "type": "light",
+    "image": "/images/bodies/jacked-o-lantern.png"
+  },
+  {
+    "id": "junker",
+    "name": "Junker",
+    "armor": 7620,
+    "speed": 682,
+    "energy": 0.277,
+    "description": "Balanced tank body with average health and speed",
+    "type": "medium",
+    "image": "/images/bodies/junker.png"
+  },
+  {
+    "id": "maul",
+    "name": "Maul",
+    "armor": 9240,
+    "speed": 616,
+    "energy": 0.304,
+    "description": "Medium-heavy prioritizing durability",
+    "type": "heavy",
+    "image": "/images/bodies/maul.png"
+  },
+  {
+    "id": "muzzle",
+    "name": "Muzzle",
+    "armor": 8160,
+    "speed": 660,
+    "energy": 0.286,
+    "description": "Values health and speed equally",
+    "type": "medium",
+    "image": "/images/bodies/muzzle.png"
+  },
+  {
+    "id": "nomad",
+    "name": "Nomad",
+    "armor": 9510,
+    "speed": 605,
+    "energy": 0.3285,
+    "description": "Heavier than average body",
+    "type": "heavy",
+    "image": "/images/bodies/nomad.png"
+  },
+  {
+    "id": "octopus",
+    "name": "Octopus",
+    "armor": 10590,
+    "speed": 561,
+    "energy": 0.3265,
+    "description": "Heavy body sacrificed much speed for health",
+    "type": "heavy",
+    "image": "/images/bodies/octopus.png"
+  },
+  {
+    "id": "rex",
+    "name": "Rex",
+    "armor": 6810,
+    "speed": 715,
+    "energy": 0.2635,
+    "description": "OG king of the jungle",
+    "type": "light",
+    "image": "/images/bodies/rex.png"
+  },
+  {
+    "id": "santas-slay",
+    "name": "Santa's Slay",
+    "armor": 9510,
+    "speed": 605,
+    "energy": 0.3285,
+    "description": "Festive variant with elf animations",
+    "type": "heavy",
+    "image": "/images/bodies/santas-slay.png"
+  },
+  {
+    "id": "scorpion",
+    "name": "Scorpion",
+    "armor": 8970,
+    "speed": 627,
+    "energy": 0.2995,
+    "description": "Medium frame with balanced stats",
+    "type": "medium",
+    "image": "/images/bodies/scorpion.png"
+  },
+  {
+    "id": "scout",
+    "name": "Scout",
+    "armor": 7080,
+    "speed": 704,
+    "energy": 0.268,
+    "description": "Medium-light body sacrificed part of health for speed",
+    "type": "medium",
+    "image": "/images/bodies/scout.png"
+  },
+  {
+    "id": "shark",
+    "name": "Shark",
+    "armor": 10050,
+    "speed": 583,
+    "energy": 0.3175,
+    "description": "Lacks speed but makes up in armor and style",
+    "type": "heavy",
+    "image": "/images/bodies/shark.png"
+  },
+  {
+    "id": "shepherd",
+    "name": "Shepherd",
+    "armor": 8700,
+    "speed": 638,
+    "energy": 0.295,
+    "description": "Medium body emphasizing protection",
+    "type": "medium",
+    "image": "/images/bodies/shepherd.png"
+  },
+  {
+    "id": "snoops-lowrider",
+    "name": "Snoop's Bumpin' Lowrider",
+    "armor": 8430,
+    "speed": 649,
+    "energy": 0.3105,
+    "description": "Belonged to the legendary Snoop Dogg",
+    "type": "medium",
+    "image": "/images/bodies/snoops-lowrider.png"
+  },
+  {
+    "id": "tiger",
+    "name": "Tiger",
+    "armor": 7620,
+    "speed": 682,
+    "energy": 0.27,
+    "description": "Balanced tank body with average health and speed",
+    "type": "medium",
+    "image": "/images/bodies/tiger.png"
+  },
+  {
+    "id": "titan",
+    "name": "Titan",
+    "armor": 10860,
+    "speed": 550,
+    "energy": 0.331,
+    "description": "Massive body seeks to dominate with huge health",
+    "type": "heavy",
+    "image": "/images/bodies/titan.png"
+  },
+  {
+    "id": "tortoise",
+    "name": "Tortoise",
+    "armor": 10320,
+    "speed": 572,
+    "energy": 0.322,
+    "description": "Heavy body sacrificed speed for additional health",
+    "type": "heavy",
+    "image": "/images/bodies/tortoise.png"
+  },
+  {
+    "id": "tracks",
+    "name": "Tracks",
+    "armor": 9780,
+    "speed": 594,
+    "energy": 0.333,
+    "description": "Heavy frame with high energy regeneration",
+    "type": "heavy",
+    "image": "/images/bodies/tracks.png"
+  }
+]

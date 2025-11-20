@@ -1,0 +1,184 @@
+[
+  {
+    "id": "artillery-turret",
+    "name": "Artillery Turret",
+    "energy": 7,
+    "lifetime": 18,
+    "damage": 1300,
+    "description": "Fires on enemies, shoots over obstacles",
+    "image": "/images/abilities/artillery-turret.png"
+  },
+  {
+    "id": "cannon-turret",
+    "name": "Cannon Turret",
+    "energy": 6,
+    "lifetime": 18,
+    "damage": 1300,
+    "description": "Stationary cannon fires on enemies",
+    "image": "/images/abilities/cannon-turret.png"
+  },
+  {
+    "id": "machine-gun-turret",
+    "name": "Machine Gun Turret",
+    "energy": 7,
+    "lifetime": 18,
+    "damage": 420,
+    "description": "Rapid fire turret",
+    "image": "/images/abilities/machine-gun-turret.png"
+  },
+  {
+    "id": "air-strike",
+    "name": "Air Strike",
+    "energy": 7,
+    "lifetime": 0.5,
+    "damage": 2250,
+    "description": "Powerful series of explosions in a line",
+    "image": "/images/abilities/air-strike.png"
+  },
+  {
+    "id": "cloak-drone",
+    "name": "Cloak Drone",
+    "energy": 5,
+    "lifetime": 15,
+    "damage": 0,
+    "description": "Cloaks you from enemies",
+    "image": "/images/abilities/cloak-drone.png"
+  },
+  {
+    "id": "decoy",
+    "name": "Decoy",
+    "energy": 4,
+    "lifetime": 5,
+    "damage": 0,
+    "description": "Fake tank version to distract enemies",
+    "image": "/images/abilities/decoy.png"
+  },
+  {
+    "id": "disguise-drone",
+    "name": "Disguise Drone",
+    "energy": 5,
+    "lifetime": 10,
+    "damage": 0,
+    "description": "Temporarily disguises you as enemy player",
+    "image": "/images/abilities/disguise-drone.png"
+  },
+  {
+    "id": "grapnel-launcher",
+    "name": "Grapnel Launcher",
+    "energy": 6,
+    "lifetime": 2,
+    "damage": 0,
+    "description": "Prevents enemy firing/abilities, pulls them toward you",
+    "image": "/images/abilities/grapnel-launcher.png"
+  },
+  {
+    "id": "grenade",
+    "name": "Grenade",
+    "energy": 6,
+    "lifetime": 0,
+    "damage": 7000,
+    "description": "Explosive surprise, detonates after delay",
+    "image": "/images/abilities/grenade.png"
+  },
+  {
+    "id": "reactive-plating",
+    "name": "Reactive Plating",
+    "energy": 6,
+    "lifetime": 3,
+    "damage": 0,
+    "description": "Absorbs incoming damage, explodes dealing proportional damage",
+    "image": "/images/abilities/reactive-plating.png"
+  },
+  {
+    "id": "relay-drone",
+    "name": "Relay Drone",
+    "energy": 6,
+    "lifetime": 0.7,
+    "damage": 0,
+    "description": "Short ranged teleport to chosen point",
+    "image": "/images/abilities/relay-drone.png"
+  },
+  {
+    "id": "repair-drone",
+    "name": "Repair Drone",
+    "energy": 5,
+    "lifetime": 8,
+    "damage": 0,
+    "description": "Follows tank, repairs in short intervals",
+    "image": "/images/abilities/repair-drone.png"
+  },
+  {
+    "id": "repair-zone",
+    "name": "Repair Zone",
+    "energy": 7,
+    "lifetime": 6,
+    "damage": 0,
+    "description": "Generator repairs allies around it over time",
+    "image": "/images/abilities/repair-zone.png"
+  },
+  {
+    "id": "repulsor-zone",
+    "name": "Repulsor Zone",
+    "energy": 7,
+    "lifetime": 6,
+    "damage": 0,
+    "description": "Pushes enemies away from center",
+    "image": "/images/abilities/repulsor-zone.png"
+  },
+  {
+    "id": "shield-drone",
+    "name": "Shield Drone",
+    "energy": 6,
+    "lifetime": 3,
+    "damage": 0,
+    "shield": 7000,
+    "description": "Temporary shield blocks incoming damage",
+    "image": "/images/abilities/shield-drone.png"
+  },
+  {
+    "id": "shield-projector",
+    "name": "Shield Projector",
+    "energy": 6,
+    "lifetime": 3,
+    "damage": 0,
+    "description": "Temporary shield barrier blocks enemies and projectiles",
+    "image": "/images/abilities/shield-projector.png"
+  },
+  {
+    "id": "smoke-canister",
+    "name": "Smoke Canister",
+    "energy": 6,
+    "lifetime": 10,
+    "damage": 0,
+    "description": "Covers area in smoke for hiding",
+    "image": "/images/abilities/smoke-canister.png"
+  },
+  {
+    "id": "speed-booster",
+    "name": "Speed Booster",
+    "energy": 4,
+    "lifetime": 4,
+    "damage": 0,
+    "speedMultiplier": 2.2,
+    "description": "Temporary speed boost",
+    "image": "/images/abilities/speed-booster.png"
+  },
+  {
+    "id": "stun-grenade",
+    "name": "Stun Grenade",
+    "energy": 6,
+    "lifetime": 0,
+    "damage": 3000,
+    "description": "Explosive stun, immobilizes enemies for seconds",
+    "image": "/images/abilities/stun-grenade.png"
+  },
+  {
+    "id": "vortex-zone",
+    "name": "Vortex Zone",
+    "energy": 7,
+    "lifetime": 1.5,
+    "damage": 0,
+    "description": "Pulls enemies toward center",
+    "image": "/images/abilities/vortex-zone.png"
+  }
+]
