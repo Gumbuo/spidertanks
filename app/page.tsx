@@ -116,6 +116,29 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Official Trailer */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-lg p-6">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <span className="text-2xl">🎬</span>
+              <h2 className="text-3xl font-bold text-red-400">Watch the Official Trailer</h2>
+            </div>
+            <div className="aspect-video rounded-lg overflow-hidden bg-black">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/5Tyqhqp3GYI?si=n__1tK32fqHmPqHs"
+                title="Spider Tanks: Cores of Chaos - Official Trailer"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* IMX Diamonds Rewards */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 border-2 border-purple-500/50 rounded-lg p-8 relative overflow-hidden">
@@ -203,29 +226,6 @@ export default function Home() {
             <p className="text-gray-400 text-sm">Watch and share Spider Tanks gameplay. Submit your best moments and epic battles!</p>
             <div className="mt-4 inline-block px-3 py-1 bg-orange-500 text-black text-sm rounded-full font-bold">Watch Streams</div>
           </a>
-        </div>
-
-        {/* Official Trailer */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-lg p-6">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <span className="text-2xl">🎬</span>
-              <h2 className="text-3xl font-bold text-red-400">Watch the Official Trailer</h2>
-            </div>
-            <div className="aspect-video rounded-lg overflow-hidden bg-black">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/5Tyqhqp3GYI?si=n__1tK32fqHmPqHs"
-                title="Spider Tanks: Cores of Chaos - Official Trailer"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          </div>
         </div>
 
         <div className="max-w-3xl mx-auto bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-lg p-8">
