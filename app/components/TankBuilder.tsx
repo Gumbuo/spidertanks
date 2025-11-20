@@ -205,6 +205,16 @@ export default function TankBuilder() {
           identifier="builder"
           title="Spider Tanks Guide - Tank Builder"
         />
+
+        {/* Back Button */}
+        <div className="text-center mt-12">
+          <a
+            href="/"
+            className="inline-block px-6 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/30 transition-colors"
+          >
+            ← Back to Home
+          </a>
+        </div>
       </div>
 
       <Footer />
