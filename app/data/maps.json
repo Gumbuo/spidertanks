@@ -3,8 +3,10 @@
     "id": "safe-haven",
     "name": "Safe Haven",
     "planet": "Salacia",
-    "description": "A secure outpost on the ocean planet Salacia, featuring strategic cover points and multiple engagement zones.",
-    "image": "/images/maps/safe-haven.png"
+    "description": "A secure outpost on the ocean planet Salacia with old mines, trepidatious tracks and rickety boardwalks. Strategic cover points and multiple engagement zones.",
+    "image": "/images/maps/safe-haven.png",
+    "nft": true,
+    "rarity": "Uncommon"
   },
   {
     "id": "steaming-stronghold",
@@ -17,8 +19,10 @@
     "id": "arctic-base",
     "name": "Arctic Base",
     "planet": "Chione",
-    "description": "A frozen military installation with icy terrain that affects movement and visibility.",
-    "image": "/images/maps/arctic-base.png"
+    "description": "A frozen military installation with icy terrain that affects movement and visibility. Sub-zero temperatures and unforgiving terrain test every tank.",
+    "image": "/images/maps/arctic-base.png",
+    "nft": true,
+    "rarity": "Uncommon"
   },
   {
     "id": "frozen-research",
@@ -31,8 +35,10 @@
     "id": "dragon-cave",
     "name": "Dragon Cave",
     "planet": "Cacus",
-    "description": "A volcanic cavern system with narrow passages and lava hazards throughout the battlefield.",
-    "image": "/images/maps/dragon-cave.png"
+    "description": "A volcanic cavern system with narrow passages and lava hazards throughout the battlefield. The spirit of an ancient dragon still resides within.",
+    "image": "/images/maps/dragon-cave.png",
+    "nft": true,
+    "rarity": "Uncommon/Legendary"
   },
   {
     "id": "vault-of-value",
@@ -45,8 +51,10 @@
     "id": "jungle-temple",
     "name": "Jungle Temple",
     "planet": "Silvanus",
-    "description": "An ancient temple hidden in the dense jungles of Silvanus, with vertical gameplay and hidden paths.",
-    "image": "/images/maps/jungle-temple.png"
+    "description": "An ancient temple hidden in the dense jungles of Silvanus, with vertical gameplay and hidden paths. Wild ruins with pitfalls and poisonous plants.",
+    "image": "/images/maps/jungle-temple.png",
+    "nft": true,
+    "rarity": "Uncommon"
   },
   {
     "id": "shrouded-shrine",
@@ -59,8 +67,10 @@
     "id": "death-canyon",
     "name": "Death Canyon",
     "planet": "Earth",
-    "description": "A treacherous canyon on Earth featuring high walls, narrow chokepoints, and vertical combat.",
-    "image": "/images/maps/death-canyon.png"
+    "description": "A treacherous canyon on Earth featuring high walls, narrow chokepoints, and vertical combat. Old west style showdown where scraps will fly and the strongest tanks will stand tall.",
+    "image": "/images/maps/death-canyon.png",
+    "nft": true,
+    "rarity": "Uncommon/Legendary"
   },
   {
     "id": "forsaken-city",
