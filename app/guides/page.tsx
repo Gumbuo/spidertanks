@@ -1,5 +1,7 @@
 "use client";
 
+import Comments from "../components/Comments";
+
 export default function GuidesPage() {
   const guideCategories = [
     {
@@ -121,6 +123,13 @@ export default function GuidesPage() {
             </a>
           </div>
         </div>
+
+        {/* Comments Section */}
+        <Comments
+          url="https://spidertanks.xyz/guides"
+          identifier="guides"
+          title="Spider Tanks Guide - Strategy Guides"
+        />
       </div>
     </div>
   );

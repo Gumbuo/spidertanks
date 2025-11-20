@@ -1,6 +1,7 @@
 "use client";
 
 import maps from "../data/maps.json";
+import Comments from "../components/Comments";
 
 export default function MapsPage() {
   // Group maps by planet
@@ -91,6 +92,13 @@ export default function MapsPage() {
             ← Back to Home
           </a>
         </div>
+
+        {/* Comments Section */}
+        <Comments
+          url="https://spidertanks.xyz/maps"
+          identifier="maps"
+          title="Spider Tanks Guide - Battle Maps"
+        />
       </div>
     </div>
   );

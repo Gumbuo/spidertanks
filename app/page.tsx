@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Comments from "./components/Comments";
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -137,6 +138,13 @@ export default function Home() {
             Earn Arachnium through victories and quests to upgrade your tanks and dominate the battlefield.
           </p>
         </div>
+
+        {/* Comments Section */}
+        <Comments
+          url="https://spidertanks.xyz"
+          identifier="home"
+          title="Spider Tanks Guide - Home"
+        />
       </main>
 
       <footer className="border-t border-cyan-500/20 mt-16 py-8">

@@ -8,6 +8,7 @@ import abilities from "../data/abilities.json";
 import { DraggablePart } from "./DraggablePart";
 import { BuildSlot } from "./BuildSlot";
 import { StatsDisplay } from "./StatsDisplay";
+import Comments from "./Comments";
 
 export interface TankBuild {
   body: typeof bodies[0] | null;
@@ -172,6 +173,13 @@ export default function TankBuilder() {
             </div>
           </div>
         </div>
+
+        {/* Comments Section */}
+        <Comments
+          url="https://spidertanks.xyz/builder"
+          identifier="builder"
+          title="Spider Tanks Guide - Tank Builder"
+        />
       </div>
 
       <DragOverlay dropAnimation={null}>
