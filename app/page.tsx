@@ -95,25 +95,32 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-b from-cyan-500/10 to-transparent border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/40 transition-colors">
-            <div className="text-4xl mb-4">🕷️</div>
-            <h3 className="text-xl font-bold text-cyan-400 mb-3">Tank Database</h3>
-            <p className="text-gray-400">Complete stats and details for all tank bodies, weapons, and abilities. Plan your loadout with comprehensive data.</p>
-            <div className="mt-4 inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">Coming Soon</div>
-          </div>
-
-          <a href="/builder" className="bg-gradient-to-b from-blue-500/10 to-transparent border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/40 transition-colors block">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <a href="/builder" className="bg-gradient-to-b from-blue-500/10 to-transparent border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/40 transition-all hover:scale-105 block">
             <div className="text-4xl mb-4">⚙️</div>
-            <h3 className="text-xl font-bold text-blue-400 mb-3">Build Calculator</h3>
-            <p className="text-gray-400">Create and share custom tank builds. Test different combinations of bodies, weapons, and abilities.</p>
-            <div className="mt-4 inline-block px-3 py-1 bg-blue-500 text-black text-sm rounded-full font-bold">Try It Now!</div>
+            <h3 className="text-xl font-bold text-blue-400 mb-3">Tank Builder</h3>
+            <p className="text-gray-400 text-sm">Create custom tank builds with drag-and-drop. See real-time stats and perfect your loadout.</p>
+            <div className="mt-4 inline-block px-3 py-1 bg-blue-500 text-black text-sm rounded-full font-bold">Build Now!</div>
           </a>
 
-          <div className="bg-gradient-to-b from-cyan-500/10 to-transparent border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/40 transition-colors">
+          <a href="/maps" className="bg-gradient-to-b from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 transition-all hover:scale-105 block">
+            <div className="text-4xl mb-4">🗺️</div>
+            <h3 className="text-xl font-bold text-green-400 mb-3">Battle Maps</h3>
+            <p className="text-gray-400 text-sm">Explore all 12 maps across 5 planets. Learn terrain, strategies, and map control.</p>
+            <div className="mt-4 inline-block px-3 py-1 bg-green-500 text-black text-sm rounded-full font-bold">Explore Maps</div>
+          </a>
+
+          <a href="/guides" className="bg-gradient-to-b from-purple-500/10 to-transparent border border-purple-500/20 rounded-lg p-6 hover:border-purple-500/40 transition-all hover:scale-105 block">
             <div className="text-4xl mb-4">📚</div>
-            <h3 className="text-xl font-bold text-cyan-400 mb-3">Strategy Guides</h3>
-            <p className="text-gray-400">Master the meta with in-depth guides. Learn map strategies, team compositions, and advanced tactics.</p>
+            <h3 className="text-xl font-bold text-purple-400 mb-3">Strategy Guides</h3>
+            <p className="text-gray-400 text-sm">Master the meta with beginner to advanced guides. Tips, builds, and winning strategies.</p>
+            <div className="mt-4 inline-block px-3 py-1 bg-purple-500 text-black text-sm rounded-full font-bold">Read Guides</div>
+          </a>
+
+          <div className="bg-gradient-to-b from-cyan-500/10 to-transparent border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/40 transition-all">
+            <div className="text-4xl mb-4">🕷️</div>
+            <h3 className="text-xl font-bold text-cyan-400 mb-3">Tank Database</h3>
+            <p className="text-gray-400 text-sm">Complete searchable database with all tank parts, stats, and detailed information.</p>
             <div className="mt-4 inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">Coming Soon</div>
           </div>
         </div>

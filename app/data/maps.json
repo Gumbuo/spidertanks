@@ -1,0 +1,86 @@
+[
+  {
+    "id": "safe-haven",
+    "name": "Safe Haven",
+    "planet": "Salacia",
+    "description": "A secure outpost on the ocean planet Salacia, featuring strategic cover points and multiple engagement zones.",
+    "image": "/images/maps/safe-haven.png"
+  },
+  {
+    "id": "steaming-stronghold",
+    "name": "Steaming Stronghold",
+    "planet": "Salacia",
+    "description": "A fortified position surrounded by geothermal vents, offering tactical advantages through steam cover.",
+    "image": "/images/maps/steaming-stronghold.png"
+  },
+  {
+    "id": "arctic-base",
+    "name": "Arctic Base",
+    "planet": "Chione",
+    "description": "A frozen military installation with icy terrain that affects movement and visibility.",
+    "image": "/images/maps/arctic-base.png"
+  },
+  {
+    "id": "frozen-research",
+    "name": "Frozen Research",
+    "planet": "Chione",
+    "description": "An abandoned research facility in the frozen wastelands, featuring tight corridors and open courtyards.",
+    "image": "/images/maps/frozen-research.png"
+  },
+  {
+    "id": "dragon-cave",
+    "name": "Dragon Cave",
+    "planet": "Cacus",
+    "description": "A volcanic cavern system with narrow passages and lava hazards throughout the battlefield.",
+    "image": "/images/maps/dragon-cave.png"
+  },
+  {
+    "id": "vault-of-value",
+    "name": "Vault of Value",
+    "planet": "Cacus",
+    "description": "A treasure vault deep within Cacus, featuring valuable control points and tight defensive positions.",
+    "image": "/images/maps/vault-of-value.png"
+  },
+  {
+    "id": "jungle-temple",
+    "name": "Jungle Temple",
+    "planet": "Silvanus",
+    "description": "An ancient temple hidden in the dense jungles of Silvanus, with vertical gameplay and hidden paths.",
+    "image": "/images/maps/jungle-temple.png"
+  },
+  {
+    "id": "shrouded-shrine",
+    "name": "Shrouded Shrine",
+    "planet": "Silvanus",
+    "description": "A mystical shrine shrouded in mist, offering limited visibility and ambush opportunities.",
+    "image": "/images/maps/shrouded-shrine.png"
+  },
+  {
+    "id": "death-canyon",
+    "name": "Death Canyon",
+    "planet": "Earth",
+    "description": "A treacherous canyon on Earth featuring high walls, narrow chokepoints, and vertical combat.",
+    "image": "/images/maps/death-canyon.png"
+  },
+  {
+    "id": "forsaken-city",
+    "name": "Forsaken City",
+    "planet": "Earth",
+    "description": "Urban ruins providing cover through destroyed buildings and abandoned vehicles.",
+    "image": "/images/maps/forsaken-city.png"
+  },
+  {
+    "id": "overrun-underpass",
+    "name": "Overrun Underpass",
+    "planet": "Earth",
+    "description": "A highway underpass with multiple levels and vehicular cover points.",
+    "image": "/images/maps/overrun-underpass.png"
+  },
+  {
+    "id": "shootybooms-shooting-range",
+    "name": "Shootybooms Shooting Range",
+    "planet": "Earth",
+    "description": "A combat training facility perfect for testing weapons and practicing tactics.",
+    "image": "/images/maps/shootybooms-shooting-range.png"
+  }
+]
