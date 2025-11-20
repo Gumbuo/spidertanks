@@ -90,10 +90,26 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <p className="text-center text-gray-400 mt-6">
+            <p className="text-center text-gray-400 mt-6 mb-6">
               Until Spider Tanks launches on <span className="text-cyan-400 font-semibold">Immutable X</span> and{" "}
               <span className="text-cyan-400 font-semibold">Epic Games</span>
             </p>
+
+            {/* Epic Games Download Button */}
+            <div className="text-center">
+              <a
+                href="https://store.epicgames.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 border border-gray-600 rounded-lg text-white font-bold text-lg hover:from-gray-600 hover:to-gray-800 transition-all transform hover:scale-105"
+              >
+                <span className="text-2xl">🎮</span>
+                <div className="text-left">
+                  <div>Download on Epic Games</div>
+                  <div className="text-xs text-gray-400 font-normal">Free-to-Play • Available December 8th</div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
 
