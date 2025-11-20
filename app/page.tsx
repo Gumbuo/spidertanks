@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import Comments from "./components/Comments";
 import Footer from "./components/Footer";
+import { useHoverSound } from "./hooks/useHoverSound";
 
 export default function Home() {
+  const playHoverSound = useHoverSound();
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -101,6 +103,7 @@ export default function Home() {
                 href="https://store.epicgames.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 border border-gray-600 rounded-lg text-white font-bold text-lg hover:from-gray-600 hover:to-gray-800 transition-all transform hover:scale-105"
               >
                 <span className="text-2xl">🎮</span>
@@ -114,21 +117,21 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <a href="/builder" className="bg-gradient-to-b from-blue-500/10 to-transparent border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/40 transition-all hover:scale-105 block">
+          <a href="/builder" onMouseEnter={playHoverSound} className="bg-gradient-to-b from-blue-500/10 to-transparent border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/40 transition-all hover:scale-105 block">
             <div className="text-4xl mb-4">⚙️</div>
             <h3 className="text-xl font-bold text-blue-400 mb-3">Tank Builder</h3>
             <p className="text-gray-400 text-sm">Create custom tank builds with drag-and-drop. See real-time stats and perfect your loadout.</p>
             <div className="mt-4 inline-block px-3 py-1 bg-blue-500 text-black text-sm rounded-full font-bold">Build Now!</div>
           </a>
 
-          <a href="/maps" className="bg-gradient-to-b from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 transition-all hover:scale-105 block">
+          <a href="/maps" onMouseEnter={playHoverSound} className="bg-gradient-to-b from-green-500/10 to-transparent border border-green-500/20 rounded-lg p-6 hover:border-green-500/40 transition-all hover:scale-105 block">
             <div className="text-4xl mb-4">🗺️</div>
             <h3 className="text-xl font-bold text-green-400 mb-3">Battle Maps</h3>
             <p className="text-gray-400 text-sm">Explore all 12 maps across 5 planets. Learn terrain, strategies, and map control.</p>
             <div className="mt-4 inline-block px-3 py-1 bg-green-500 text-black text-sm rounded-full font-bold">Explore Maps</div>
           </a>
 
-          <a href="/guides" className="bg-gradient-to-b from-purple-500/10 to-transparent border border-purple-500/20 rounded-lg p-6 hover:border-purple-500/40 transition-all hover:scale-105 block">
+          <a href="/guides" onMouseEnter={playHoverSound} className="bg-gradient-to-b from-purple-500/10 to-transparent border border-purple-500/20 rounded-lg p-6 hover:border-purple-500/40 transition-all hover:scale-105 block">
             <div className="text-4xl mb-4">📚</div>
             <h3 className="text-xl font-bold text-purple-400 mb-3">Strategy Guides</h3>
             <p className="text-gray-400 text-sm">Master the meta with beginner to advanced guides. Tips, builds, and winning strategies.</p>

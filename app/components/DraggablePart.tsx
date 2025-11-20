@@ -2,6 +2,7 @@
 
 import { useDraggable } from "@dnd-kit/core";
 import { CSS } from "@dnd-kit/utilities";
+import { useHoverSound } from "../hooks/useHoverSound";
 
 interface DraggablePartProps {
   id: string;
@@ -10,6 +11,7 @@ interface DraggablePartProps {
 }
 
 export function DraggablePart({ id, data, type }: DraggablePartProps) {
+  const playHoverSound = useHoverSound();
   const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
     id,
   });
@@ -25,6 +27,7 @@ export function DraggablePart({ id, data, type }: DraggablePartProps) {
       style={style}
       {...listeners}
       {...attributes}
+      onMouseEnter={playHoverSound}
       className="bg-gradient-to-b from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 rounded-lg p-3 cursor-grab active:cursor-grabbing hover:border-cyan-500/50 transition-all"
     >
       {/* Part image */}

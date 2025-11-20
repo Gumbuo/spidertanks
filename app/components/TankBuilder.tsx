@@ -10,6 +10,7 @@ import { BuildSlot } from "./BuildSlot";
 import { StatsDisplay } from "./StatsDisplay";
 import Comments from "./Comments";
 import Footer from "./Footer";
+import { useHoverSound } from "../hooks/useHoverSound";
 
 export interface TankBuild {
   body: typeof bodies[0] | null;
@@ -17,6 +18,8 @@ export interface TankBuild {
 }
 
 export default function TankBuilder() {
+  const playHoverSound = useHoverSound();
+
   const [build, setBuild] = useState<TankBuild>({
     body: null,
     weapon: null,
@@ -96,6 +99,7 @@ export default function TankBuilder() {
                 href="https://market.immutable.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition-colors"
               >
                 <span>🛒</span>
@@ -115,6 +119,7 @@ export default function TankBuilder() {
                 <div className="flex gap-2 mb-6">
                   <button
                     onClick={() => setActiveTab("bodies")}
+                    onMouseEnter={playHoverSound}
                     className={`px-4 py-2 rounded-lg transition-colors ${
                       activeTab === "bodies"
                         ? "bg-cyan-500 text-black"
@@ -125,6 +130,7 @@ export default function TankBuilder() {
                   </button>
                   <button
                     onClick={() => setActiveTab("weapons")}
+                    onMouseEnter={playHoverSound}
                     className={`px-4 py-2 rounded-lg transition-colors ${
                       activeTab === "weapons"
                         ? "bg-cyan-500 text-black"
@@ -135,6 +141,7 @@ export default function TankBuilder() {
                   </button>
                   <button
                     onClick={() => setActiveTab("abilities")}
+                    onMouseEnter={playHoverSound}
                     className={`px-4 py-2 rounded-lg transition-colors ${
                       activeTab === "abilities"
                         ? "bg-cyan-500 text-black"
@@ -203,6 +210,7 @@ export default function TankBuilder() {
 
                 <button
                   onClick={() => setBuild({ body: null, weapon: null })}
+                  onMouseEnter={playHoverSound}
                   className="w-full mt-4 px-4 py-2 bg-red-500/20 text-red-400 border border-red-500/30 rounded-lg hover:bg-red-500/30 transition-colors"
                 >
                   Clear Build
@@ -226,6 +234,7 @@ export default function TankBuilder() {
         <div className="text-center mt-12">
           <a
             href="/"
+            onMouseEnter={playHoverSound}
             className="inline-block px-6 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/30 transition-colors"
           >
             ← Back to Home

@@ -1,4 +1,10 @@
+"use client";
+
+import { useHoverSound } from "../hooks/useHoverSound";
+
 export default function Footer() {
+  const playHoverSound = useHoverSound();
+
   return (
     <footer className="border-t border-cyan-500/20 mt-16 py-8 bg-black/30">
       <div className="container mx-auto px-4">
@@ -11,6 +17,7 @@ export default function Footer() {
                 href="https://gumbuo.io"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
                 className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition-colors"
               >
                 🎮 Gumbuo.io
@@ -19,6 +26,7 @@ export default function Footer() {
                 href="https://gamehole.ink"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
                 className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition-colors"
               >
                 🎯 Gamehole.ink
@@ -27,6 +35,7 @@ export default function Footer() {
                 href="https://gamehole.games"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
                 className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition-colors"
               >
                 🕹️ Gamehole.games

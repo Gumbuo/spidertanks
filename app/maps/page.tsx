@@ -3,8 +3,10 @@
 import maps from "../data/maps.json";
 import Comments from "../components/Comments";
 import Footer from "../components/Footer";
+import { useHoverSound } from "../hooks/useHoverSound";
 
 export default function MapsPage() {
+  const playHoverSound = useHoverSound();
   // Group maps by planet
   const mapsByPlanet = maps.reduce((acc, map) => {
     if (!acc[map.planet]) {
@@ -60,6 +62,7 @@ export default function MapsPage() {
                 href="https://market.immutable.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition-colors"
               >
                 <span>🛒</span>
@@ -125,6 +128,7 @@ export default function MapsPage() {
         <div className="text-center mt-12">
           <a
             href="/"
+            onMouseEnter={playHoverSound}
             className="inline-block px-6 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/30 transition-colors"
           >
             ← Back to Home
