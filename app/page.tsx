@@ -47,6 +47,14 @@ export default function Home() {
               <p className="text-xs text-gray-400">Community Guide - Not affiliated with GAMEDIA</p>
             </div>
             <nav className="hidden md:flex gap-6">
+              <a
+                href="https://gamedia.nl/spider-tanks-cores-of-chaos"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+              >
+                Official Site ↗
+              </a>
               <a href="#tanks" className="text-gray-300 hover:text-cyan-400 transition-colors">Tanks</a>
               <a href="#builds" className="text-gray-300 hover:text-cyan-400 transition-colors">Builds</a>
               <a href="#guides" className="text-gray-300 hover:text-cyan-400 transition-colors">Guides</a>
@@ -234,11 +242,24 @@ export default function Home() {
             Spider Tanks is an intense 3v3 PvP brawler where you pilot customizable tanks in fast-paced arena battles.
             Choose from a wide variety of tank bodies, weapons, and abilities to create your perfect loadout.
           </p>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed mb-6">
             Launching December 8th, 2025 on <span className="text-orange-400 font-semibold">Immutable X</span> blockchain
             and available for download on <span className="text-orange-400 font-semibold">Epic Games</span>.
             Earn Arachnium through victories and quests to upgrade your tanks and dominate the battlefield.
           </p>
+          <div className="text-center">
+            <a
+              href="https://gamedia.nl/spider-tanks-cores-of-chaos"
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={playHoverSound}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-bold rounded-lg hover:bg-orange-600 transition-all transform hover:scale-105"
+            >
+              <span className="text-xl">🌐</span>
+              Visit Official Website
+              <span className="text-sm">↗</span>
+            </a>
+          </div>
         </div>
 
         {/* Comments Section */}
