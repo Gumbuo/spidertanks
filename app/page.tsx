@@ -157,7 +157,7 @@ export default function Home() {
 
               <div className="text-center">
                 <a
-                  href="https://www.immutable.com/rewards"
+                  href="https://www.immutable.com/zkevm-rewards"
                   target="_blank"
                   rel="noopener noreferrer"
                   onMouseEnter={playHoverSound}
@@ -165,8 +165,8 @@ export default function Home() {
                 >
                   <span className="text-2xl">💎</span>
                   <div>
-                    <div>Join IMX Rewards Campaign</div>
-                    <div className="text-xs font-normal opacity-90">Start Earning Diamonds Today</div>
+                    <div>Earn Rewards on Immutable Play</div>
+                    <div className="text-xs font-normal opacity-90">Complete Quests & Claim IMX Rewards</div>
                   </div>
                   <span className="text-xl">→</span>
                 </a>
