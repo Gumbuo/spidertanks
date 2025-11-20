@@ -55,7 +55,7 @@ export default function Home() {
               >
                 Official Site ↗
               </a>
-              <a href="/builder" className="text-gray-300 hover:text-cyan-400 transition-colors">Builder</a>
+              <a href="/builder" className="text-gray-300 hover:text-cyan-400 transition-colors">Tank Builder</a>
               <a href="/maps" className="text-gray-300 hover:text-cyan-400 transition-colors">Maps</a>
               <a href="/guides" className="text-gray-300 hover:text-cyan-400 transition-colors">Guides</a>
               <a href="/streams" className="text-gray-300 hover:text-cyan-400 transition-colors">Streams</a>
