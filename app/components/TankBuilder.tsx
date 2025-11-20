@@ -26,9 +26,18 @@ export default function TankBuilder() {
 
   const [activeId, setActiveId] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"bodies" | "weapons" | "abilities">("bodies");
+  const [activeItem, setActiveItem] = useState<any>(null);
 
   function handleDragStart(event: DragStartEvent) {
-    setActiveId(event.active.id as string);
+    const itemId = event.active.id as string;
+    setActiveId(itemId);
+
+    // Find and store the active item
+    const body = bodies.find((b) => b.id === itemId);
+    const weapon = weapons.find((w) => w.id === itemId);
+    const ability = abilities.find((a) => a.id === itemId);
+
+    setActiveItem(body || weapon || ability);
   }
 
   function handleDragEnd(event: DragEndEvent) {
@@ -59,7 +68,17 @@ export default function TankBuilder() {
     }
 
     setActiveId(null);
+    setActiveItem(null);
   }
+
+  // Determine active item type
+  const getActiveType = () => {
+    if (!activeItem) return null;
+    if (bodies.find(b => b.id === activeId)) return "body";
+    if (weapons.find(w => w.id === activeId)) return "weapon";
+    if (abilities.find(a => a.id === activeId)) return "ability";
+    return null;
+  };
 
   return (
     <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
@@ -155,7 +174,20 @@ export default function TankBuilder() {
         </div>
       </div>
 
-      <DragOverlay>{activeId ? <div className="opacity-50">Dragging...</div> : null}</DragOverlay>
+      <DragOverlay dropAnimation={null}>
+        {activeId && activeItem ? (
+          <div className="bg-gradient-to-b from-cyan-500/40 to-cyan-500/20 border-2 border-cyan-400 rounded-lg p-3 w-32 rotate-3 shadow-2xl">
+            <div className="aspect-square bg-black/50 rounded-lg mb-2 flex items-center justify-center overflow-hidden">
+              <img
+                src={activeItem.image}
+                alt={activeItem.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-xs font-bold text-cyan-400 truncate">{activeItem.name}</div>
+          </div>
+        ) : null}
+      </DragOverlay>
     </DndContext>
   );
 }
