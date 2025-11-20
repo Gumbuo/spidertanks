@@ -89,8 +89,25 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-12">
-        <div className="text-center mb-16">
+      <main className="container mx-auto px-4 py-12 relative">
+        {/* Random Tank Parts Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
+          {/* Weapons */}
+          <img src="/images/weapons/bouncer-gun.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "10%", left: "5%", transform: "rotate(15deg)" }} />
+          <img src="/images/weapons/cannon.png" alt="" className="absolute w-32 h-32 object-contain" style={{ top: "25%", right: "10%", transform: "rotate(-20deg)" }} />
+          <img src="/images/weapons/crossbow.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "50%", left: "8%", transform: "rotate(45deg)" }} />
+          <img src="/images/weapons/blade-spinner.png" alt="" className="absolute w-20 h-20 object-contain" style={{ bottom: "30%", right: "15%", transform: "rotate(-30deg)" }} />
+          <img src="/images/weapons/beat-blaster.png" alt="" className="absolute w-24 h-24 object-contain" style={{ bottom: "10%", left: "12%", transform: "rotate(60deg)" }} />
+
+          {/* Tank Bodies */}
+          <img src="/images/bodies/bandit.png" alt="" className="absolute w-32 h-32 object-contain" style={{ top: "15%", right: "20%", transform: "rotate(-15deg)" }} />
+          <img src="/images/bodies/crab.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "60%", right: "5%", transform: "rotate(25deg)" }} />
+          <img src="/images/bodies/chicken.png" alt="" className="absolute w-24 h-24 object-contain" style={{ bottom: "20%", right: "25%", transform: "rotate(-40deg)" }} />
+          <img src="/images/bodies/flea.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "40%", left: "15%", transform: "rotate(10deg)" }} />
+          <img src="/images/bodies/blink.png" alt="" className="absolute w-26 h-26 object-contain" style={{ bottom: "15%", left: "20%", transform: "rotate(-25deg)" }} />
+        </div>
+
+        <div className="text-center mb-16 relative z-10">
           <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Spider Tanks: Cores of Chaos
           </h2>
@@ -101,7 +118,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-8 relative overflow-hidden">
             {/* Background Logo */}
             <div
-              className="absolute inset-0 bg-center bg-no-repeat opacity-5"
+              className="absolute inset-0 bg-center bg-no-repeat opacity-15"
               style={{
                 backgroundImage: "url('/images/weapons/bouncer-gun.png')",
                 backgroundSize: "400px"
