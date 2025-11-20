@@ -116,6 +116,65 @@ export default function Home() {
           </div>
         </div>
 
+        {/* IMX Diamonds Rewards */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 border-2 border-purple-500/50 rounded-lg p-8 relative overflow-hidden">
+            {/* Animated background effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+
+            <div className="relative z-10">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <span className="text-4xl">💎</span>
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Earn IMX Diamonds!
+                </h2>
+                <span className="text-4xl">💎</span>
+              </div>
+
+              <p className="text-center text-gray-200 text-lg mb-6 max-w-2xl mx-auto">
+                Participate in the <span className="font-bold text-purple-400">Immutable X Campaign</span> and earn
+                <span className="font-bold text-blue-400"> IMX Diamonds</span> by playing Spider Tanks,
+                trading NFTs, and completing challenges!
+              </p>
+
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="bg-black/30 border border-purple-500/30 rounded-lg p-4 text-center">
+                  <div className="text-2xl mb-2">🎮</div>
+                  <div className="text-sm font-bold text-purple-400">Play & Earn</div>
+                  <div className="text-xs text-gray-400 mt-1">Win matches to earn diamonds</div>
+                </div>
+                <div className="bg-black/30 border border-blue-500/30 rounded-lg p-4 text-center">
+                  <div className="text-2xl mb-2">🛒</div>
+                  <div className="text-sm font-bold text-blue-400">Trade NFTs</div>
+                  <div className="text-xs text-gray-400 mt-1">Buy & sell on Immutable marketplace</div>
+                </div>
+                <div className="bg-black/30 border border-pink-500/30 rounded-lg p-4 text-center">
+                  <div className="text-2xl mb-2">🏆</div>
+                  <div className="text-sm font-bold text-pink-400">Complete Challenges</div>
+                  <div className="text-xs text-gray-400 mt-1">Finish quests for bonus rewards</div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <a
+                  href="https://www.immutable.com/rewards"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={playHoverSound}
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 shadow-lg shadow-purple-500/50"
+                >
+                  <span className="text-2xl">💎</span>
+                  <div>
+                    <div>Join IMX Rewards Campaign</div>
+                    <div className="text-xs font-normal opacity-90">Start Earning Diamonds Today</div>
+                  </div>
+                  <span className="text-xl">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <a href="/builder" onMouseEnter={playHoverSound} className="bg-gradient-to-b from-blue-500/10 to-transparent border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/40 transition-all hover:scale-105 block">
             <div className="text-4xl mb-4">⚙️</div>
