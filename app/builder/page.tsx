@@ -61,7 +61,7 @@ export default function IMXRewardsPage() {
 
               <div className="text-center">
                 <a
-                  href="https://www.immutable.com/zkevm-rewards"
+                  href="https://www.immutable.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   onMouseEnter={playHoverSound}
