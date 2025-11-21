@@ -7,7 +7,30 @@
     "damage": 750,
     "range": 19,
     "description": "Shoots bursts of sound waves, pushes enemies with BASS",
-    "image": "/images/weapons/beat-blaster.png"
+    "image": "/images/weapons/beat-blaster.png",
+    "modules": [
+      {
+        "id": "beat-blaster-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "beat-blaster-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "beat-blaster-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "blade-spinner",
@@ -17,7 +40,30 @@
     "damage": 2100,
     "range": 25,
     "description": "Spinning blades return after firing",
-    "image": "/images/weapons/blade-spinner.png"
+    "image": "/images/weapons/blade-spinner.png",
+    "modules": [
+      {
+        "id": "blade-spinner-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "blade-spinner-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "blade-spinner-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "bouncer-gun",
@@ -27,7 +73,30 @@
     "damage": 1200,
     "range": 20,
     "description": "Bullets bounce off enemies, get stronger when they do",
-    "image": "/images/weapons/bouncer-gun.png"
+    "image": "/images/weapons/bouncer-gun.png",
+    "modules": [
+      {
+        "id": "bouncer-gun-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "bouncer-gun-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "bouncer-gun-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "cannon",
@@ -37,7 +106,30 @@
     "damage": 1450,
     "range": 20,
     "description": "Burst-fire capability",
-    "image": "/images/weapons/cannon.png"
+    "image": "/images/weapons/cannon.png",
+    "modules": [
+      {
+        "id": "cannon-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "cannon-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "cannon-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "crossbow",
@@ -47,7 +139,30 @@
     "damage": 2400,
     "range": 28,
     "description": "Can pierce through enemies, more powerful when drawn back",
-    "image": "/images/weapons/crossbow.png"
+    "image": "/images/weapons/crossbow.png",
+    "modules": [
+      {
+        "id": "crossbow-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "crossbow-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "crossbow-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "eggxecutioner",
@@ -57,7 +172,30 @@
     "damage": 1250,
     "range": 19,
     "description": "Eggxplosive projectiles detonate on impact",
-    "image": "/images/weapons/eggxecutioner.png"
+    "image": "/images/weapons/eggxecutioner.png",
+    "modules": [
+      {
+        "id": "eggxecutioner-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "eggxecutioner-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "eggxecutioner-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "finisher",
@@ -67,7 +205,30 @@
     "damage": 2000,
     "range": 30,
     "description": "Automatically targets nearby enemies with explosive drill torpedoes",
-    "image": "/images/weapons/finisher.png"
+    "image": "/images/weapons/finisher.png",
+    "modules": [
+      {
+        "id": "finisher-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "finisher-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "finisher-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "gatling-gun",
@@ -77,7 +238,30 @@
     "damage": 525,
     "range": 22,
     "description": "Storm of bullets, requires warmup, slows while firing",
-    "image": "/images/weapons/gatling-gun.png"
+    "image": "/images/weapons/gatling-gun.png",
+    "modules": [
+      {
+        "id": "gatling-gun-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "gatling-gun-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "gatling-gun-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "laser-blaster",
@@ -87,7 +271,30 @@
     "damage": 500,
     "range": 24,
     "description": "Projectiles get increasingly powerful per clip",
-    "image": "/images/weapons/laser-blaster.png"
+    "image": "/images/weapons/laser-blaster.png",
+    "modules": [
+      {
+        "id": "laser-blaster-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "laser-blaster-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "laser-blaster-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "lava-launcher",
@@ -97,7 +304,30 @@
     "damage": 900,
     "range": 20,
     "description": "Causes damage on impact plus additional damage over time",
-    "image": "/images/weapons/lava-launcher.png"
+    "image": "/images/weapons/lava-launcher.png",
+    "modules": [
+      {
+        "id": "lava-launcher-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "lava-launcher-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "lava-launcher-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "railgun",
@@ -107,7 +337,30 @@
     "damage": 6500,
     "range": 24,
     "description": "Very powerful charged shot, must stop moving to charge",
-    "image": "/images/weapons/railgun.png"
+    "image": "/images/weapons/railgun.png",
+    "modules": [
+      {
+        "id": "railgun-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "railgun-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "railgun-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "repair-gun",
@@ -117,7 +370,30 @@
     "damage": 750,
     "range": 19,
     "description": "Fires healing energy at allies, deals light enemy damage",
-    "image": "/images/weapons/repair-gun.png"
+    "image": "/images/weapons/repair-gun.png",
+    "modules": [
+      {
+        "id": "repair-gun-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "repair-gun-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "repair-gun-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "ripper",
@@ -127,7 +403,30 @@
     "damage": 1300,
     "range": 20,
     "description": "Projectiles split into three after delay",
-    "image": "/images/weapons/ripper.png"
+    "image": "/images/weapons/ripper.png",
+    "modules": [
+      {
+        "id": "ripper-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "ripper-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "ripper-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "shocker",
@@ -137,7 +436,30 @@
     "damage": 1700,
     "range": 20,
     "description": "Slow-moving lightning ball with expanding damage zone",
-    "image": "/images/weapons/shocker.png"
+    "image": "/images/weapons/shocker.png",
+    "modules": [
+      {
+        "id": "shocker-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "shocker-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "shocker-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "shotgun",
@@ -147,7 +469,30 @@
     "damage": 380,
     "range": 13,
     "description": "Spread of bullets, very effective at close range",
-    "image": "/images/weapons/shotgun.png"
+    "image": "/images/weapons/shotgun.png",
+    "modules": [
+      {
+        "id": "shotgun-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "shotgun-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "shotgun-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "sniper-rifle",
@@ -157,7 +502,30 @@
     "damage": 4000,
     "range": 26,
     "description": "Long distance, slow reload, powerful punch",
-    "image": "/images/weapons/sniper-rifle.png"
+    "image": "/images/weapons/sniper-rifle.png",
+    "modules": [
+      {
+        "id": "sniper-rifle-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "sniper-rifle-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "sniper-rifle-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "snowballer",
@@ -167,7 +535,30 @@
     "damage": 1500,
     "range": 20,
     "description": "Slows enemies, speeds allies",
-    "image": "/images/weapons/snowballer.png"
+    "image": "/images/weapons/snowballer.png",
+    "modules": [
+      {
+        "id": "snowballer-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "snowballer-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "snowballer-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "stinger",
@@ -177,7 +568,30 @@
     "damage": 1700,
     "range": 18,
     "description": "Acid blobs slow and damage over time",
-    "image": "/images/weapons/stinger.png"
+    "image": "/images/weapons/stinger.png",
+    "modules": [
+      {
+        "id": "stinger-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "stinger-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "stinger-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "twin-guns",
@@ -187,7 +601,30 @@
     "damage": 625,
     "range": 19,
     "description": "Short bursts, less damage per bullet, better hit chance",
-    "image": "/images/weapons/twin-guns.png"
+    "image": "/images/weapons/twin-guns.png",
+    "modules": [
+      {
+        "id": "twin-guns-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "twin-guns-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "twin-guns-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "brambler",
@@ -197,7 +634,30 @@
     "damage": 1200,
     "range": 19,
     "description": "Thorny patch hurts and slows enemies in area",
-    "image": "/images/weapons/brambler.png"
+    "image": "/images/weapons/brambler.png",
+    "modules": [
+      {
+        "id": "brambler-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "brambler-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "brambler-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "fire-artillery",
@@ -207,7 +667,30 @@
     "damage": 1200,
     "range": 21,
     "description": "Explosive shell sets fire to ground around it",
-    "image": "/images/weapons/fire-artillery.png"
+    "image": "/images/weapons/fire-artillery.png",
+    "modules": [
+      {
+        "id": "fire-artillery-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "fire-artillery-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "fire-artillery-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "repair-artillery",
@@ -217,7 +700,30 @@
     "damage": 1500,
     "range": 19,
     "description": "Can repair allies, causes light enemy damage",
-    "image": "/images/weapons/repair-artillery.png"
+    "image": "/images/weapons/repair-artillery.png",
+    "modules": [
+      {
+        "id": "repair-artillery-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "repair-artillery-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "repair-artillery-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "rocket-artillery",
@@ -227,7 +733,30 @@
     "damage": 630,
     "range": 19,
     "description": "Barrage of explosive rockets in arc",
-    "image": "/images/weapons/rocket-artillery.png"
+    "image": "/images/weapons/rocket-artillery.png",
+    "modules": [
+      {
+        "id": "rocket-artillery-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "rocket-artillery-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "rocket-artillery-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "brainstormer",
@@ -237,7 +766,30 @@
     "damage": 0,
     "range": 12,
     "description": "Shoots brainpower, siphon/steal health from targets",
-    "image": "/images/weapons/brainstormer.png"
+    "image": "/images/weapons/brainstormer.png",
+    "modules": [
+      {
+        "id": "brainstormer-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "brainstormer-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "brainstormer-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "flamethrower",
@@ -247,7 +799,30 @@
     "damage": 0,
     "range": 8,
     "description": "Sprays flames at wide angle, additional damage over time",
-    "image": "/images/weapons/flamethrower.png"
+    "image": "/images/weapons/flamethrower.png",
+    "modules": [
+      {
+        "id": "flamethrower-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "flamethrower-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "flamethrower-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   },
   {
     "id": "t-ray",
@@ -257,6 +832,29 @@
     "damage": 0,
     "range": 22,
     "description": "Penetrating ray of pure prehistoric anti-matter",
-    "image": "/images/weapons/t-ray.png"
+    "image": "/images/weapons/t-ray.png",
+    "modules": [
+      {
+        "id": "t-ray-module-1",
+        "name": "Damage Boost",
+        "damageBonus": 150,
+        "rangeBonus": 0,
+        "description": "Increases weapon damage"
+      },
+      {
+        "id": "t-ray-module-2",
+        "name": "Range Boost",
+        "damageBonus": 0,
+        "rangeBonus": 3,
+        "description": "Increases weapon range"
+      },
+      {
+        "id": "t-ray-module-3",
+        "name": "Balanced Boost",
+        "damageBonus": 75,
+        "rangeBonus": 1,
+        "description": "Balanced damage and range increase"
+      }
+    ]
   }
 ]

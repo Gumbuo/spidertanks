@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { TankBuild } from "./TankBuilder";
 
 interface StatsDisplayProps {
@@ -8,21 +7,28 @@ interface StatsDisplayProps {
 }
 
 export function StatsDisplay({ build }: StatsDisplayProps) {
-  const { body, weapon } = build;
-  const [level, setLevel] = useState(10);
+  const { body, weapon, bodyLevel, weaponLevel, selectedBodyModule, selectedWeaponModule } = build;
 
-  // Scale stat based on level (assuming data is level 10)
+  // Get active modules from the part's built-in modules
+  const activeBodyMod = selectedBodyModule !== null && body?.modules ? body.modules[selectedBodyModule] : null;
+  const activeWeaponMod = selectedWeaponModule !== null && weapon?.modules ? weapon.modules[selectedWeaponModule] : null;
+
+  // Scale stat based on part's individual level (assuming data is level 10)
   // Level 1 = 50% of stats, Level 10 = 100% of stats
-  const scaleStat = (baseStat: number) => {
-    return baseStat * (0.5 + (level / 10) * 0.5);
+  const scaleBodyStat = (baseStat: number) => {
+    return baseStat * (0.5 + (bodyLevel / 10) * 0.5);
   };
 
-  // Calculate total stats with level scaling
-  const totalArmor = scaleStat(body?.armor || 0);
-  const totalSpeed = scaleStat(body?.speed || 0);
-  const totalEnergy = scaleStat(body?.energy || 0);
-  const weaponDamage = scaleStat(weapon?.damage || 0);
-  const weaponRange = scaleStat(weapon?.range || 0);
+  const scaleWeaponStat = (baseStat: number) => {
+    return baseStat * (0.5 + (weaponLevel / 10) * 0.5);
+  };
+
+  // Calculate total stats with level scaling and module bonuses
+  const totalArmor = scaleBodyStat(body?.armor || 0) + (activeBodyMod?.armorBonus || 0);
+  const totalSpeed = scaleBodyStat(body?.speed || 0) + (activeBodyMod?.speedBonus || 0);
+  const totalEnergy = scaleBodyStat(body?.energy || 0) + (activeBodyMod?.energyBonus || 0);
+  const weaponDamage = scaleWeaponStat(weapon?.damage || 0) + (activeWeaponMod?.damageBonus || 0);
+  const weaponRange = scaleWeaponStat(weapon?.range || 0) + (activeWeaponMod?.rangeBonus || 0);
 
   return (
     <div className="bg-black/50 border border-cyan-500/30 rounded-lg p-6">
@@ -46,31 +52,6 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
         }
       `}</style>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Build Stats</h2>
-
-      {/* Level Slider */}
-      {body && (
-        <div className="mb-6 pb-4 border-b border-cyan-500/20">
-          <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-bold text-gray-400">LEVEL</label>
-            <span className="text-2xl font-bold text-cyan-400">{level}</span>
-          </div>
-          <input
-            type="range"
-            min="1"
-            max="10"
-            value={level}
-            onChange={(e) => setLevel(Number(e.target.value))}
-            className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer slider-thumb"
-            style={{
-              background: `linear-gradient(to right, #06b6d4 0%, #06b6d4 ${(level - 1) * 11.11}%, #1f2937 ${(level - 1) * 11.11}%, #1f2937 100%)`
-            }}
-          />
-          <div className="flex justify-between text-xs text-gray-500 mt-1">
-            <span>1</span>
-            <span>10</span>
-          </div>
-        </div>
-      )}
 
       {!body ? (
         <div className="text-center text-gray-500 py-8">
@@ -110,6 +91,34 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
               {weapon && <div><span className="font-bold">Weapon:</span> {weapon.name}</div>}
             </div>
           </div>
+
+          {/* Active Modules */}
+          {(activeBodyMod || activeWeaponMod) && (
+            <div className="pt-4 border-t border-cyan-500/20">
+              <h3 className="text-sm font-bold text-green-400 mb-2">ACTIVE MODULES</h3>
+              <div className="text-xs text-gray-400 space-y-2">
+                {activeBodyMod && (
+                  <div className="bg-green-500/10 border border-green-500/30 rounded p-2">
+                    <div className="font-bold text-green-400 mb-1">Body: {activeBodyMod.name}</div>
+                    <div className="text-[10px] space-y-0.5">
+                      {activeBodyMod.armorBonus !== 0 && <div>HP: {activeBodyMod.armorBonus > 0 ? '+' : ''}{activeBodyMod.armorBonus}</div>}
+                      {activeBodyMod.speedBonus !== 0 && <div>Speed: {activeBodyMod.speedBonus > 0 ? '+' : ''}{activeBodyMod.speedBonus}</div>}
+                      {activeBodyMod.energyBonus !== 0 && <div>Energy/s: {activeBodyMod.energyBonus > 0 ? '+' : ''}{activeBodyMod.energyBonus}</div>}
+                    </div>
+                  </div>
+                )}
+                {activeWeaponMod && (
+                  <div className="bg-green-500/10 border border-green-500/30 rounded p-2">
+                    <div className="font-bold text-green-400 mb-1">Weapon: {activeWeaponMod.name}</div>
+                    <div className="text-[10px] space-y-0.5">
+                      {activeWeaponMod.damageBonus !== 0 && <div>Damage: {activeWeaponMod.damageBonus > 0 ? '+' : ''}{activeWeaponMod.damageBonus}</div>}
+                      {activeWeaponMod.rangeBonus !== 0 && <div>Range: {activeWeaponMod.rangeBonus > 0 ? '+' : ''}{activeWeaponMod.rangeBonus}</div>}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

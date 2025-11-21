@@ -8,13 +8,15 @@ import abilities from "../data/abilities.json";
 import { DraggablePart } from "./DraggablePart";
 import { BuildSlot } from "./BuildSlot";
 import { StatsDisplay } from "./StatsDisplay";
-import Comments from "./Comments";
-import Footer from "./Footer";
 import { useHoverSound } from "../hooks/useHoverSound";
 
 export interface TankBuild {
   body: typeof bodies[0] | null;
   weapon: typeof weapons[0] | null;
+  bodyLevel: number;
+  weaponLevel: number;
+  selectedBodyModule: number | null;
+  selectedWeaponModule: number | null;
 }
 
 export default function TankBuilder() {
@@ -23,6 +25,10 @@ export default function TankBuilder() {
   const [build, setBuild] = useState<TankBuild>({
     body: null,
     weapon: null,
+    bodyLevel: 10,
+    weaponLevel: 10,
+    selectedBodyModule: null,
+    selectedWeaponModule: null,
   });
 
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -74,6 +80,15 @@ export default function TankBuilder() {
     if (weapons.find(w => w.id === activeId)) return "weapon";
     if (abilities.find(a => a.id === activeId)) return "ability";
     return null;
+  };
+
+  // Handle module selection
+  const handleModuleSelection = (partType: "body" | "weapon", moduleIndex: number) => {
+    if (partType === "body") {
+      setBuild({ ...build, selectedBodyModule: moduleIndex });
+    } else {
+      setBuild({ ...build, selectedWeaponModule: moduleIndex });
+    }
   };
 
   return (
@@ -205,11 +220,136 @@ export default function TankBuilder() {
 
                 <div className="space-y-4">
                   <BuildSlot id="body-slot" label="Body" item={build.body} type="body" />
+
+                  {/* Body Level Slider */}
+                  {build.body && (
+                    <div className="mt-4 p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
+                      <div className="flex items-center justify-between mb-2">
+                        <label className="text-sm font-bold text-gray-400">BODY LEVEL</label>
+                        <span className="text-xl font-bold text-cyan-400">{build.bodyLevel}</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="1"
+                        max="10"
+                        value={build.bodyLevel}
+                        onChange={(e) => setBuild({ ...build, bodyLevel: Number(e.target.value) })}
+                        className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer"
+                        style={{
+                          background: `linear-gradient(to right, #06b6d4 0%, #06b6d4 ${(build.bodyLevel - 1) * 11.11}%, #1f2937 ${(build.bodyLevel - 1) * 11.11}%, #1f2937 100%)`
+                        }}
+                      />
+                      <div className="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>1</span>
+                        <span>10</span>
+                      </div>
+                    </div>
+                  )}
+
                   <BuildSlot id="weapon-slot" label="Weapon" item={build.weapon} type="weapon" />
+
+                  {/* Weapon Level Slider */}
+                  {build.weapon && (
+                    <div className="mt-4 p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
+                      <div className="flex items-center justify-between mb-2">
+                        <label className="text-sm font-bold text-gray-400">WEAPON LEVEL</label>
+                        <span className="text-xl font-bold text-cyan-400">{build.weaponLevel}</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="1"
+                        max="10"
+                        value={build.weaponLevel}
+                        onChange={(e) => setBuild({ ...build, weaponLevel: Number(e.target.value) })}
+                        className="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer"
+                        style={{
+                          background: `linear-gradient(to right, #06b6d4 0%, #06b6d4 ${(build.weaponLevel - 1) * 11.11}%, #1f2937 ${(build.weaponLevel - 1) * 11.11}%, #1f2937 100%)`
+                        }}
+                      />
+                      <div className="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>1</span>
+                        <span>10</span>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
+                {/* Body Modules - Show at Level 10 */}
+                {build.body && build.bodyLevel === 10 && (
+                  <div className="mt-6 pt-6 border-t border-cyan-500/30">
+                    <h3 className="text-lg font-bold text-cyan-400 mb-3">Body Modules (Select 1)</h3>
+                    <div className="space-y-2">
+                      {build.body.modules.map((module: any, index: number) => (
+                        <div
+                          key={`body-module-${index}`}
+                          onClick={() => handleModuleSelection("body", index)}
+                          onMouseEnter={playHoverSound}
+                          className={`p-3 rounded-lg border-2 cursor-pointer transition-all ${
+                            build.selectedBodyModule === index
+                              ? "border-green-400 bg-green-500/20 ring-2 ring-green-400/50"
+                              : "border-cyan-500/30 bg-cyan-500/10 hover:border-cyan-500/50"
+                          }`}
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <div className="font-bold text-sm text-cyan-400">{module.name}</div>
+                            {build.selectedBodyModule === index && (
+                              <div className="text-xs font-bold text-green-400 px-2 py-0.5 bg-green-500/20 rounded">ACTIVE</div>
+                            )}
+                          </div>
+                          <div className="text-xs text-gray-400 mb-2">{module.description}</div>
+                          <div className="flex gap-3 text-xs">
+                            {module.armorBonus !== 0 && <span className="text-cyan-400">HP: +{module.armorBonus}</span>}
+                            {module.speedBonus !== 0 && <span className="text-cyan-400">Speed: +{module.speedBonus}</span>}
+                            {module.energyBonus !== 0 && <span className="text-cyan-400">Energy/s: +{module.energyBonus}</span>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Weapon Modules - Show at Level 10 */}
+                {build.weapon && build.weaponLevel === 10 && (
+                  <div className="mt-6 pt-6 border-t border-cyan-500/30">
+                    <h3 className="text-lg font-bold text-cyan-400 mb-3">Weapon Modules (Select 1)</h3>
+                    <div className="space-y-2">
+                      {build.weapon.modules.map((module: any, index: number) => (
+                        <div
+                          key={`weapon-module-${index}`}
+                          onClick={() => handleModuleSelection("weapon", index)}
+                          onMouseEnter={playHoverSound}
+                          className={`p-3 rounded-lg border-2 cursor-pointer transition-all ${
+                            build.selectedWeaponModule === index
+                              ? "border-green-400 bg-green-500/20 ring-2 ring-green-400/50"
+                              : "border-cyan-500/30 bg-cyan-500/10 hover:border-cyan-500/50"
+                          }`}
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <div className="font-bold text-sm text-cyan-400">{module.name}</div>
+                            {build.selectedWeaponModule === index && (
+                              <div className="text-xs font-bold text-green-400 px-2 py-0.5 bg-green-500/20 rounded">ACTIVE</div>
+                            )}
+                          </div>
+                          <div className="text-xs text-gray-400 mb-2">{module.description}</div>
+                          <div className="flex gap-3 text-xs">
+                            {module.damageBonus !== 0 && <span className="text-cyan-400">Damage: +{module.damageBonus}</span>}
+                            {module.rangeBonus !== 0 && <span className="text-cyan-400">Range: +{module.rangeBonus}</span>}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <button
-                  onClick={() => setBuild({ body: null, weapon: null })}
+                  onClick={() => setBuild({
+                    body: null,
+                    weapon: null,
+                    bodyLevel: 10,
+                    weaponLevel: 10,
+                    selectedBodyModule: null,
+                    selectedWeaponModule: null,
+                  })}
                   onMouseEnter={playHoverSound}
                   className="w-full mt-4 px-4 py-2 bg-red-500/20 text-red-400 border border-red-500/30 rounded-lg hover:bg-red-500/30 transition-colors"
                 >
@@ -223,26 +363,7 @@ export default function TankBuilder() {
           </div>
         </div>
 
-        {/* Comments Section */}
-        <Comments
-          url="https://spidertanks.xyz/builder"
-          identifier="builder"
-          title="Spider Tanks Guide - Tank Builder"
-        />
-
-        {/* Back Button */}
-        <div className="text-center mt-12">
-          <a
-            href="/"
-            onMouseEnter={playHoverSound}
-            className="inline-block px-6 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/30 transition-colors"
-          >
-            ← Back to Home
-          </a>
-        </div>
       </div>
-
-      <Footer />
 
       <DragOverlay dropAnimation={null}>
         {activeId && activeItem ? (

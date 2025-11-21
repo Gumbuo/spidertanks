@@ -7,7 +7,7 @@ import { useHoverSound } from "../hooks/useHoverSound";
 interface DraggablePartProps {
   id: string;
   data: any;
-  type: "body" | "weapon" | "ability";
+  type: "body" | "weapon" | "ability" | "module";
 }
 
 export function DraggablePart({ id, data, type }: DraggablePartProps) {
@@ -59,6 +59,16 @@ export function DraggablePart({ id, data, type }: DraggablePartProps) {
         <div className="text-[10px] text-gray-400 space-y-0.5">
           <div>Energy: {data.energy}</div>
           {data.damage > 0 && <div>DMG: {data.damage}</div>}
+        </div>
+      )}
+
+      {type === "module" && (
+        <div className="text-[10px] text-gray-400 space-y-0.5">
+          {data.armorBonus !== 0 && <div>HP: {data.armorBonus > 0 ? '+' : ''}{data.armorBonus}</div>}
+          {data.speedBonus !== 0 && <div>SPD: {data.speedBonus > 0 ? '+' : ''}{data.speedBonus}</div>}
+          {data.energyBonus !== 0 && <div>NRG: {data.energyBonus > 0 ? '+' : ''}{data.energyBonus}</div>}
+          {data.damageBonus !== 0 && <div>DMG: {data.damageBonus > 0 ? '+' : ''}{data.damageBonus}</div>}
+          {data.rangeBonus !== 0 && <div>RNG: {data.rangeBonus > 0 ? '+' : ''}{data.rangeBonus}</div>}
         </div>
       )}
     </div>

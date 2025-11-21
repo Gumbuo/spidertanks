@@ -7,7 +7,33 @@
     "energy": 0.2727,
     "description": "Light weight may sacrifice some health for quickness",
     "type": "light",
-    "image": "/images/bodies/bandit.png"
+    "image": "/images/bodies/bandit.png",
+    "modules": [
+      {
+        "id": "bandit-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "bandit-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "bandit-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "blink",
@@ -17,7 +43,33 @@
     "energy": 0.259,
     "description": "Sacrificed much of its health for speed",
     "type": "light",
-    "image": "/images/bodies/blink.png"
+    "image": "/images/bodies/blink.png",
+    "modules": [
+      {
+        "id": "blink-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "blink-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "blink-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "chicken",
@@ -27,7 +79,33 @@
     "energy": 0.2635,
     "description": "Light frame prioritizing velocity",
     "type": "light",
-    "image": "/images/bodies/chicken.png"
+    "image": "/images/bodies/chicken.png",
+    "modules": [
+      {
+        "id": "chicken-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "chicken-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "chicken-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "crab",
@@ -37,7 +115,33 @@
     "energy": 0.2905,
     "description": "Medium body balancing health and speed",
     "type": "medium",
-    "image": "/images/bodies/crab.png"
+    "image": "/images/bodies/crab.png",
+    "modules": [
+      {
+        "id": "crab-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "crab-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "crab-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "flea",
@@ -47,7 +151,33 @@
     "energy": 0.25,
     "description": "Fastest on the battlefield",
     "type": "light",
-    "image": "/images/bodies/flea.png"
+    "image": "/images/bodies/flea.png",
+    "modules": [
+      {
+        "id": "flea-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "flea-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "flea-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "hurricane",
@@ -57,7 +187,33 @@
     "energy": 0.2815,
     "description": "Hovers above the battlefield",
     "type": "medium",
-    "image": "/images/bodies/hurricane.png"
+    "image": "/images/bodies/hurricane.png",
+    "modules": [
+      {
+        "id": "hurricane-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "hurricane-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "hurricane-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "jacked-o-lantern",
@@ -67,7 +223,33 @@
     "energy": 0.2545,
     "description": "Seasonal variant with special animations",
     "type": "light",
-    "image": "/images/bodies/jacked-o-lantern.png"
+    "image": "/images/bodies/jacked-o-lantern.png",
+    "modules": [
+      {
+        "id": "jacked-o-lantern-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "jacked-o-lantern-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "jacked-o-lantern-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "junker",
@@ -77,7 +259,33 @@
     "energy": 0.277,
     "description": "Balanced tank body with average health and speed",
     "type": "medium",
-    "image": "/images/bodies/junker.png"
+    "image": "/images/bodies/junker.png",
+    "modules": [
+      {
+        "id": "junker-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "junker-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "junker-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "maul",
@@ -87,7 +295,33 @@
     "energy": 0.304,
     "description": "Medium-heavy prioritizing durability",
     "type": "heavy",
-    "image": "/images/bodies/maul.png"
+    "image": "/images/bodies/maul.png",
+    "modules": [
+      {
+        "id": "maul-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "maul-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "maul-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "muzzle",
@@ -97,7 +331,33 @@
     "energy": 0.286,
     "description": "Values health and speed equally",
     "type": "medium",
-    "image": "/images/bodies/muzzle.png"
+    "image": "/images/bodies/muzzle.png",
+    "modules": [
+      {
+        "id": "muzzle-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "muzzle-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "muzzle-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "nomad",
@@ -107,7 +367,33 @@
     "energy": 0.3285,
     "description": "Heavier than average body",
     "type": "heavy",
-    "image": "/images/bodies/nomad.png"
+    "image": "/images/bodies/nomad.png",
+    "modules": [
+      {
+        "id": "nomad-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "nomad-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "nomad-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "octopus",
@@ -117,7 +403,33 @@
     "energy": 0.3265,
     "description": "Heavy body sacrificed much speed for health",
     "type": "heavy",
-    "image": "/images/bodies/octopus.png"
+    "image": "/images/bodies/octopus.png",
+    "modules": [
+      {
+        "id": "octopus-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "octopus-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "octopus-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "rex",
@@ -127,7 +439,33 @@
     "energy": 0.2635,
     "description": "OG king of the jungle",
     "type": "light",
-    "image": "/images/bodies/rex.png"
+    "image": "/images/bodies/rex.png",
+    "modules": [
+      {
+        "id": "rex-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "rex-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "rex-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "santas-slay",
@@ -137,7 +475,33 @@
     "energy": 0.3285,
     "description": "Festive variant with elf animations",
     "type": "heavy",
-    "image": "/images/bodies/santas-slay.png"
+    "image": "/images/bodies/santas-slay.png",
+    "modules": [
+      {
+        "id": "santas-slay-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "santas-slay-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "santas-slay-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "scorpion",
@@ -147,7 +511,33 @@
     "energy": 0.2995,
     "description": "Medium frame with balanced stats",
     "type": "medium",
-    "image": "/images/bodies/scorpion.png"
+    "image": "/images/bodies/scorpion.png",
+    "modules": [
+      {
+        "id": "scorpion-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "scorpion-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "scorpion-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "scout",
@@ -157,7 +547,33 @@
     "energy": 0.268,
     "description": "Medium-light body sacrificed part of health for speed",
     "type": "medium",
-    "image": "/images/bodies/scout.png"
+    "image": "/images/bodies/scout.png",
+    "modules": [
+      {
+        "id": "scout-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "scout-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "scout-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "shark",
@@ -167,7 +583,33 @@
     "energy": 0.3175,
     "description": "Lacks speed but makes up in armor and style",
     "type": "heavy",
-    "image": "/images/bodies/shark.png"
+    "image": "/images/bodies/shark.png",
+    "modules": [
+      {
+        "id": "shark-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "shark-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "shark-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "shepherd",
@@ -177,7 +619,33 @@
     "energy": 0.295,
     "description": "Medium body emphasizing protection",
     "type": "medium",
-    "image": "/images/bodies/shepherd.png"
+    "image": "/images/bodies/shepherd.png",
+    "modules": [
+      {
+        "id": "shepherd-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "shepherd-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "shepherd-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "snoops-lowrider",
@@ -187,7 +655,33 @@
     "energy": 0.3105,
     "description": "Belonged to the legendary Snoop Dogg",
     "type": "medium",
-    "image": "/images/bodies/snoops-lowrider.png"
+    "image": "/images/bodies/snoops-lowrider.png",
+    "modules": [
+      {
+        "id": "snoops-lowrider-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "snoops-lowrider-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "snoops-lowrider-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "tiger",
@@ -197,7 +691,33 @@
     "energy": 0.27,
     "description": "Balanced tank body with average health and speed",
     "type": "medium",
-    "image": "/images/bodies/tiger.png"
+    "image": "/images/bodies/tiger.png",
+    "modules": [
+      {
+        "id": "tiger-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "tiger-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "tiger-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "titan",
@@ -207,7 +727,33 @@
     "energy": 0.331,
     "description": "Massive body seeks to dominate with huge health",
     "type": "heavy",
-    "image": "/images/bodies/titan.png"
+    "image": "/images/bodies/titan.png",
+    "modules": [
+      {
+        "id": "titan-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "titan-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "titan-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "tortoise",
@@ -217,7 +763,33 @@
     "energy": 0.322,
     "description": "Heavy body sacrificed speed for additional health",
     "type": "heavy",
-    "image": "/images/bodies/tortoise.png"
+    "image": "/images/bodies/tortoise.png",
+    "modules": [
+      {
+        "id": "tortoise-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "tortoise-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "tortoise-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   },
   {
     "id": "tracks",
@@ -227,6 +799,32 @@
     "energy": 0.333,
     "description": "Heavy frame with high energy regeneration",
     "type": "heavy",
-    "image": "/images/bodies/tracks.png"
+    "image": "/images/bodies/tracks.png",
+    "modules": [
+      {
+        "id": "tracks-module-1",
+        "name": "Armor Boost",
+        "armorBonus": 500,
+        "speedBonus": 0,
+        "energyBonus": 0,
+        "description": "Increases armor protection"
+      },
+      {
+        "id": "tracks-module-2",
+        "name": "Speed Boost",
+        "armorBonus": 0,
+        "speedBonus": 30,
+        "energyBonus": 0,
+        "description": "Increases movement speed"
+      },
+      {
+        "id": "tracks-module-3",
+        "name": "Energy Boost",
+        "armorBonus": 0,
+        "speedBonus": 0,
+        "energyBonus": 0.03,
+        "description": "Increases energy regeneration"
+      }
+    ]
   }
 ]

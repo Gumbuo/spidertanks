@@ -11,34 +11,38 @@ export default function Footer() {
         <div className="max-w-4xl mx-auto">
           {/* Other Projects */}
           <div className="mb-6 text-center">
-            <h3 className="text-lg font-bold text-cyan-400 mb-3">Check Out Our Other Projects</h3>
-            <div className="flex flex-wrap justify-center gap-4">
+            <h3 className="text-lg font-bold text-cyan-400 mb-4">Check Out Our Other Projects</h3>
+            <div className="grid md:grid-cols-3 gap-4">
               <a
                 href="https://gumbuo.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHoverSound}
-                className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition-colors"
+                className="px-4 py-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/20 transition-colors block"
               >
-                🎮 Gumbuo.io
+                <div className="text-cyan-400 font-bold">🎮 Gumbuo.io</div>
+                <div className="text-gray-400 text-xs mt-1">Alien Points Economy</div>
+                <div className="text-orange-400 text-xs mt-1">(NO LIQUIDITY TOKEN - don't buy, testing smart contracts)</div>
               </a>
               <a
                 href="https://gamehole.ink"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHoverSound}
-                className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition-colors"
+                className="px-4 py-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/20 transition-colors block"
               >
-                🎯 Gamehole.ink
+                <div className="text-cyan-400 font-bold">🎯 Gamehole.ink</div>
+                <div className="text-gray-400 text-xs mt-1">Free Game Hosting</div>
               </a>
               <a
                 href="https://gamehole.games"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHoverSound}
-                className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition-colors"
+                className="px-4 py-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/20 transition-colors block"
               >
-                🕹️ Gamehole.games
+                <div className="text-cyan-400 font-bold">🕹️ Gamehole.games</div>
+                <div className="text-gray-400 text-xs mt-1">Free Games to Play</div>
               </a>
             </div>
           </div>

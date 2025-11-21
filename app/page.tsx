@@ -275,13 +275,16 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Comments Section */}
+      </main>
+
+      {/* Comments Section - Below Main Content */}
+      <div className="container mx-auto px-4 pb-12">
         <Comments
           url="https://spidertanks.xyz"
           identifier="home"
           title="Spider Tanks Guide - Home"
         />
-      </main>
+      </div>
 
       <Footer />
     </div>
