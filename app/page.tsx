@@ -91,20 +91,32 @@ export default function Home() {
 
       <main className="container mx-auto px-4 py-12 relative">
         {/* Random Tank Parts Background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
-          {/* Weapons */}
-          <img src="/images/weapons/bouncer-gun.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "10%", left: "5%", transform: "rotate(15deg)" }} />
-          <img src="/images/weapons/cannon.png" alt="" className="absolute w-32 h-32 object-contain" style={{ top: "25%", right: "10%", transform: "rotate(-20deg)" }} />
-          <img src="/images/weapons/crossbow.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "50%", left: "8%", transform: "rotate(45deg)" }} />
-          <img src="/images/weapons/blade-spinner.png" alt="" className="absolute w-20 h-20 object-contain" style={{ bottom: "30%", right: "15%", transform: "rotate(-30deg)" }} />
-          <img src="/images/weapons/beat-blaster.png" alt="" className="absolute w-24 h-24 object-contain" style={{ bottom: "10%", left: "12%", transform: "rotate(60deg)" }} />
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
+          {/* Weapons - Left Side */}
+          <img src="/images/weapons/bouncer-gun.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "5%", left: "3%", transform: "rotate(15deg)" }} />
+          <img src="/images/weapons/crossbow.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "20%", left: "8%", transform: "rotate(45deg)" }} />
+          <img src="/images/weapons/beat-blaster.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "38%", left: "2%", transform: "rotate(60deg)" }} />
+          <img src="/images/weapons/blade-spinner.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "55%", left: "10%", transform: "rotate(-30deg)" }} />
+          <img src="/images/weapons/cannon.png" alt="" className="absolute w-32 h-32 object-contain" style={{ top: "72%", left: "5%", transform: "rotate(-20deg)" }} />
+          <img src="/images/weapons/crossbow.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "88%", left: "8%", transform: "rotate(35deg)" }} />
 
-          {/* Tank Bodies */}
-          <img src="/images/bodies/bandit.png" alt="" className="absolute w-32 h-32 object-contain" style={{ top: "15%", right: "20%", transform: "rotate(-15deg)" }} />
-          <img src="/images/bodies/crab.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "60%", right: "5%", transform: "rotate(25deg)" }} />
-          <img src="/images/bodies/chicken.png" alt="" className="absolute w-24 h-24 object-contain" style={{ bottom: "20%", right: "25%", transform: "rotate(-40deg)" }} />
-          <img src="/images/bodies/flea.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "40%", left: "15%", transform: "rotate(10deg)" }} />
-          <img src="/images/bodies/blink.png" alt="" className="absolute w-26 h-26 object-contain" style={{ bottom: "15%", left: "20%", transform: "rotate(-25deg)" }} />
+          {/* Weapons - Right Side */}
+          <img src="/images/weapons/cannon.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "8%", right: "5%", transform: "rotate(-25deg)" }} />
+          <img src="/images/weapons/bouncer-gun.png" alt="" className="absolute w-22 h-22 object-contain" style={{ top: "28%", right: "3%", transform: "rotate(40deg)" }} />
+          <img src="/images/weapons/blade-spinner.png" alt="" className="absolute w-26 h-26 object-contain" style={{ top: "45%", right: "8%", transform: "rotate(-15deg)" }} />
+          <img src="/images/weapons/beat-blaster.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "62%", right: "2%", transform: "rotate(55deg)" }} />
+          <img src="/images/weapons/crossbow.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "78%", right: "6%", transform: "rotate(-45deg)" }} />
+          <img src="/images/weapons/cannon.png" alt="" className="absolute w-18 h-18 object-contain" style={{ top: "92%", right: "4%", transform: "rotate(20deg)" }} />
+
+          {/* Tank Bodies - Scattered */}
+          <img src="/images/bodies/bandit.png" alt="" className="absolute w-32 h-32 object-contain" style={{ top: "12%", right: "18%", transform: "rotate(-15deg)" }} />
+          <img src="/images/bodies/crab.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "32%", left: "18%", transform: "rotate(25deg)" }} />
+          <img src="/images/bodies/chicken.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "48%", right: "20%", transform: "rotate(-40deg)" }} />
+          <img src="/images/bodies/flea.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "65%", left: "22%", transform: "rotate(10deg)" }} />
+          <img src="/images/bodies/blink.png" alt="" className="absolute w-26 h-26 object-contain" style={{ top: "82%", right: "22%", transform: "rotate(-25deg)" }} />
+          <img src="/images/bodies/bandit.png" alt="" className="absolute w-22 h-22 object-contain" style={{ top: "95%", left: "25%", transform: "rotate(30deg)" }} />
+          <img src="/images/bodies/crab.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "18%", left: "25%", transform: "rotate(-35deg)" }} />
+          <img src="/images/bodies/chicken.png" alt="" className="absolute w-18 h-18 object-contain" style={{ top: "75%", right: "30%", transform: "rotate(50deg)" }} />
         </div>
 
         <div className="text-center mb-16 relative z-10">
