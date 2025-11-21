@@ -49,13 +49,20 @@ export default function Footer() {
 
           {/* Disclaimer */}
           <div className="border-t border-cyan-500/10 pt-6 text-center text-gray-400 text-sm">
-            <p className="mb-2 font-semibold text-orange-400">
-              ⚠️ Not Affiliated with GAMEDIA
+            <p className="mb-3 text-cyan-400 font-semibold">
+              🕷️ Community Fan Site for Spider Tanks
             </p>
-            <p className="mb-2">
-              This is a community-created fan site and is not affiliated with, endorsed by, or associated with GAMEDIA or Spider Tanks.
+            <p className="mb-2 leading-relaxed">
+              This is an unofficial fan-made tool created with respect and appreciation for Spider Tanks and GAMEDIA.
+              We aim to help the Spider Tanks community with tank building, strategy planning, and game resources.
             </p>
-            <p>All trademarks and copyrights belong to their respective owners.</p>
+            <p className="mb-2 text-xs leading-relaxed">
+              Spider Tanks™, all tank designs, game assets, and related content are the property of GAMEDIA and Gala Games.
+              All NFT assets displayed are sourced from publicly available metadata on Immutable X.
+            </p>
+            <p className="text-xs text-gray-500">
+              Not officially affiliated with, endorsed by, or sponsored by GAMEDIA. All trademarks and copyrights belong to their respective owners.
+            </p>
           </div>
         </div>
       </div>
