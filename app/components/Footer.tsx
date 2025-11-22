@@ -52,6 +52,18 @@ export default function Footer() {
             <p className="mb-3 text-cyan-400 font-semibold">
               🕷️ Community Fan Site for Spider Tanks
             </p>
+            <p className="mb-3">
+              <a
+                href="https://x.com/GAMEDIA_GAMES"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
+                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                <span>Follow GAMEDIA on X/Twitter</span>
+                <span>→</span>
+              </a>
+            </p>
             <p className="mb-2 leading-relaxed">
               This is an unofficial fan-made tool created with respect and appreciation for Spider Tanks and GAMEDIA.
               We aim to help the Spider Tanks community with tank building, strategy planning, and game resources.
