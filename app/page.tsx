@@ -172,18 +172,31 @@ export default function Home() {
             </p>
 
             {/* Download Buttons */}
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-3 gap-4">
               <a
                 href="https://play.google.com/store/apps/details?id=nl.gamedia.spidertanks&pli=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHoverSound}
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 border border-green-500 rounded-lg text-white font-bold text-lg hover:from-green-500 hover:to-green-600 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-600 to-green-700 border border-green-500 rounded-lg text-white font-bold hover:from-green-500 hover:to-green-600 transition-all transform hover:scale-105"
               >
                 <span className="text-2xl">📱</span>
                 <div className="text-left">
-                  <div>Download on Android</div>
-                  <div className="text-xs text-green-200 font-normal">Mobile • Available Now!</div>
+                  <div className="text-base">Android</div>
+                  <div className="text-xs text-green-200 font-normal">Google Play • Now!</div>
+                </div>
+              </a>
+              <a
+                href="https://apps.apple.com/us/app/spider-tanks-cores-of-chaos/id6746262642"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
+                className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 border border-blue-500 rounded-lg text-white font-bold hover:from-blue-500 hover:to-blue-600 transition-all transform hover:scale-105"
+              >
+                <span className="text-2xl">🍎</span>
+                <div className="text-left">
+                  <div className="text-base">iOS</div>
+                  <div className="text-xs text-blue-200 font-normal">App Store • Now!</div>
                 </div>
               </a>
               <a
@@ -191,12 +204,12 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHoverSound}
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 border border-gray-600 rounded-lg text-white font-bold text-lg hover:from-gray-600 hover:to-gray-800 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-gray-700 to-gray-900 border border-gray-600 rounded-lg text-white font-bold hover:from-gray-600 hover:to-gray-800 transition-all transform hover:scale-105"
               >
                 <span className="text-2xl">🎮</span>
                 <div className="text-left">
-                  <div>Download on Epic Games</div>
-                  <div className="text-xs text-gray-400 font-normal">Free-to-Play • Available December 8th</div>
+                  <div className="text-base">PC</div>
+                  <div className="text-xs text-gray-400 font-normal">Epic Games • Dec 8th</div>
                 </div>
               </a>
             </div>
