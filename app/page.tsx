@@ -171,14 +171,27 @@ export default function Home() {
               <span className="text-cyan-400 font-semibold">Epic Games</span>
             </p>
 
-            {/* Epic Games Download Button */}
-            <div className="text-center">
+            {/* Download Buttons */}
+            <div className="grid md:grid-cols-2 gap-4">
+              <a
+                href="https://play.google.com/store/apps/details?id=nl.gamedia.spidertanks&pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 border border-green-500 rounded-lg text-white font-bold text-lg hover:from-green-500 hover:to-green-600 transition-all transform hover:scale-105"
+              >
+                <span className="text-2xl">📱</span>
+                <div className="text-left">
+                  <div>Download on Android</div>
+                  <div className="text-xs text-green-200 font-normal">Mobile • Available Now!</div>
+                </div>
+              </a>
               <a
                 href="https://store.epicgames.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHoverSound}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 border border-gray-600 rounded-lg text-white font-bold text-lg hover:from-gray-600 hover:to-gray-800 transition-all transform hover:scale-105"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-gray-700 to-gray-900 border border-gray-600 rounded-lg text-white font-bold text-lg hover:from-gray-600 hover:to-gray-800 transition-all transform hover:scale-105"
               >
                 <span className="text-2xl">🎮</span>
                 <div className="text-left">
