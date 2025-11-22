@@ -217,6 +217,72 @@ export default function Home() {
           </div>
         </div>
 
+        {/* What's New Section */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <h2 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            What's New in Cores of Chaos
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            {/* Free to Play */}
+            <div className="bg-gradient-to-b from-green-500/10 to-transparent border border-green-500/30 rounded-lg p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-4xl">🎮</span>
+                <h3 className="text-2xl font-bold text-green-400">Free to Play for Everyone</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                No barriers to entry. No complicated web3 accounts required. No need to own rare digital assets.
+              </p>
+              <p className="text-gray-400 text-sm">
+                Jump straight into the action on your favorite platform and start battling immediately!
+              </p>
+            </div>
+
+            {/* Progression System */}
+            <div className="bg-gradient-to-b from-purple-500/10 to-transparent border border-purple-500/30 rounded-lg p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-4xl">🏆</span>
+                <h3 className="text-2xl font-bold text-purple-400">New Progression System</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Unlock every tank body and weapon by conquering the competition.
+              </p>
+              <p className="text-gray-400 text-sm">
+                Prove you're the best in the solar system and customize your arsenal!
+              </p>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Tank Variations */}
+            <div className="bg-gradient-to-b from-cyan-500/10 to-transparent border border-cyan-500/30 rounded-lg p-6">
+              <div className="text-3xl mb-3 text-center">⚙️</div>
+              <h3 className="text-xl font-bold text-cyan-400 mb-2 text-center">Tank Variations</h3>
+              <p className="text-gray-400 text-sm text-center">
+                Customize your tank with unique variations for personalized destruction and death-defying escapes.
+              </p>
+            </div>
+
+            {/* New Mobility */}
+            <div className="bg-gradient-to-b from-blue-500/10 to-transparent border border-blue-500/30 rounded-lg p-6">
+              <div className="text-3xl mb-3 text-center">🚀</div>
+              <h3 className="text-xl font-bold text-blue-400 mb-2 text-center">Enhanced Mobility</h3>
+              <p className="text-gray-400 text-sm text-center">
+                New mobility options that will completely change the way you see the arena.
+              </p>
+            </div>
+
+            {/* Arena Forces */}
+            <div className="bg-gradient-to-b from-orange-500/10 to-transparent border border-orange-500/30 rounded-lg p-6">
+              <div className="text-3xl mb-3 text-center">⚡</div>
+              <h3 className="text-xl font-bold text-orange-400 mb-2 text-center">Arena Hazards</h3>
+              <p className="text-gray-400 text-sm text-center">
+                Powerful forces now hide within the arenas. Surviving other tankers may not be enough!
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Official Trailer */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-lg p-6">
