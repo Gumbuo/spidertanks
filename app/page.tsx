@@ -167,8 +167,8 @@ export default function Home() {
               </div>
             </div>
             <p className="text-center text-gray-400 mt-6 mb-6">
-              Until Spider Tanks launches on <span className="text-cyan-400 font-semibold">Immutable X</span> and{" "}
-              <span className="text-cyan-400 font-semibold">Epic Games</span>
+              Until Spider Tanks launches on <span className="text-cyan-400 font-semibold">Epic Games</span> for{" "}
+              <span className="text-cyan-400 font-semibold">PC and Mac</span>
             </p>
 
             {/* Download Buttons */}
