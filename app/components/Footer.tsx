@@ -57,7 +57,7 @@ export default function Footer() {
               We aim to help the Spider Tanks community with tank building, strategy planning, and game resources.
             </p>
             <p className="mb-2 text-xs leading-relaxed">
-              Spider Tanks™, all tank designs, game assets, and related content are the property of GAMEDIA and Gala Games.
+              Spider Tanks™, all tank designs, game assets, and related content are the property of GAMEDIA.
               All NFT assets displayed are sourced from publicly available metadata on Immutable X.
             </p>
             <p className="text-xs text-gray-500">
