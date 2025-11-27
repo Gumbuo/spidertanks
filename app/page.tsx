@@ -22,7 +22,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const launchDate = new Date("2025-12-08T11:00:00Z").getTime();
+    const launchDate = new Date("2024-12-08T11:00:00Z").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -67,6 +67,7 @@ export default function Home() {
             <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-cyan-500">
               <video
                 autoPlay
+                muted
                 controls
                 className="w-full h-auto"
                 onEnded={closeVideo}
@@ -416,7 +417,7 @@ export default function Home() {
             Choose from a wide variety of tank bodies, weapons, and abilities to create your perfect loadout.
           </p>
           <p className="text-gray-300 leading-relaxed mb-6">
-            Launching December 8th, 2025 on <span className="text-orange-400 font-semibold">Immutable X</span> blockchain
+            Launching December 8th, 2024 on <span className="text-orange-400 font-semibold">Immutable X</span> blockchain
             and available for download on <span className="text-orange-400 font-semibold">Epic Games</span>.
             Earn Arachnium through victories and quests to upgrade your tanks and dominate the battlefield.
           </p>
