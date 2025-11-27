@@ -71,15 +71,6 @@ export default function Home() {
       {showVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-95 backdrop-blur-sm">
           <div className="relative w-full max-w-5xl mx-4">
-            {/* Close Button */}
-            <button
-              onClick={closeVideo}
-              className="absolute -top-12 right-0 text-white hover:text-cyan-400 transition-colors text-4xl font-bold z-10"
-              aria-label="Close video"
-            >
-              ✕
-            </button>
-
             {/* Video Container */}
             <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-cyan-500">
               <video
@@ -92,16 +83,6 @@ export default function Home() {
                 <source src="/Fox_Fights_Alien_Wins_Video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-            </div>
-
-            {/* Skip Button */}
-            <div className="text-center mt-4">
-              <button
-                onClick={closeVideo}
-                className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-bold transition-colors text-black"
-              >
-                Skip Ad →
-              </button>
             </div>
           </div>
         </div>
