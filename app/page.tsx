@@ -8,12 +8,18 @@ import { useHoverSound } from "./hooks/useHoverSound";
 
 export default function Home() {
   const playHoverSound = useHoverSound();
+  const [showVideo, setShowVideo] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
+
+  // Show video popup on page load
+  useEffect(() => {
+    setShowVideo(true);
+  }, []);
 
   useEffect(() => {
     const launchDate = new Date("2025-12-08T11:00:00Z").getTime();
@@ -38,8 +44,51 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
+  const closeVideo = () => {
+    setShowVideo(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white">
+      {/* Video Popup Modal */}
+      {showVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-95 backdrop-blur-sm">
+          <div className="relative w-full max-w-5xl mx-4">
+            {/* Close Button */}
+            <button
+              onClick={closeVideo}
+              className="absolute -top-12 right-0 text-white hover:text-cyan-400 transition-colors text-4xl font-bold z-10"
+              aria-label="Close video"
+            >
+              ✕
+            </button>
+
+            {/* Video Container */}
+            <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-cyan-500">
+              <video
+                autoPlay
+                controls
+                className="w-full h-auto"
+                onEnded={closeVideo}
+              >
+                <source src="/Fox_Fights_Alien_Wins_Video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            {/* Skip Button */}
+            <div className="text-center mt-4">
+              <button
+                onClick={closeVideo}
+                className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-bold transition-colors text-black"
+              >
+                Skip Ad →
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       <header className="border-b border-cyan-500/20 bg-black/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
