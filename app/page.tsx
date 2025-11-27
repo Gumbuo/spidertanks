@@ -9,6 +9,7 @@ import { useHoverSound } from "./hooks/useHoverSound";
 export default function Home() {
   const playHoverSound = useHoverSound();
   const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useState<HTMLVideoElement | null>(null);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -20,6 +21,22 @@ export default function Home() {
   useEffect(() => {
     setShowVideo(true);
   }, []);
+
+  // Handle video autoplay with unmute
+  useEffect(() => {
+    if (showVideo && videoRef[0]) {
+      const video = videoRef[0];
+      // Start muted for autoplay
+      video.muted = true;
+      video.play().then(() => {
+        // Once playing, unmute it
+        video.muted = false;
+      }).catch(() => {
+        // If autoplay fails, keep it muted
+        video.muted = true;
+      });
+    }
+  }, [showVideo, videoRef]);
 
   useEffect(() => {
     const launchDate = new Date("2025-12-08T11:00:00Z").getTime();
@@ -66,7 +83,7 @@ export default function Home() {
             {/* Video Container */}
             <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-cyan-500">
               <video
-                autoPlay
+                ref={(el) => videoRef[1](el)}
                 controls
                 className="w-full h-auto"
                 onEnded={closeVideo}
