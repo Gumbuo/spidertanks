@@ -84,6 +84,16 @@ export default function Home() {
                 Your browser does not support the video tag.
               </video>
             </div>
+
+            {/* Play Button */}
+            <div className="text-center mt-4">
+              <button
+                onClick={() => videoRef.current?.play()}
+                className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-bold transition-colors text-black"
+              >
+                ▶ Play Video
+              </button>
+            </div>
           </div>
         </div>
       )}
