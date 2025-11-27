@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Comments from "./components/Comments";
 import Footer from "./components/Footer";
 import TankBuilder from "./components/TankBuilder";
@@ -9,7 +9,7 @@ import { useHoverSound } from "./hooks/useHoverSound";
 export default function Home() {
   const playHoverSound = useHoverSound();
   const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useState<HTMLVideoElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -24,8 +24,8 @@ export default function Home() {
 
   // Handle video autoplay with unmute
   useEffect(() => {
-    if (showVideo && videoRef[0]) {
-      const video = videoRef[0];
+    if (showVideo && videoRef.current) {
+      const video = videoRef.current;
       // Start muted for autoplay
       video.muted = true;
       video.play().then(() => {
@@ -36,7 +36,7 @@ export default function Home() {
         video.muted = true;
       });
     }
-  }, [showVideo, videoRef]);
+  }, [showVideo]);
 
   useEffect(() => {
     const launchDate = new Date("2025-12-08T11:00:00Z").getTime();
@@ -83,7 +83,7 @@ export default function Home() {
             {/* Video Container */}
             <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-cyan-500">
               <video
-                ref={(el) => videoRef[1](el)}
+                ref={videoRef}
                 controls
                 className="w-full h-auto"
                 onEnded={closeVideo}
