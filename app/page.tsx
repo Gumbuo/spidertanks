@@ -84,6 +84,7 @@ export default function Home() {
             <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-cyan-500">
               <video
                 ref={videoRef}
+                autoPlay
                 controls
                 className="w-full h-auto"
                 onEnded={closeVideo}
