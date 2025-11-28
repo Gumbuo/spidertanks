@@ -6,9 +6,16 @@ import Footer from "./components/Footer";
 import TankBuilder from "./components/TankBuilder";
 import { useHoverSound } from "./hooks/useHoverSound";
 
+// Add more videos to this array as needed
+const AD_VIDEOS = [
+  "/Fox_Fights_Alien_Wins_Video.mp4",
+  "/can_you_make_these_character.mp4",
+];
+
 export default function Home() {
   const playHoverSound = useHoverSound();
   const [showVideo, setShowVideo] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState<string>("");
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -17,8 +24,25 @@ export default function Home() {
     seconds: 0,
   });
 
-  // Show video popup on page load
+  // Show video popup on page load with rotation
   useEffect(() => {
+    // Get last played video from localStorage to avoid repeats
+    const lastPlayed = localStorage.getItem("lastVideoAd");
+
+    // Filter out the last played video if we have more than 1
+    let availableVideos = AD_VIDEOS;
+    if (lastPlayed && AD_VIDEOS.length > 1) {
+      availableVideos = AD_VIDEOS.filter(v => v !== lastPlayed);
+    }
+
+    // Randomly select from available videos
+    const randomIndex = Math.floor(Math.random() * availableVideos.length);
+    const selected = availableVideos[randomIndex];
+
+    // Save this as last played
+    localStorage.setItem("lastVideoAd", selected);
+
+    setSelectedVideo(selected);
     setShowVideo(true);
   }, []);
 
@@ -80,7 +104,7 @@ export default function Home() {
                 className="w-full h-auto"
                 onEnded={closeVideo}
               >
-                <source src="/Fox_Fights_Alien_Wins_Video.mp4" type="video/mp4" />
+                {selectedVideo && <source src={selectedVideo} type="video/mp4" />}
                 Your browser does not support the video tag.
               </video>
             </div>
