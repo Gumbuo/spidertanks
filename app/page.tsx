@@ -13,6 +13,7 @@ const AD_VIDEOS = [
   "/Fox_and_Alien_Battle_Video.mp4",
   "/Tank_Battle_Video_Generation.mp4",
   "/Tank_Battle_Video_Generation_2.mp4",
+  "/Pixel_Tank_Alien_Invasion_Game.mp4",
 ];
 
 export default function Home() {
