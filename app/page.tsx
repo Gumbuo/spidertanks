@@ -10,6 +10,7 @@ import { useHoverSound } from "./hooks/useHoverSound";
 const AD_VIDEOS = [
   "/Fox_Fights_Alien_Wins_Video.mp4",
   "/can_you_make_these_character.mp4",
+  "/Fox_and_Alien_Battle_Video.mp4",
 ];
 
 export default function Home() {
