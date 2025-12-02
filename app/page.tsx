@@ -12,6 +12,7 @@ const AD_VIDEOS = [
   "/can_you_make_these_character.mp4",
   "/Fox_and_Alien_Battle_Video.mp4",
   "/Tank_Battle_Video_Generation.mp4",
+  "/Tank_Battle_Video_Generation_2.mp4",
 ];
 
 export default function Home() {
