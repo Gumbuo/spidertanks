@@ -1,6 +1,6 @@
 "use client";
 
-import Comments from "../components/Comments";
+
 import Footer from "../components/Footer";
 import { useHoverSound } from "../hooks/useHoverSound";
 
@@ -196,13 +196,6 @@ export default function IMXRewardsPage() {
             ← Back to Home
           </a>
         </div>
-
-        {/* Comments Section */}
-        <Comments
-          url="https://spidertanks.xyz/builder"
-          identifier="imx-rewards"
-          title="Spider Tanks Guide - Immutable Play Rewards"
-        />
       </div>
 
       <Footer />

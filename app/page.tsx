@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import Comments from "./components/Comments";
+
 import Footer from "./components/Footer";
 import TankBuilder from "./components/TankBuilder";
 import { useHoverSound } from "./hooks/useHoverSound";
@@ -100,6 +100,8 @@ export default function Home() {
       {showVideo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-95 backdrop-blur-sm">
           <div className="relative w-full max-w-5xl mx-4">
+            {/* Close Button */}
+            <button onClick={closeVideo} className="absolute -top-2 -right-2 z-10 w-10 h-10 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl transition-colors shadow-lg">X</button>
             {/* Video Container */}
             <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-cyan-500">
               <video
@@ -474,15 +476,6 @@ export default function Home() {
         </div>
 
       </main>
-
-      {/* Comments Section - Below Main Content */}
-      <div className="container mx-auto px-4 pb-12">
-        <Comments
-          url="https://spidertanks.xyz"
-          identifier="home"
-          title="Spider Tanks Guide - Home"
-        />
-      </div>
 
       <Footer />
     </div>

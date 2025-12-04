@@ -1,6 +1,6 @@
 "use client";
 
-import Comments from "../components/Comments";
+
 import Footer from "../components/Footer";
 
 export default function GuidesPage() {
@@ -124,13 +124,6 @@ export default function GuidesPage() {
             </a>
           </div>
         </div>
-
-        {/* Comments Section */}
-        <Comments
-          url="https://spidertanks.xyz/guides"
-          identifier="guides"
-          title="Spider Tanks Guide - Strategy Guides"
-        />
       </div>
 
       <Footer />

@@ -1,7 +1,7 @@
 "use client";
 
 import maps from "../data/maps.json";
-import Comments from "../components/Comments";
+
 import Footer from "../components/Footer";
 import { useHoverSound } from "../hooks/useHoverSound";
 
@@ -134,13 +134,6 @@ export default function MapsPage() {
             ← Back to Home
           </a>
         </div>
-
-        {/* Comments Section */}
-        <Comments
-          url="https://spidertanks.xyz/maps"
-          identifier="maps"
-          title="Spider Tanks Guide - Battle Maps"
-        />
       </div>
 
       <Footer />

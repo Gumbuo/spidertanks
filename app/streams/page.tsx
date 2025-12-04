@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Comments from "../components/Comments";
+
 import Footer from "../components/Footer";
 import { useHoverSound } from "../hooks/useHoverSound";
 
@@ -265,13 +265,6 @@ export default function StreamsPage() {
             ← Back to Home
           </a>
         </div>
-
-        {/* Comments Section */}
-        <Comments
-          url="https://spidertanks.xyz/streams"
-          identifier="streams"
-          title="Spider Tanks Guide - Community Streams"
-        />
       </div>
 
       <Footer />

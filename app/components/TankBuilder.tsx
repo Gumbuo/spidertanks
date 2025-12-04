@@ -99,30 +99,6 @@ export default function TankBuilder() {
             Tank Builder
           </h1>
 
-          {/* NFT Tank Parts Info */}
-          <div className="max-w-3xl mx-auto mb-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-lg p-6">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-2xl">💎</span>
-              <h3 className="text-lg font-bold text-purple-400">Own Your Tank Parts as NFTs</h3>
-            </div>
-            <p className="text-gray-300 text-sm mb-4 text-center">
-              All tank bodies, weapons, and abilities are available as NFTs on <span className="text-purple-400 font-semibold">Immutable X</span>.
-              Buy, sell, and trade parts to build your perfect loadout!
-            </p>
-            <div className="text-center">
-              <a
-                href="https://market.immutable.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={playHoverSound}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition-colors"
-              >
-                <span>🛒</span>
-                Browse NFT Parts on Immutable
-              </a>
-              <p className="text-xs text-purple-300 mt-2">Available after December 8th launch</p>
-            </div>
-          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Parts Library */}

@@ -12,17 +12,26 @@ export default function Footer() {
           {/* Other Projects */}
           <div className="mb-6 text-center">
             <h3 className="text-lg font-bold text-cyan-400 mb-4">Check Out Our Other Projects</h3>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid md:grid-cols-4 gap-4">
               <a
-                href="https://gumbuo.io"
+                href="https://univershole.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
                 onMouseEnter={playHoverSound}
-                className="px-4 py-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/20 transition-colors block"
+                className="px-4 py-3 bg-purple-500/10 border border-purple-500/30 rounded-lg hover:bg-purple-500/20 transition-colors block"
               >
-                <div className="text-cyan-400 font-bold">🎮 Gumbuo.io</div>
-                <div className="text-gray-400 text-xs mt-1">Alien Points Economy</div>
-                <div className="text-orange-400 text-xs mt-1">(NO LIQUIDITY TOKEN - don't buy, testing smart contracts)</div>
+                <div className="text-purple-400 font-bold">* UniversHole.xyz</div>
+                <div className="text-gray-400 text-xs mt-1">Pixel Art Sales</div>
+              </a>
+              <a
+                href="https://univershole.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                onMouseEnter={playHoverSound}
+                className="px-4 py-3 bg-green-500/10 border border-green-500/30 rounded-lg hover:bg-green-500/20 transition-colors block"
+              >
+                <div className="text-green-400 font-bold">* UniversHole.com</div>
+                <div className="text-gray-400 text-xs mt-1">Cool Online Tools</div>
               </a>
               <a
                 href="https://gamehole.ink"
@@ -31,7 +40,7 @@ export default function Footer() {
                 onMouseEnter={playHoverSound}
                 className="px-4 py-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/20 transition-colors block"
               >
-                <div className="text-cyan-400 font-bold">🎯 Gamehole.ink</div>
+                <div className="text-cyan-400 font-bold">~ Gamehole.ink</div>
                 <div className="text-gray-400 text-xs mt-1">Free Game Hosting</div>
               </a>
               <a
@@ -41,7 +50,7 @@ export default function Footer() {
                 onMouseEnter={playHoverSound}
                 className="px-4 py-3 bg-cyan-500/10 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/20 transition-colors block"
               >
-                <div className="text-cyan-400 font-bold">🕹️ Gamehole.games</div>
+                <div className="text-cyan-400 font-bold">! Gamehole.games</div>
                 <div className="text-gray-400 text-xs mt-1">Free Games to Play</div>
               </a>
             </div>
@@ -50,7 +59,7 @@ export default function Footer() {
           {/* Disclaimer */}
           <div className="border-t border-cyan-500/10 pt-6 text-center text-gray-400 text-sm">
             <p className="mb-3 text-cyan-400 font-semibold">
-              🕷️ Community Fan Site for Spider Tanks
+              Community Fan Site for Spider Tanks
             </p>
             <p className="mb-3">
               <a
@@ -69,7 +78,7 @@ export default function Footer() {
               We aim to help the Spider Tanks community with tank building, strategy planning, and game resources.
             </p>
             <p className="mb-2 text-xs leading-relaxed">
-              Spider Tanks™, all tank designs, game assets, and related content are the property of GAMEDIA.
+              Spider Tanks, all tank designs, game assets, and related content are the property of GAMEDIA.
               All tank images are sourced from the publicly available Spider Tanks Fandom Wiki.
             </p>
             <p className="text-xs text-gray-500">
