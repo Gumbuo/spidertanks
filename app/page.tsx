@@ -301,6 +301,23 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Team Section */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-lg p-6 text-center">
+            <h3 className="text-2xl font-bold text-cyan-400 mb-4">The 5 Who Shaped This Guide</h3>
+            <div className="rounded-lg overflow-hidden mb-4">
+              <img
+                src="/images/team.jpg"
+                alt="The team behind Spider Tanks Guide"
+                className="w-full max-w-2xl mx-auto rounded-lg"
+              />
+            </div>
+            <p className="text-gray-400 text-sm">
+              Built by the community, for the community.
+            </p>
+          </div>
+        </div>
+
       </main>
 
       <Footer />
