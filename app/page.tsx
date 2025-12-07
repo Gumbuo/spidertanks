@@ -271,6 +271,25 @@ export default function Home() {
           <TankBuilder />
         </div>
 
+        {/* Stream Submission CTA */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-lg p-6 text-center">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <span className="text-2xl">📺</span>
+              <h3 className="text-2xl font-bold text-orange-400">Want Your Stream in Our Strategy Guides?</h3>
+            </div>
+            <p className="text-gray-300 mb-4">
+              Submit your stream URL and get featured in our community guides!
+            </p>
+            <a
+              href="/streams"
+              onMouseEnter={playHoverSound}
+              className="inline-block px-6 py-3 bg-orange-500 text-black font-bold rounded-lg hover:bg-orange-400 transition-colors"
+            >
+              Submit to Streams →
+            </a>
+          </div>
+        </div>
 
       </main>
 
