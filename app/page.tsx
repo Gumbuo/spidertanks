@@ -8,6 +8,7 @@ import { useHoverSound } from "./hooks/useHoverSound";
 
 export default function Home() {
   const playHoverSound = useHoverSound();
+  const [showSplash, setShowSplash] = useState(true);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -40,6 +41,26 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white">
+      {/* Splash Screen */}
+      {showSplash && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
+          <div
+            className="text-center cursor-pointer p-12 rounded-2xl border-4 border-cyan-500 bg-gradient-to-b from-gray-900 to-black hover:border-cyan-400 transition-all transform hover:scale-105"
+            onClick={() => setShowSplash(false)}
+          >
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
+              SPIDER TANKS
+            </h1>
+            <p className="text-3xl md:text-5xl font-bold text-white mb-8">
+              December 8th
+            </p>
+            <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xl rounded-lg transition-colors">
+              Enter Site
+            </button>
+          </div>
+        </div>
+      )}
+
       <header className="border-b border-cyan-500/20 bg-black/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -138,17 +159,19 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-red-400">Watch the Official Trailer</h2>
             </div>
             <div className="aspect-video rounded-lg overflow-hidden bg-black">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/5Tyqhqp3GYI?autoplay=1&mute=1&si=n__1tK32fqHmPqHs"
-                title="Spider Tanks: Cores of Chaos - Official Trailer"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="w-full h-full"
-              />
+              {!showSplash && (
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/5Tyqhqp3GYI?autoplay=1&si=n__1tK32fqHmPqHs"
+                  title="Spider Tanks: Cores of Chaos - Official Trailer"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              )}
             </div>
           </div>
         </div>
