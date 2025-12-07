@@ -41,18 +41,7 @@ export default function GuidesPage() {
         { title: "Advanced Movement Techniques", status: "Available Dec 8th" },
       ],
     },
-    {
-      id: "meta",
-      title: "Meta & Economy",
-      icon: "💎",
-      color: "from-orange-500/20 to-yellow-500/20 border-orange-500/30",
-      guides: [
-        { title: "Current Meta Analysis", status: "Available Dec 8th" },
-        { title: "Earning Arachnium Guide", status: "Available Dec 8th" },
-        { title: "NFT Trading Tips", status: "Available Dec 8th" },
-        { title: "Progression & Leveling", status: "Available Dec 8th" },
-      ],
-    },
+
   ];
 
   return (
@@ -67,7 +56,7 @@ export default function GuidesPage() {
             Master the arena with comprehensive guides and strategies
           </p>
           <div className="inline-block px-4 py-2 bg-orange-500/20 border border-orange-500/30 rounded-lg text-orange-400">
-            📅 Full guides available after December 8th launch
+            📅 Full more accurate guides will start developing after December 8th launch!!!
           </div>
         </div>
 
@@ -102,27 +91,14 @@ export default function GuidesPage() {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="max-w-3xl mx-auto mt-12 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-8 text-center">
-          <h3 className="text-2xl font-bold text-cyan-400 mb-3">Want to Contribute?</h3>
-          <p className="text-gray-300 mb-4">
-            After the December 8th launch, we'll be adding comprehensive guides based on real gameplay.
-            Check back here for expert strategies, tips, and meta analysis!
-          </p>
-          <div className="flex gap-4 justify-center">
-            <a
-              href="/builder"
-              className="px-6 py-3 bg-cyan-500 text-black font-bold rounded-lg hover:bg-cyan-400 transition-colors"
-            >
-              Try Tank Builder
-            </a>
-            <a
-              href="/"
-              className="px-6 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/30 transition-colors"
-            >
-              Back to Home
-            </a>
-          </div>
+        {/* Back Button */}
+        <div className="text-center mt-12">
+          <a
+            href="/"
+            className="inline-block px-6 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/30 transition-colors"
+          >
+            ← Back to Home
+          </a>
         </div>
       </div>
 
