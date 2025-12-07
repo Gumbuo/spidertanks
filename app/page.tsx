@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import Footer from "./components/Footer";
 import TankBuilder from "./components/TankBuilder";
+import CommentSection from "./components/CommentSection";
 import { useHoverSound } from "./hooks/useHoverSound";
 
 export default function Home() {
@@ -316,6 +317,11 @@ export default function Home() {
               Built by the community, for the community.
             </p>
           </div>
+        </div>
+
+        {/* Comment Section */}
+        <div className="mb-16">
+          <CommentSection />
         </div>
 
       </main>
