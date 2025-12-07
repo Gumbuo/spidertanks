@@ -6,23 +6,14 @@ import Footer from "./components/Footer";
 import TankBuilder from "./components/TankBuilder";
 import { useHoverSound } from "./hooks/useHoverSound";
 
-// YouTube trailer video ID
-const YOUTUBE_TRAILER_ID = "5Tyqhqp3GYI";
-
 export default function Home() {
   const playHoverSound = useHoverSound();
-  const [showVideo, setShowVideo] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
-
-  // Show YouTube trailer popup on page load
-  useEffect(() => {
-    setShowVideo(true);
-  }, []);
 
   useEffect(() => {
     const launchDate = new Date("2025-12-08T11:00:00Z").getTime();
@@ -47,46 +38,8 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  const closeVideo = () => {
-    setShowVideo(false);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white">
-      {/* YouTube Trailer Popup Modal */}
-      {showVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-95 backdrop-blur-sm">
-          <div className="relative w-full max-w-5xl mx-4">
-            {/* Close Button */}
-            <button onClick={closeVideo} className="absolute -top-2 -right-2 z-10 w-10 h-10 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl transition-colors shadow-lg">X</button>
-            {/* YouTube Video Container */}
-            <div className="relative rounded-xl overflow-hidden shadow-2xl border-4 border-cyan-500 aspect-video">
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${YOUTUBE_TRAILER_ID}?autoplay=1&rel=0`}
-                title="Spider Tanks: Cores of Chaos - Official Trailer"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-
-            {/* Skip Button */}
-            <div className="text-center mt-4">
-              <button
-                onClick={closeVideo}
-                className="px-8 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-bold transition-colors text-black"
-              >
-                Skip Trailer
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
       <header className="border-b border-cyan-500/20 bg-black/50 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -188,7 +141,7 @@ export default function Home() {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/5Tyqhqp3GYI?si=n__1tK32fqHmPqHs"
+                src="https://www.youtube.com/embed/5Tyqhqp3GYI?autoplay=1&mute=1&si=n__1tK32fqHmPqHs"
                 title="Spider Tanks: Cores of Chaos - Official Trailer"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
