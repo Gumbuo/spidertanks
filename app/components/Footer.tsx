@@ -54,6 +54,9 @@ export default function Footer() {
                 <div className="text-gray-400 text-xs mt-1">Free Games to Play</div>
               </a>
             </div>
+            <p className="text-xs text-gray-500 mt-4">
+              These projects have no relation to Spider Tanks or GAMEDIA. For any issues, contact Foxhole, not GAMEDIA.
+            </p>
           </div>
 
           {/* Disclaimer */}
