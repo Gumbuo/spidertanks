@@ -42,35 +42,9 @@ export default function MapsPage() {
           <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Battle Maps
           </h1>
-          <p className="text-xl text-gray-400 mb-6">
+          <p className="text-xl text-gray-400">
             Explore the 12 battlefields across 5 planets in Spider Tanks
           </p>
-
-          {/* NFT Maps Info */}
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-lg p-6">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <span className="text-2xl">💎</span>
-              <h3 className="text-xl font-bold text-purple-400">Player-Owned NFT Maps</h3>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              5 maps are available as NFTs on <span className="text-purple-400 font-semibold">Immutable X</span>:
-              Safe Haven, Arctic Base, Dragon Cave, Jungle Temple, and Death Canyon.
-              Map owners earn rewards when matches are played on their maps!
-            </p>
-            <div className="text-center">
-              <a
-                href="https://market.immutable.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={playHoverSound}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-purple-500 text-white font-bold rounded-lg hover:bg-purple-600 transition-colors"
-              >
-                <span>🛒</span>
-                View on Immutable Marketplace
-              </a>
-              <p className="text-xs text-purple-300 mt-2">Available after December 8th launch</p>
-            </div>
-          </div>
         </div>
 
         {/* Maps by Planet */}
