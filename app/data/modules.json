@@ -1,74 +1,34 @@
 [
   {
-    "id": "module-armor-1",
-    "name": "Armor Module Alpha",
-    "type": "defensive",
-    "armorBonus": 500,
-    "speedBonus": 0,
-    "energyBonus": 0,
-    "damageBonus": 0,
-    "rangeBonus": 0,
-    "description": "Increases armor protection",
-    "image": "/images/modules/placeholder-armor.png"
+    "id": "cannon-calibrated",
+    "name": "Calibrated Cannon",
+    "weapon": "Cannon",
+    "type": "trade-off",
+    "description": "Projectile speed and weapon fire rate are increased at the cost of reduced projectile damage",
+    "bonuses": {
+      "reloadTime": "-0.37s",
+      "projectileSpeed": "+4.5m/s"
+    },
+    "penalties": {
+      "projectileDamage": "reduced"
+    },
+    "unlockMethod": "Mastery Level",
+    "image": "/images/modules/placeholder-calibrated.png"
   },
   {
-    "id": "module-speed-1",
-    "name": "Speed Module Alpha",
-    "type": "mobility",
-    "armorBonus": 0,
-    "speedBonus": 30,
-    "energyBonus": 0,
-    "damageBonus": 0,
-    "rangeBonus": 0,
-    "description": "Increases movement speed",
-    "image": "/images/modules/placeholder-speed.png"
-  },
-  {
-    "id": "module-energy-1",
-    "name": "Energy Module Alpha",
-    "type": "utility",
-    "armorBonus": 0,
-    "speedBonus": 0,
-    "energyBonus": 0.03,
-    "damageBonus": 0,
-    "rangeBonus": 0,
-    "description": "Increases energy regeneration",
-    "image": "/images/modules/placeholder-energy.png"
-  },
-  {
-    "id": "module-damage-1",
-    "name": "Damage Module Alpha",
-    "type": "offensive",
-    "armorBonus": 0,
-    "speedBonus": 0,
-    "energyBonus": 0,
-    "damageBonus": 150,
-    "rangeBonus": 0,
-    "description": "Increases weapon damage",
-    "image": "/images/modules/placeholder-damage.png"
-  },
-  {
-    "id": "module-range-1",
-    "name": "Range Module Alpha",
-    "type": "offensive",
-    "armorBonus": 0,
-    "speedBonus": 0,
-    "energyBonus": 0,
-    "damageBonus": 0,
-    "rangeBonus": 3,
-    "description": "Increases weapon range",
-    "image": "/images/modules/placeholder-range.png"
-  },
-  {
-    "id": "module-balanced-1",
-    "name": "Balanced Module Alpha",
-    "type": "balanced",
-    "armorBonus": 200,
-    "speedBonus": 15,
-    "energyBonus": 0.01,
-    "damageBonus": 50,
-    "rangeBonus": 1,
-    "description": "Provides balanced stat improvements",
-    "image": "/images/modules/placeholder-balanced.png"
+    "id": "cannon-weakening",
+    "name": "Weakening Cannon",
+    "weapon": "Cannon",
+    "type": "trade-off",
+    "description": "Projectiles have a chance to weaken enemies at the cost of increasing the reload time of the weapon",
+    "bonuses": {
+      "statusEffect": "WEAKNESS",
+      "statusEffectChance": "6%"
+    },
+    "penalties": {
+      "reloadTime": "+0.07s"
+    },
+    "unlockMethod": "Mastery Level",
+    "image": "/images/modules/placeholder-weakening.png"
   }
 ]

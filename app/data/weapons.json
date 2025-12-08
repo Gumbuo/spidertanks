@@ -103,31 +103,37 @@
     "name": "Cannon",
     "type": "projectile",
     "damageType": "physical",
-    "damage": 1450,
+    "damage": 1400,
+    "clipSize": 3,
+    "reloadTime": 2.5,
+    "projectileSpeed": 180,
     "range": 20,
-    "description": "Burst-fire capability",
+    "description": "One of the most popular weapons throughout history. Can fire either a single shot or a quick burst of several rounds.",
     "image": "/images/weapons/cannon.png",
     "modules": [
       {
-        "id": "cannon-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "cannon-calibrated",
+        "name": "Calibrated Cannon",
+        "description": "Projectile speed and weapon fire rate are increased at the cost of reduced projectile damage",
+        "bonuses": {
+          "reloadTime": "-0.37s",
+          "projectileSpeed": "+4.5m/s"
+        },
+        "penalties": {
+          "projectileDamage": "reduced"
+        }
       },
       {
-        "id": "cannon-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
-      },
-      {
-        "id": "cannon-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "cannon-weakening",
+        "name": "Weakening Cannon",
+        "description": "Projectiles have a chance to weaken enemies at the cost of increasing the reload time of the weapon",
+        "bonuses": {
+          "statusEffect": "WEAKNESS",
+          "statusEffectChance": "6%"
+        },
+        "penalties": {
+          "reloadTime": "+0.07s"
+        }
       }
     ]
   },
