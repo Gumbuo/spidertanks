@@ -326,36 +326,36 @@
   {
     "id": "muzzle",
     "name": "Muzzle",
-    "armor": 8160,
-    "speed": 660,
+    "armor": 9440,
+    "speed": 792,
     "energy": 0.286,
-    "description": "Values health and speed equally",
+    "passive": "Your tank deals increased damage to distant enemies",
+    "distantDamage": "+10%",
+    "description": "Deals increased damage to distant enemies",
     "type": "medium",
     "image": "/images/bodies/muzzle.png",
+    "maxOutCost": 99,
     "modules": [
       {
-        "id": "muzzle-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "muzzle-lightweight-repair",
+        "name": "Lightweight Repair Drones",
+        "description": "The Repair Drone ability costs less energy, at the cost of reducing its effectiveness",
+        "bonuses": {
+          "repairDroneEnergyCost": "reduced"
+        },
+        "penalties": {
+          "repairDroneEffect": "-20%"
+        }
       },
       {
-        "id": "muzzle-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
-      },
-      {
-        "id": "muzzle-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "muzzle-hybrid-propellant",
+        "name": "Hybrid Propellant",
+        "description": "Your tank has a large increase in projectile speed and reload speed for a short duration after destroying an enemy",
+        "bonuses": {
+          "reloadSpeedOnKill": "increased",
+          "projectileSpeedOnKill": "increased"
+        },
+        "penalties": {}
       }
     ]
   },
