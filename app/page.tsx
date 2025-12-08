@@ -10,35 +10,6 @@ import { useHoverSound } from "./hooks/useHoverSound";
 export default function Home() {
   const playHoverSound = useHoverSound();
   const [showSplash, setShowSplash] = useState(true);
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  useEffect(() => {
-    const launchDate = new Date("2025-12-08T11:00:00Z").getTime();
-
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      if (distance > 0) {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000),
-        });
-      }
-    };
-
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white">
@@ -53,7 +24,7 @@ export default function Home() {
               SPIDER TANKS
             </h1>
             <p className="text-3xl md:text-5xl font-bold text-white mb-8">
-              December 8th
+              OUT NOW
             </p>
             <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-xl rounded-lg transition-colors">
               Enter Site
@@ -199,36 +170,11 @@ export default function Home() {
             ></div>
 
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-cyan-400 text-center mb-6">Launch Countdown</h3>
-            <div className="grid grid-cols-4 gap-4">
-              <div className="text-center">
-                <div className="bg-black/50 rounded-lg p-4 border border-cyan-500/20">
-                  <div className="text-4xl font-bold text-cyan-400">{timeLeft.days}</div>
-                  <div className="text-sm text-gray-400 mt-2">Days</div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="bg-black/50 rounded-lg p-4 border border-cyan-500/20">
-                  <div className="text-4xl font-bold text-cyan-400">{timeLeft.hours}</div>
-                  <div className="text-sm text-gray-400 mt-2">Hours</div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="bg-black/50 rounded-lg p-4 border border-cyan-500/20">
-                  <div className="text-4xl font-bold text-cyan-400">{timeLeft.minutes}</div>
-                  <div className="text-sm text-gray-400 mt-2">Minutes</div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="bg-black/50 rounded-lg p-4 border border-cyan-500/20">
-                  <div className="text-4xl font-bold text-cyan-400">{timeLeft.seconds}</div>
-                  <div className="text-sm text-gray-400 mt-2">Seconds</div>
-                </div>
-              </div>
-            </div>
-            <p className="text-center text-gray-400 mt-6 mb-6">
-              Until Spider Tanks launches on <span className="text-cyan-400 font-semibold">Epic Games</span> for{" "}
-              <span className="text-cyan-400 font-semibold">PC and Mac</span>
+              <h3 className="text-2xl font-bold text-cyan-400 text-center mb-6">Download Now</h3>
+            <p className="text-center text-gray-400 mb-6">
+              Spider Tanks is available on <span className="text-cyan-400 font-semibold">Epic Games</span>,{" "}
+              <span className="text-cyan-400 font-semibold">Android</span>, and{" "}
+              <span className="text-cyan-400 font-semibold">iOS</span>
             </p>
 
             {/* Download Buttons */}
@@ -269,7 +215,7 @@ export default function Home() {
                 <span className="text-2xl">🎮</span>
                 <div className="text-left">
                   <div className="text-base">PC</div>
-                  <div className="text-xs text-gray-400 font-normal">Epic Games • Dec 8th</div>
+                  <div className="text-xs text-gray-400 font-normal">Epic Games • Now!</div>
                 </div>
               </a>
             </div>
