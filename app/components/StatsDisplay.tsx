@@ -23,12 +23,22 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
     return baseStat * (0.5 + (weaponLevel / 10) * 0.5);
   };
 
+  // Helper to safely get module bonus (handles both old and new formats)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const getModBonus = (mod: any, key: string): number => {
+    if (!mod) return 0;
+    // Old format: direct property
+    if (typeof mod[key] === 'number') return mod[key];
+    // New format: in bonuses object (not numeric, so return 0 for calculations)
+    return 0;
+  };
+
   // Calculate total stats with level scaling and module bonuses
-  const totalArmor = scaleBodyStat(body?.armor || 0) + (activeBodyMod?.armorBonus || 0);
-  const totalSpeed = scaleBodyStat(body?.speed || 0) + (activeBodyMod?.speedBonus || 0);
-  const totalEnergy = scaleBodyStat(body?.energy || 0) + (activeBodyMod?.energyBonus || 0);
-  const weaponDamage = scaleWeaponStat(weapon?.damage || 0) + (activeWeaponMod?.damageBonus || 0);
-  const weaponRange = scaleWeaponStat(weapon?.range || 0) + (activeWeaponMod?.rangeBonus || 0);
+  const totalArmor = scaleBodyStat(body?.armor || 0) + getModBonus(activeBodyMod, 'armorBonus');
+  const totalSpeed = scaleBodyStat(body?.speed || 0) + getModBonus(activeBodyMod, 'speedBonus');
+  const totalEnergy = scaleBodyStat(body?.energy || 0) + getModBonus(activeBodyMod, 'energyBonus');
+  const weaponDamage = scaleWeaponStat(weapon?.damage || 0) + getModBonus(activeWeaponMod, 'damageBonus');
+  const weaponRange = scaleWeaponStat(weapon?.range || 0) + getModBonus(activeWeaponMod, 'rangeBonus');
 
   return (
     <div className="bg-black/50 border border-cyan-500/30 rounded-lg p-6">
@@ -101,9 +111,13 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
                   <div className="bg-green-500/10 border border-green-500/30 rounded p-2">
                     <div className="font-bold text-green-400 mb-1">Body: {activeBodyMod.name}</div>
                     <div className="text-[10px] space-y-0.5">
-                      {activeBodyMod.armorBonus !== 0 && <div>HP: {activeBodyMod.armorBonus > 0 ? '+' : ''}{activeBodyMod.armorBonus}</div>}
-                      {activeBodyMod.speedBonus !== 0 && <div>Speed: {activeBodyMod.speedBonus > 0 ? '+' : ''}{activeBodyMod.speedBonus}</div>}
-                      {activeBodyMod.energyBonus !== 0 && <div>Energy/s: {activeBodyMod.energyBonus > 0 ? '+' : ''}{activeBodyMod.energyBonus}</div>}
+                      {getModBonus(activeBodyMod, 'armorBonus') !== 0 && <div>HP: +{getModBonus(activeBodyMod, 'armorBonus')}</div>}
+                      {getModBonus(activeBodyMod, 'speedBonus') !== 0 && <div>Speed: +{getModBonus(activeBodyMod, 'speedBonus')}</div>}
+                      {getModBonus(activeBodyMod, 'energyBonus') !== 0 && <div>Energy/s: +{getModBonus(activeBodyMod, 'energyBonus')}</div>}
+                      {/* New format - show description for trade-off modules */}
+                      {activeBodyMod.description && !getModBonus(activeBodyMod, 'armorBonus') && !getModBonus(activeBodyMod, 'speedBonus') && !getModBonus(activeBodyMod, 'energyBonus') && (
+                        <div className="text-gray-300">{activeBodyMod.description}</div>
+                      )}
                     </div>
                   </div>
                 )}
@@ -111,8 +125,13 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
                   <div className="bg-green-500/10 border border-green-500/30 rounded p-2">
                     <div className="font-bold text-green-400 mb-1">Weapon: {activeWeaponMod.name}</div>
                     <div className="text-[10px] space-y-0.5">
-                      {activeWeaponMod.damageBonus !== 0 && <div>Damage: {activeWeaponMod.damageBonus > 0 ? '+' : ''}{activeWeaponMod.damageBonus}</div>}
-                      {activeWeaponMod.rangeBonus !== 0 && <div>Range: {activeWeaponMod.rangeBonus > 0 ? '+' : ''}{activeWeaponMod.rangeBonus}</div>}
+                      {/* Old format */}
+                      {getModBonus(activeWeaponMod, 'damageBonus') !== 0 && <div>Damage: +{getModBonus(activeWeaponMod, 'damageBonus')}</div>}
+                      {getModBonus(activeWeaponMod, 'rangeBonus') !== 0 && <div>Range: +{getModBonus(activeWeaponMod, 'rangeBonus')}</div>}
+                      {/* New format - show description for trade-off modules */}
+                      {activeWeaponMod.description && !getModBonus(activeWeaponMod, 'damageBonus') && !getModBonus(activeWeaponMod, 'rangeBonus') && (
+                        <div className="text-gray-300">{activeWeaponMod.description}</div>
+                      )}
                     </div>
                   </div>
                 )}
