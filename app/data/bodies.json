@@ -2,36 +2,35 @@
   {
     "id": "bandit",
     "name": "Bandit",
-    "armor": 7350,
-    "speed": 693,
-    "energy": 0.2727,
-    "description": "Light weight may sacrifice some health for quickness",
+    "armor": 7755,
+    "speed": 840,
+    "energy": 0.273,
+    "passive": "Damaging an enemy applies an anti-repair effect on them for a short duration",
+    "antiRepairOnHit": "-20%",
+    "description": "Applies anti-repair effect on hit",
     "type": "light",
     "image": "/images/bodies/bandit.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "bandit-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "bandit-energy-dash",
+        "name": "Energy Absorbing Dash Drive",
+        "description": "When you dash through an enemy tank, you steal a portion of their energy",
+        "bonuses": {
+          "energyTheftOnDashCollision": "20%"
+        },
+        "penalties": {}
       },
       {
-        "id": "bandit-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
-      },
-      {
-        "id": "bandit-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "bandit-optimized-grapnel",
+        "name": "Optimized Grapnel Module",
+        "description": "The Grapnel Launcher costs less energy and it pulls enemies faster",
+        "bonuses": {
+          "grapnelLauncherEnergyCost": "reduced"
+        },
+        "penalties": {
+          "grapnelLauncherEffect": "-10%"
+        }
       }
     ]
   },

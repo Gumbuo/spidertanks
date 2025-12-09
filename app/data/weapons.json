@@ -241,31 +241,41 @@
     "name": "Gatling Gun",
     "type": "projectile",
     "damageType": "physical",
-    "damage": 525,
+    "damage": 625,
+    "clipSize": 30,
+    "windupTime": 0.6,
+    "reloadTime": 2.5,
+    "projectileSpeed": 22,
     "range": 22,
-    "description": "Storm of bullets, requires warmup, slows while firing",
+    "fireRate": 0.167,
+    "description": "Can fire a storm of bullets, but takes a second to warm up and slows you down while firing",
     "image": "/images/weapons/gatling-gun.png",
+    "maxOutCost": 99,
     "modules": [
       {
-        "id": "gatling-gun-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "gatling-heavy",
+        "name": "Heavy Gatling Gun",
+        "description": "Increased projectile damage at the cost of increased windup time and reduced movement speed while firing",
+        "bonuses": {
+          "projectileDamage": "+25%"
+        },
+        "penalties": {
+          "windupTime": "+1s"
+        }
       },
       {
-        "id": "gatling-gun-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
-      },
-      {
-        "id": "gatling-gun-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "gatling-rapid",
+        "name": "Rapid Gatling Gun",
+        "description": "Fire rate is increased and reload time is decreased, at the cost of reduced clip size and reduced damage",
+        "bonuses": {
+          "reloadTime": "-0.5s",
+          "fireRate": "-0.066/s"
+        },
+        "penalties": {
+          "damageType": "ELEMENTAL",
+          "projectileDamage": "-100",
+          "clipSize": "reduced"
+        }
       }
     ]
   },
