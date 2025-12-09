@@ -43,15 +43,6 @@ export default function Home() {
             </div>
             <nav className="hidden md:flex gap-3">
               <a
-                href="https://gamedia.nl/spider-tanks-cores-of-chaos"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={playHoverSound}
-                className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-cyan-400 hover:bg-cyan-500/20 transition-all font-semibold"
-              >
-                Official Site ↗
-              </a>
-              <a
                 href="/maps"
                 onMouseEnter={playHoverSound}
                 className="px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-lg text-green-400 hover:bg-green-500/20 transition-all"
@@ -71,16 +62,6 @@ export default function Home() {
                 className="px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-400 hover:bg-orange-500/20 transition-all"
               >
                 Streams
-              </a>
-              <div className="border-l border-gray-700 mx-2"></div>
-              <a
-                href="https://x.com/GAMEDIA_GAMES"
-                target="_blank"
-                rel="noopener noreferrer"
-                onMouseEnter={playHoverSound}
-                className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/20 transition-all font-semibold"
-              >
-                Twitter
               </a>
             </nav>
           </div>
