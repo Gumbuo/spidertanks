@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import Footer from "./components/Footer";
 import TankBuilder from "./components/TankBuilder";
+import PartsDatabase from "./components/PartsDatabase";
 import CommentSection from "./components/CommentSection";
 import { useHoverSound } from "./hooks/useHoverSound";
 
@@ -161,6 +162,11 @@ export default function Home() {
         {/* Tank Builder */}
         <div className="mb-16">
           <TankBuilder />
+        </div>
+
+        {/* Parts Database */}
+        <div className="mb-16">
+          <PartsDatabase />
         </div>
 
         {/* Stream Submission CTA */}
