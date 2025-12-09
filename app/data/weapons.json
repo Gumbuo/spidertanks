@@ -643,6 +643,47 @@
     ]
   },
   {
+    "id": "triple-threat",
+    "name": "Triple Threat",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 650,
+    "projectileAmount": 3,
+    "clipSize": 3,
+    "reloadTime": 1.8,
+    "projectileSpeed": 27,
+    "range": 19,
+    "fireRate": 0.05,
+    "description": "Shoots quickfire bursts of fast projectiles",
+    "image": "/images/weapons/triple-threat.png",
+    "maxOutCost": 100,
+    "modules": [
+      {
+        "id": "triple-threat-elemental",
+        "name": "Elemental Triple Threat",
+        "description": "Every third projectile now deals more damage and every first projectile now deals less damage",
+        "bonuses": {
+          "damageType": "ELEMENTAL",
+          "lastProjectileDamage": "+200"
+        },
+        "penalties": {
+          "firstProjectileDamage": "-250"
+        }
+      },
+      {
+        "id": "triple-threat-deadly",
+        "name": "Deadly Triple Threat",
+        "description": "Killing an enemy refills all your ammo, at the cost of increased reload time",
+        "bonuses": {
+          "ammoRefillOnKill": "full"
+        },
+        "penalties": {
+          "reloadTime": "increased"
+        }
+      }
+    ]
+  },
+  {
     "id": "brambler",
     "name": "Brambler",
     "type": "arced",

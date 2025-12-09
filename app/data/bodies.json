@@ -181,36 +181,37 @@
   {
     "id": "hurricane",
     "name": "Hurricane",
-    "armor": 7890,
-    "speed": 671,
-    "energy": 0.2815,
-    "description": "Hovers above the battlefield",
+    "armor": 8217,
+    "speed": 805,
+    "energy": 0.292,
+    "passive": "Your tank pushes nearby enemies away upon damaging them. This has a short cooldown.",
+    "knockbackOnHit": "2.5m",
+    "damageOnDeploy": "+10%",
+    "description": "Pushes enemies away on damage, bonus damage after ability use",
     "type": "medium",
     "image": "/images/bodies/hurricane.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "hurricane-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "hurricane-graviton-affinity",
+        "name": "Graviton Affinity Regulators",
+        "description": "The Repulsor and Vortex Zone abilities cost less energy and have a longer duration",
+        "bonuses": {
+          "repulsorZoneEnergyCost": "reduced",
+          "repulsorZoneDuration": "increased",
+          "vortexZoneEnergyCost": "reduced",
+          "vortexZoneDuration": "increased"
+        },
+        "penalties": {}
       },
       {
-        "id": "hurricane-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
-      },
-      {
-        "id": "hurricane-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "hurricane-flux-excitors",
+        "name": "Flux Excitors",
+        "description": "Your tank has a reduced dash cooldown",
+        "bonuses": {
+          "dashCooldown": "-25%"
+        },
+        "penalties": {}
       }
     ]
   },
