@@ -826,5 +826,42 @@
         "description": "Increases energy regeneration"
       }
     ]
+  },
+  {
+    "id": "pawn",
+    "name": "Pawn",
+    "armor": 9372,
+    "speed": 739,
+    "energy": 0.304,
+    "passive": "Your tank provides increased repair effectiveness to itself and nearby allies as long as any ally is nearby",
+    "repairingReceivedAura": "+7%",
+    "auraRadius": "16m",
+    "description": "Support body that boosts repair effectiveness for nearby allies",
+    "type": "heavy",
+    "image": "/images/bodies/pawn.png",
+    "maxOutCost": 100,
+    "modules": [
+      {
+        "id": "pawn-scorite-implosion",
+        "name": "Scorite Implosion Inductor",
+        "description": "The Shield Projector ability costs less energy and now explodes, dealing damage when it expires, at the cost of reducing its duration",
+        "bonuses": {
+          "shieldProjectorEnergyCost": "reduced",
+          "shieldProjectorExplodes": true
+        },
+        "penalties": {
+          "shieldProjectorDuration": "reduced"
+        }
+      },
+      {
+        "id": "pawn-flux-deployment",
+        "name": "Flux Deployment Boosters",
+        "description": "Your tank has greatly increased movement speed for a short duration after respawning",
+        "bonuses": {
+          "speedOnRespawn": "+35%"
+        },
+        "penalties": {}
+      }
+    ]
   }
 ]
