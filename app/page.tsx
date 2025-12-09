@@ -127,8 +127,8 @@ export default function Home() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/5Tyqhqp3GYI?autoplay=1&si=n__1tK32fqHmPqHs"
-                  title="Spider Tanks: Cores of Chaos - Official Trailer"
+                  src="https://www.youtube.com/embed/MLokMJ_m454?autoplay=1"
+                  title="Spider Tanks: Cores of Chaos"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
