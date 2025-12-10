@@ -794,36 +794,40 @@
   {
     "id": "tracks",
     "name": "Tracks",
-    "armor": 9780,
-    "speed": 594,
+    "armor": 9834,
+    "speed": 7.12,
     "energy": 0.333,
-    "description": "Heavy frame with high energy regeneration",
+    "passive": "Your tank has increased projectile range",
+    "description": "Heavy tracked frame with increased projectile range",
     "type": "heavy",
     "image": "/images/bodies/tracks.png",
     "modules": [
       {
-        "id": "tracks-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "tracks-hyperfuel",
+        "name": "Hyperfuel-Infused Grenades",
+        "description": "The Grenade ability deals more damage, at the cost of costing more energy",
+        "bonuses": {
+          "grenadeDamage": "+29%"
+        },
+        "penalties": {
+          "grenadeEnergyCost": "increased"
+        }
       },
       {
-        "id": "tracks-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
+        "id": "tracks-kinetic",
+        "name": "Kinetic Energy Transfer",
+        "description": "Your tank deals increased damage if there's an obstacle between it and the enemy hit",
+        "bonuses": {
+          "damageWithObstacle": "increased"
+        }
       },
       {
-        "id": "tracks-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "tracks-combustible",
+        "name": "Combustible Dash Drive",
+        "description": "When you dash you leave behind a trail of burning fuel, dealing damage to enemies",
+        "bonuses": {
+          "dashEffect": "Trigger burning trail on dash"
+        }
       }
     ]
   },
