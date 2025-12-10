@@ -787,31 +787,43 @@
     "name": "Rocket Artillery",
     "type": "arced",
     "damageType": "physical",
-    "damage": 630,
+    "damage": 666,
+    "projectileAmount": 6,
+    "explosionDamage": 666,
+    "explosionRadius": 2.3,
+    "clipSize": 1,
+    "reloadTime": 1.95,
+    "projectileSpeed": 50,
     "range": 19,
-    "description": "Barrage of explosive rockets in arc",
+    "description": "Launches a barrage of explosive rockets that descend on your enemies",
     "image": "/images/weapons/rocket-artillery.png",
     "modules": [
       {
-        "id": "rocket-artillery-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "rocket-artillery-mlrs",
+        "name": "MLRS Rocket Artillery",
+        "description": "Increases the amount of projectiles fired at the cost of increasing the radius and dealing less damage while also being unable to move while firing",
+        "bonuses": {
+          "projectileAmount": "+4"
+        },
+        "penalties": {
+          "explosionDamage": "-222",
+          "explosionRadius": "0.5m",
+          "reloadTime": "+1.95s",
+          "projectileSpread": "+0.1°",
+          "movementWhileFiring": "disabled"
+        }
       },
       {
-        "id": "rocket-artillery-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
-      },
-      {
-        "id": "rocket-artillery-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "rocket-artillery-loaded",
+        "name": "Loaded Rocket Artillery",
+        "description": "Clip size is increased, at the cost of reload time and not being able to move while firing",
+        "bonuses": {
+          "clipSize": "+1"
+        },
+        "penalties": {
+          "reloadTime": "+1.05s",
+          "movementWhileFiring": "disabled"
+        }
       }
     ]
   },
