@@ -30,5 +30,79 @@
     },
     "unlockMethod": "Mastery Level",
     "image": "/images/modules/placeholder-weakening.png"
+  },
+  {
+    "id": "rocket-artillery-mlrs",
+    "name": "MLRS Rocket Artillery",
+    "weapon": "Rocket Artillery",
+    "type": "trade-off",
+    "description": "Increases the amount of projectiles fired at the cost of increasing the radius and dealing less damage while also being unable to move while firing",
+    "bonuses": {
+      "projectileAmount": "+4"
+    },
+    "penalties": {
+      "explosionDamage": "-222",
+      "explosionRadius": "0.5m",
+      "reloadTime": "+1.95s",
+      "projectileSpread": "+0.1°",
+      "movementWhileFiring": "disabled"
+    },
+    "unlockMethod": "Mastery Level",
+    "image": "/images/modules/placeholder-mlrs.png"
+  },
+  {
+    "id": "rocket-artillery-loaded",
+    "name": "Loaded Rocket Artillery",
+    "weapon": "Rocket Artillery",
+    "type": "trade-off",
+    "description": "Clip size is increased, at the cost of reload time and not being able to move while firing",
+    "bonuses": {
+      "clipSize": "+1"
+    },
+    "penalties": {
+      "reloadTime": "+1.05s",
+      "movementWhileFiring": "disabled"
+    },
+    "unlockMethod": "Mastery Level",
+    "image": "/images/modules/placeholder-loaded.png"
+  },
+  {
+    "id": "tracks-hyperfuel",
+    "name": "Hyperfuel-Infused Grenades",
+    "body": "Tracks",
+    "type": "trade-off",
+    "description": "The Grenade ability deals more damage, at the cost of costing more energy",
+    "bonuses": {
+      "grenadeDamage": "+29%"
+    },
+    "penalties": {
+      "grenadeEnergyCost": "increased"
+    },
+    "unlockMethod": "Mastery Level",
+    "image": "/images/modules/placeholder-hyperfuel.png"
+  },
+  {
+    "id": "tracks-kinetic",
+    "name": "Kinetic Energy Transfer",
+    "body": "Tracks",
+    "type": "bonus",
+    "description": "Your tank deals increased damage if there's an obstacle between it and the enemy hit",
+    "bonuses": {
+      "damageWithObstacle": "increased"
+    },
+    "unlockMethod": "Mastery Level",
+    "image": "/images/modules/placeholder-kinetic.png"
+  },
+  {
+    "id": "tracks-combustible",
+    "name": "Combustible Dash Drive",
+    "body": "Tracks",
+    "type": "bonus",
+    "description": "When you dash you leave behind a trail of burning fuel, dealing damage to enemies",
+    "bonuses": {
+      "dashEffect": "Trigger burning trail on dash"
+    },
+    "unlockMethod": "Mastery Level",
+    "image": "/images/modules/placeholder-combustible.png"
   }
 ]
