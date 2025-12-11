@@ -63,6 +63,22 @@ const verifiedBodies = [
       { name: "Scorite Implosion Inductor", desc: "Shield explodes on expire, less duration" },
       { name: "Flux Deployment Boosters", desc: "+35% speed on respawn" }
     ]
+  },
+  {
+    id: "tracks",
+    name: "Tracks",
+    armor: 9834,
+    speed: "7.12m/s",
+    energy: "0.333/s",
+    passive: "Your tank has increased projectile range",
+    specialStat: "Grenade Damage: +29%",
+    maxOutCost: 100,
+    type: "heavy",
+    modules: [
+      { name: "Hyperfuel-Infused Grenades", desc: "+29% grenade damage, increased energy cost" },
+      { name: "Kinetic Energy Transfer", desc: "Bonus damage when obstacle between you and enemy" },
+      { name: "Combustible Dash Drive", desc: "Leave burning trail on dash, damages enemies" }
+    ]
   }
 ];
 
@@ -116,6 +132,25 @@ const verifiedWeapons = [
     modules: [
       { name: "Elemental Triple Threat", desc: "ELEMENTAL, variable projectile damage" },
       { name: "Deadly Triple Threat", desc: "Full ammo on kill, slower reload" }
+    ]
+  },
+  {
+    id: "rocket-artillery",
+    name: "Rocket Artillery",
+    damage: 666,
+    damageType: "Physical",
+    clipSize: 1,
+    projectileAmount: 6,
+    reloadTime: "1.95s",
+    projectileSpeed: "50m/s",
+    range: "19m",
+    explosionDamage: 666,
+    explosionRadius: "2.3m",
+    maxOutCost: 100,
+    description: "Launches a barrage of explosive rockets that descend on your enemies",
+    modules: [
+      { name: "MLRS Rocket Artillery", desc: "+4 projectiles, -222 explosion dmg, can't move while firing" },
+      { name: "Loaded Rocket Artillery", desc: "+1 clip size, +1.05s reload, can't move while firing" }
     ]
   }
 ];
