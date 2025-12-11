@@ -16,6 +16,7 @@ const verifiedBodies = [
     maxOutCost: 100,
     type: "light",
     modules: [
+      { name: "Graviton Attachment Core", desc: "+10% damage after picking up repair kit" },
       { name: "Energy Absorbing Dash Drive", desc: "Steal 20% energy on dash collision" },
       { name: "Optimized Grapnel Module", desc: "Less grapnel energy cost, -10% effect" }
     ]
@@ -32,6 +33,7 @@ const verifiedBodies = [
     maxOutCost: 99,
     type: "medium",
     modules: [
+      { name: "Titanium Lining", desc: "Your tank has increased armor" },
       { name: "Lightweight Repair Drones", desc: "Less repair energy cost, -20% effect" },
       { name: "Hybrid Propellant", desc: "Speed & reload boost on kill" }
     ]
@@ -48,6 +50,7 @@ const verifiedBodies = [
     maxOutCost: 100,
     type: "medium",
     modules: [
+      { name: "Energy Waste Actuators", desc: "+10% damage after deploying ability" },
       { name: "Graviton Affinity Regulators", desc: "Better Repulsor/Vortex zones" },
       { name: "Flux Excitors", desc: "-25% dash cooldown" }
     ]
@@ -64,6 +67,7 @@ const verifiedBodies = [
     maxOutCost: 100,
     type: "heavy",
     modules: [
+      { name: "Repair Telemetry Processor", desc: "Stronger repairs on allies, weaker otherwise" },
       { name: "Scorite Implosion Inductor", desc: "Shield explodes on expire, less duration" },
       { name: "Flux Deployment Boosters", desc: "+35% speed on respawn" }
     ]
@@ -101,6 +105,7 @@ const verifiedWeapons = [
     maxOutCost: 100,
     description: "Can fire either a single shot or a quick burst of several rounds",
     modules: [
+      { name: "Classic", desc: "Standard cannon configuration, no modifications" },
       { name: "Calibrated Cannon", desc: "-0.37s reload, +4.5m/s speed, reduced damage" },
       { name: "Weakening Cannon", desc: "6% WEAKNESS chance, +0.07s reload" }
     ]
@@ -120,6 +125,7 @@ const verifiedWeapons = [
     maxOutCost: 99,
     description: "Storm of bullets, requires warmup, slows while firing",
     modules: [
+      { name: "Classic", desc: "Standard gatling gun configuration, no modifications" },
       { name: "Heavy Gatling Gun", desc: "+25% damage, +1s windup" },
       { name: "Rapid Gatling Gun", desc: "Faster fire, ELEMENTAL type, -100 damage" }
     ]
@@ -138,6 +144,7 @@ const verifiedWeapons = [
     maxOutCost: 100,
     description: "Shoots quickfire bursts of fast projectiles",
     modules: [
+      { name: "Classic", desc: "Standard triple threat configuration, no modifications" },
       { name: "Elemental Triple Threat", desc: "ELEMENTAL, variable projectile damage" },
       { name: "Deadly Triple Threat", desc: "Full ammo on kill, slower reload" }
     ]
@@ -158,6 +165,7 @@ const verifiedWeapons = [
     maxOutCost: 100,
     description: "Launches a barrage of explosive rockets that descend on your enemies",
     modules: [
+      { name: "Classic", desc: "Standard rocket artillery configuration, no modifications" },
       { name: "MLRS Rocket Artillery", desc: "+4 projectiles, -222 explosion dmg, can't move while firing" },
       { name: "Loaded Rocket Artillery", desc: "+1 clip size, +1.05s reload, can't move while firing" }
     ]
