@@ -195,7 +195,7 @@ export default function PartsDatabase() {
   return (
     <div className="max-w-6xl mx-auto">
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-2">
+        <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-orange-500 bg-clip-text text-transparent mb-2">
           Parts Database
         </h2>
         <p className="text-gray-400">Verified stats from Cores of Chaos - Updated as we unlock more!</p>
@@ -217,8 +217,8 @@ export default function PartsDatabase() {
           onClick={() => setActiveTab("weapons")}
           className={`px-6 py-3 rounded-lg font-bold transition-all ${
             activeTab === "weapons"
-              ? "bg-purple-500 text-black"
-              : "bg-purple-500/20 text-purple-400 border border-purple-500/30 hover:bg-purple-500/30"
+              ? "bg-orange-500 text-black"
+              : "bg-orange-500/20 text-orange-400 border border-orange-500/30 hover:bg-orange-500/30"
           }`}
         >
           Weapons ({verifiedWeapons.length})
@@ -286,8 +286,8 @@ export default function PartsDatabase() {
                   <div className="text-xs text-gray-500 mb-2">MODULES</div>
                   <div className="space-y-2">
                     {body.modules.map((mod, i) => (
-                      <div key={i} className="bg-purple-500/10 border border-purple-500/20 rounded p-2">
-                        <div className="text-sm font-semibold text-purple-400">{mod.name}</div>
+                      <div key={i} className="bg-orange-500/10 border border-orange-500/20 rounded p-2">
+                        <div className="text-sm font-semibold text-orange-400">{mod.name}</div>
                         <div className="text-xs text-gray-400">{mod.desc}</div>
                       </div>
                     ))}
@@ -309,12 +309,12 @@ export default function PartsDatabase() {
           {verifiedWeapons.map((weapon) => (
             <div
               key={weapon.id}
-              className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 border border-purple-500/30 rounded-lg overflow-hidden"
+              className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 border border-orange-500/30 rounded-lg overflow-hidden"
             >
               {/* Header */}
-              <div className="bg-purple-500/20 px-4 py-3 border-b border-purple-500/30">
+              <div className="bg-orange-500/20 px-4 py-3 border-b border-orange-500/30">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold text-purple-400">{weapon.name}</h3>
+                  <h3 className="text-xl font-bold text-orange-400">{weapon.name}</h3>
                   <span className="text-xs px-2 py-1 rounded bg-orange-500/20 text-orange-400">
                     {weapon.damageType.toUpperCase()}
                   </span>
@@ -325,7 +325,7 @@ export default function PartsDatabase() {
               <div className="p-4 space-y-3">
                 {/* Image */}
                 <div className="flex justify-center mb-4">
-                  <div className="w-24 h-24 bg-black/50 rounded-lg flex items-center justify-center overflow-hidden border border-purple-500/20">
+                  <div className="w-24 h-24 bg-black/50 rounded-lg flex items-center justify-center overflow-hidden border border-orange-500/20">
                     <img
                       src={weapon.image}
                       alt={weapon.name}
@@ -378,7 +378,7 @@ export default function PartsDatabase() {
                     {weapon.projectileAmount && (
                       <div className="bg-black/30 rounded p-2">
                         <span className="text-gray-500">Projectiles:</span>
-                        <span className="text-purple-400 font-bold ml-2">{weapon.projectileAmount}</span>
+                        <span className="text-orange-400 font-bold ml-2">{weapon.projectileAmount}</span>
                       </div>
                     )}
                   </div>
