@@ -7,6 +7,7 @@ const verifiedBodies = [
   {
     id: "bandit",
     name: "Bandit",
+    image: "/images/bodies/bandit.png",
     armor: 7755,
     speed: "8.398m/s",
     energy: "0.273/s",
@@ -22,6 +23,7 @@ const verifiedBodies = [
   {
     id: "muzzle",
     name: "Muzzle",
+    image: "/images/bodies/muzzle.png",
     armor: 9440,
     speed: "7.92m/s",
     energy: "0.286/s",
@@ -37,6 +39,7 @@ const verifiedBodies = [
   {
     id: "hurricane",
     name: "Hurricane",
+    image: "/images/bodies/hurricane.png",
     armor: 8217,
     speed: "8.052m/s",
     energy: "0.292/s",
@@ -52,6 +55,7 @@ const verifiedBodies = [
   {
     id: "pawn",
     name: "Pawn",
+    image: "/images/bodies/pawn.png",
     armor: 9372,
     speed: "7.392m/s",
     energy: "0.304/s",
@@ -67,6 +71,7 @@ const verifiedBodies = [
   {
     id: "tracks",
     name: "Tracks",
+    image: "/images/bodies/tracks.png",
     armor: 9834,
     speed: "7.12m/s",
     energy: "0.333/s",
@@ -86,6 +91,7 @@ const verifiedWeapons = [
   {
     id: "cannon",
     name: "Cannon",
+    image: "/images/weapons/cannon.png",
     damage: 1400,
     damageType: "Physical",
     clipSize: 3,
@@ -102,6 +108,7 @@ const verifiedWeapons = [
   {
     id: "gatling-gun",
     name: "Gatling Gun",
+    image: "/images/weapons/gatling-gun.png",
     damage: 625,
     damageType: "Physical",
     clipSize: 30,
@@ -120,6 +127,7 @@ const verifiedWeapons = [
   {
     id: "triple-threat",
     name: "Triple Threat",
+    image: "/images/weapons/triple-threat.png",
     damage: 650,
     damageType: "Physical",
     clipSize: 3,
@@ -137,6 +145,7 @@ const verifiedWeapons = [
   {
     id: "rocket-artillery",
     name: "Rocket Artillery",
+    image: "/images/weapons/rocket-artillery.png",
     damage: 666,
     damageType: "Physical",
     clipSize: 1,
@@ -215,6 +224,17 @@ export default function PartsDatabase() {
 
               {/* Stats */}
               <div className="p-4 space-y-3">
+                {/* Image */}
+                <div className="flex justify-center mb-4">
+                  <div className="w-24 h-24 bg-black/50 rounded-lg flex items-center justify-center overflow-hidden border border-cyan-500/20">
+                    <img
+                      src={body.image}
+                      alt={body.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+
                 <div className="text-sm text-gray-300 italic mb-3">{body.passive}</div>
 
                 <div className="grid grid-cols-3 gap-2 text-sm">
@@ -278,6 +298,17 @@ export default function PartsDatabase() {
 
               {/* Stats */}
               <div className="p-4 space-y-3">
+                {/* Image */}
+                <div className="flex justify-center mb-4">
+                  <div className="w-24 h-24 bg-black/50 rounded-lg flex items-center justify-center overflow-hidden border border-purple-500/20">
+                    <img
+                      src={weapon.image}
+                      alt={weapon.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+
                 <div className="text-sm text-gray-300 italic mb-3">{weapon.description}</div>
 
                 <div className="grid grid-cols-2 gap-2 text-sm">
