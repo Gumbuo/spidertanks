@@ -88,6 +88,23 @@ const verifiedBodies = [
       { name: "Kinetic Energy Transfer", desc: "Bonus damage when obstacle between you and enemy" },
       { name: "Combustible Dash Drive", desc: "Leave burning trail on dash, damages enemies" }
     ]
+  },
+  {
+    id: "crab",
+    name: "Crab",
+    image: "/images/bodies/crab.png",
+    armor: 8678,
+    speed: "7.788m/s",
+    energy: "0.29/s",
+    passive: "Retaliates against damage received by applying it to nearby enemy tanks",
+    specialStat: "Retaliation on Hit: 50%",
+    maxOutCost: 100,
+    type: "medium",
+    modules: [
+      { name: "Kinetic Conversion Core", desc: "+speed when hit recently, -9% speed otherwise" },
+      { name: "Reclusive Shield Capacitor", desc: "+15% physical & elemental resistance when no allies nearby" },
+      { name: "Brevite Plate Replacement", desc: "Reactive Plating costs less, detonates on death" }
+    ]
   }
 ];
 
