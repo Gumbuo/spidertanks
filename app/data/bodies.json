@@ -722,36 +722,47 @@
   {
     "id": "titan",
     "name": "Titan",
-    "armor": 10860,
-    "speed": 550,
-    "energy": 0.331,
-    "description": "Massive body seeks to dominate with huge health",
+    "armor": 10758,
+    "speed": 660,
+    "energy": 0.333,
+    "passive": "Your tank slows upon being hit to gain increased physical and elemental resistance",
+    "slowOnDamaged": "-0%",
+    "resistanceOnDamaged": "+10%",
+    "description": "Slows when hit to gain increased physical and elemental resistance",
     "type": "heavy",
     "image": "/images/bodies/titan.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "titan-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "titan-kinetic-stabilizer",
+        "name": "Kinetic Stabilizer",
+        "description": "Your tank deals increased damage, at the cost of reduced movement speed",
+        "bonuses": {
+          "damage": "increased"
+        },
+        "penalties": {
+          "movementSpeed": "reduced"
+        }
       },
       {
-        "id": "titan-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
+        "id": "titan-disruptive-relay",
+        "name": "Disruptive Relay Protocols",
+        "description": "The Relay Drone ability now causes an earthquake to trigger at its final position dealing damage and slowing enemies",
+        "bonuses": {
+          "relayDroneEffect": "Triggers earthquake at final position",
+          "relayDroneSlowEnemies": true
+        },
+        "penalties": {}
       },
       {
-        "id": "titan-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "titan-equilibrium-plating",
+        "name": "Equilibrium Plating",
+        "description": "Your tank now explodes upon being destroyed dealing a percentage of its maximum armor as damage",
+        "bonuses": {
+          "triggerBodyExplosion": true,
+          "explosionDamage": "percentage of maximum armor"
+        },
+        "penalties": {}
       }
     ]
   },

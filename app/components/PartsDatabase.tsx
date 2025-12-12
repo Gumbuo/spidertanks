@@ -105,6 +105,23 @@ const verifiedBodies = [
       { name: "Reclusive Shield Capacitor", desc: "+15% physical & elemental resistance when no allies nearby" },
       { name: "Brevite Plate Replacement", desc: "Reactive Plating costs less, detonates on death" }
     ]
+  },
+  {
+    id: "titan",
+    name: "Titan",
+    image: "/images/bodies/titan.png",
+    armor: 10758,
+    speed: "6.6m/s",
+    energy: "0.333/s",
+    passive: "Your tank slows upon being hit to gain increased physical and elemental resistance",
+    specialStat: "Slow on Damaged: -0% | Resistance on Damaged: +10%",
+    maxOutCost: 100,
+    type: "heavy",
+    modules: [
+      { name: "Kinetic Stabilizer", desc: "Increased damage at the cost of reduced movement speed" },
+      { name: "Disruptive Relay Protocols", desc: "Relay Drone causes earthquake at final position, dealing damage and slowing enemies" },
+      { name: "Equilibrium Plating", desc: "Tank explodes on death dealing % of max armor as damage" }
+    ]
   }
 ];
 
