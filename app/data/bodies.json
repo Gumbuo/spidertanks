@@ -254,36 +254,44 @@
   {
     "id": "junker",
     "name": "Junker",
-    "armor": 7620,
-    "speed": 682,
-    "energy": 0.277,
-    "description": "Balanced tank body with average health and speed",
+    "armor": 7000,
+    "speed": 818,
+    "energy": 0.211,
+    "passive": "All turrets placed by your tank deal increased damage",
+    "turretsDamage": "+20%",
+    "modifiedTurrets": {
+      "description": "Your turrets have improved targeting",
+      "affectedTurrets": ["Artillery Turret", "Cannon Turret"]
+    },
+    "description": "Turret specialist body that boosts all placed turrets with increased damage and improved targeting",
     "type": "medium",
     "image": "/images/bodies/junker.png",
+    "maxOutCost": 60,
     "modules": [
       {
-        "id": "junker-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "junker-plasma-shield-transfer",
+        "name": "Plasma Shield Transfer",
+        "description": "Your turrets have a massive amount of increased armor and duration at the cost of greatly increasing the energy cost",
+        "bonuses": {
+          "turretsDuration": "+15%",
+          "turretsArmor": "+300%"
+        },
+        "penalties": {
+          "turretsEnergyCost": "greatly increased"
+        }
       },
       {
-        "id": "junker-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
-      },
-      {
-        "id": "junker-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "junker-aftermarket-turrets",
+        "name": "Aftermarket Turrets",
+        "description": "Your turrets have increased fire rate and placing a turret reduces the energy cost to 0 for a short duration at the cost of reducing turret damage and its lifetime",
+        "bonuses": {
+          "turretsFireRate": "increased",
+          "turretsEnergyCost": "-1 for short duration after placing"
+        },
+        "penalties": {
+          "turretsDamage": "-20%",
+          "turretsDuration": "reduced"
+        }
       }
     ]
   },
@@ -853,7 +861,7 @@
     "auraRadius": "16m",
     "description": "Support body that boosts repair effectiveness for nearby allies",
     "type": "heavy",
-    "image": "/images/bodies/pawn.png",
+    "image": "/images/bodies/pawn.webp",
     "maxOutCost": 100,
     "modules": [
       {

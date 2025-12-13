@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Spider Tanks: Cores of Chaos - Launch December 8th!",
     description: "Build custom tanks, battle in 3v3 arenas, and earn IMX Diamonds! Free-to-play on Epic Games.",
-    url: "https://spidertanks.xyz",
+    url: "https://spidergang.xyz",
     siteName: "Spider Tanks Guide",
     images: [
       {

@@ -399,30 +399,39 @@
     "type": "projectile",
     "damageType": "elemental",
     "damage": 750,
+    "projectileRepairing": 900,
+    "clipSize": 6,
+    "reloadTime": 4,
+    "projectileSpeed": 200,
     "range": 19,
-    "description": "Fires healing energy at allies, deals light enemy damage",
+    "rarity": "classic",
+    "description": "Rapid fires healing energy at your allies. Can also be used to deal light damage to enemies.",
     "image": "/images/weapons/repair-gun.png",
     "modules": [
       {
-        "id": "repair-gun-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "repair-gun-vampiric",
+        "name": "Vampiric Repair Gun",
+        "description": "Projectiles have lifesteal, at the cost of no longer being able to repair allies",
+        "bonuses": {
+          "lifesteal": true,
+          "projectileRepairing": "increased"
+        },
+        "penalties": {
+          "allyRepair": "disabled"
+        }
       },
       {
-        "id": "repair-gun-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
-      },
-      {
-        "id": "repair-gun-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "repair-gun-explosive",
+        "name": "Explosive Repair Gun",
+        "description": "Projectiles explode and heal nearby allies, at the cost of decreased projectile repairing. Projectile explosions cannot repair your own tank.",
+        "bonuses": {
+          "explosionRadius": "2.5m",
+          "aoeHealing": true
+        },
+        "penalties": {
+          "projectileRepairing": "-100",
+          "selfRepair": "disabled on explosions"
+        }
       }
     ]
   },
