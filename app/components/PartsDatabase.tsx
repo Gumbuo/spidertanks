@@ -58,7 +58,7 @@ const verifiedBodies = [
   {
     id: "pawn",
     name: "Pawn",
-    image: "/images/bodies/pawn.png",
+    image: "/images/bodies/pawn.webp",
     armor: 9372,
     speed: "7.392m/s",
     energy: "0.304/s",
