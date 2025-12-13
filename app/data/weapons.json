@@ -679,7 +679,7 @@
     "range": 19,
     "fireRate": 0.05,
     "description": "Shoots quickfire bursts of fast projectiles",
-    "image": "/images/weapons/triple-threat.png",
+    "image": "/images/weapons/triple-threat.webp",
     "maxOutCost": 100,
     "modules": [
       {

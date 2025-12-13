@@ -167,7 +167,7 @@ const verifiedWeapons = [
   {
     id: "triple-threat",
     name: "Triple Threat",
-    image: "/images/weapons/triple-threat.png",
+    image: "/images/weapons/triple-threat.webp",
     damage: 650,
     damageType: "Physical",
     clipSize: 3,
