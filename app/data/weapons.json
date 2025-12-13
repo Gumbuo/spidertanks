@@ -142,31 +142,46 @@
     "name": "Crossbow",
     "type": "projectile",
     "damageType": "physical",
-    "damage": 2400,
+    "damage": 2600,
+    "clipSize": 1,
+    "chargeTime": 1.3,
+    "reloadTime": 0.5,
+    "projectileSpeed": 20.7,
     "range": 28,
-    "description": "Can pierce through enemies, more powerful when drawn back",
+    "description": "Fires large bolts that can pierce through enemies. Gets more powerful and longer range by drawing it back further.",
     "image": "/images/weapons/crossbow.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "crossbow-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "crossbow-classic",
+        "name": "Classic",
+        "description": "Standard crossbow configuration, no modifications",
+        "bonuses": {},
+        "penalties": {}
       },
       {
-        "id": "crossbow-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
+        "id": "crossbow-static",
+        "name": "Static Crossbow",
+        "description": "Charging the crossbow fully will now fire static shocks at targets within the radius of the projectile at the cost of dealing less direct damage",
+        "bonuses": {
+          "statusEffects": "+Damage Over Time",
+          "effectZoneRadius": "added",
+          "statusEffectDamagePerSecond": "+60"
+        },
+        "penalties": {
+          "projectileDamage": "-243"
+        }
       },
       {
-        "id": "crossbow-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "crossbow-precise",
+        "name": "Precise Crossbow",
+        "description": "Releasing a projectile while the crossbow is fully charged will significantly speed it up at the cost of reducing projectile speed if the weapon is fired while not fully charged",
+        "bonuses": {
+          "fullyChargedProjectileSpeed": "+10.35m/s"
+        },
+        "penalties": {
+          "projectileSpeed": "-1.035m/s"
+        }
       }
     ]
   },

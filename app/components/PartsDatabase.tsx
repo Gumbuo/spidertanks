@@ -203,6 +203,25 @@ const verifiedWeapons = [
       { name: "MLRS Rocket Artillery", desc: "+4 projectiles, -222 explosion dmg, can't move while firing" },
       { name: "Loaded Rocket Artillery", desc: "+1 clip size, +1.05s reload, can't move while firing" }
     ]
+  },
+  {
+    id: "crossbow",
+    name: "Crossbow",
+    image: "/images/weapons/crossbow.png",
+    damage: 2600,
+    damageType: "Physical",
+    clipSize: 1,
+    chargeTime: "1.3s",
+    reloadTime: "0.5s",
+    projectileSpeed: "20.7m/s",
+    range: "28m",
+    maxOutCost: 100,
+    description: "Fires large bolts that can pierce through enemies. Gets more powerful and longer range by drawing it back further.",
+    modules: [
+      { name: "Classic", desc: "Standard crossbow configuration, no modifications" },
+      { name: "Static Crossbow", desc: "Fully charged fires static shocks at targets, +60 DoT/s, -243 direct damage" },
+      { name: "Precise Crossbow", desc: "Fully charged +10.35m/s speed, uncharged -1.035m/s speed" }
+    ]
   }
 ];
 
