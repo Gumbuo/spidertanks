@@ -127,6 +127,26 @@ const verifiedBodies = [
 
 const verifiedWeapons = [
   {
+    id: "burstfire",
+    name: "Burstfire",
+    image: "/images/weapons/burstfire.png",
+    damage: 950,
+    damageType: "Physical",
+    clipSize: 1,
+    projectileAmount: 3,
+    reloadTime: "1s",
+    projectileSpeed: "22m/s",
+    range: "19m",
+    fireRate: "0.1/s",
+    maxOutCost: 33,
+    description: "Shoots quickfire bursts of fast projectiles",
+    modules: [
+      { name: "Classic", desc: "Standard burstfire configuration, no modifications" },
+      { name: "Calibrated Burstfire", desc: "+200 last projectile damage, +4.4m/s first projectile speed, -4.8m/s last projectile speed" },
+      { name: "Bombarding Burstfire", desc: "+2 projectile amount, -100 damage" }
+    ]
+  },
+  {
     id: "cannon",
     name: "Cannon",
     image: "/images/weapons/cannon.png",

@@ -99,6 +99,47 @@
     ]
   },
   {
+    "id": "burstfire",
+    "name": "Burstfire",
+    "type": "projectile",
+    "damageType": "physical",
+    "damage": 950,
+    "projectileAmount": 3,
+    "clipSize": 1,
+    "reloadTime": 1,
+    "projectileSpeed": 22,
+    "range": 19,
+    "fireRate": 0.1,
+    "description": "Shoots quickfire bursts of fast projectiles",
+    "image": "/images/weapons/burstfire.png",
+    "maxOutCost": 33,
+    "modules": [
+      {
+        "id": "burstfire-calibrated",
+        "name": "Calibrated Burstfire",
+        "description": "The weapon has increased damage on the last projectile fired and increased projectile speed for the first projectile at the cost of the last projectile now being much slower",
+        "bonuses": {
+          "lastProjectileDamage": "+200",
+          "firstProjectileSpeed": "+4.4m/s"
+        },
+        "penalties": {
+          "lastProjectileSpeed": "-4.8m/s"
+        }
+      },
+      {
+        "id": "burstfire-bombarding",
+        "name": "Bombarding Burstfire",
+        "description": "Projectile amount is increased, at the cost of decreased projectile damage",
+        "bonuses": {
+          "projectileAmount": "+2"
+        },
+        "penalties": {
+          "projectileDamage": "-100"
+        }
+      }
+    ]
+  },
+  {
     "id": "cannon",
     "name": "Cannon",
     "type": "projectile",
