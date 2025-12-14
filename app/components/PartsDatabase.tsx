@@ -122,6 +122,22 @@ const verifiedBodies = [
       { name: "Disruptive Relay Protocols", desc: "Relay Drone causes earthquake at final position, dealing damage and slowing enemies" },
       { name: "Equilibrium Plating", desc: "Tank explodes on death dealing % of max armor as damage" }
     ]
+  },
+  {
+    id: "junker",
+    name: "Junker",
+    image: "/images/bodies/junker.png",
+    armor: 7000,
+    speed: "8.184m/s",
+    energy: "0.211/s",
+    passive: "All turrets placed by your tank deal increased damage",
+    specialStat: "Turrets Damage: +20% | Improved Targeting for Artillery & Cannon Turrets",
+    maxOutCost: 60,
+    type: "medium",
+    modules: [
+      { name: "Plasma Shield Transfer", desc: "+15% turret duration, +300% turret armor, greatly increased energy cost" },
+      { name: "Aftermarket Turrets", desc: "Increased fire rate, 0 energy cost briefly after placing, -20% damage, reduced duration" }
+    ]
   }
 ];
 
@@ -241,6 +257,25 @@ const verifiedWeapons = [
       { name: "Classic", desc: "Standard crossbow configuration, no modifications" },
       { name: "Static Crossbow", desc: "Fully charged fires static shocks at targets, +60 DoT/s, -243 direct damage" },
       { name: "Precise Crossbow", desc: "Fully charged +10.35m/s speed, uncharged -1.035m/s speed" }
+    ]
+  },
+  {
+    id: "repair-gun",
+    name: "Repair Gun",
+    image: "/images/weapons/repair-gun.png",
+    damage: 750,
+    damageType: "Elemental",
+    clipSize: 6,
+    reloadTime: "4s",
+    projectileSpeed: "200m/s",
+    range: "19m",
+    projectileRepairing: 900,
+    maxOutCost: 100,
+    description: "Rapid fires healing energy at your allies. Can also be used to deal light damage to enemies.",
+    modules: [
+      { name: "Classic", desc: "Standard repair gun configuration, no modifications" },
+      { name: "Vampiric Repair Gun", desc: "Projectiles have lifesteal, can no longer repair allies" },
+      { name: "Explosive Repair Gun", desc: "AoE healing 2.5m radius, -100 repair, explosions can't self-repair" }
     ]
   }
 ];
