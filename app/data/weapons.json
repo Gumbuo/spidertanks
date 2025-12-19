@@ -5,30 +5,49 @@
     "type": "projectile",
     "damageType": "physical",
     "damage": 750,
+    "projectileAmount": 3,
+    "clipSize": 1,
+    "reloadTime": 1.25,
+    "projectileSpeed": 18.9,
     "range": 19,
-    "description": "Shoots bursts of sound waves, pushes enemies with BASS",
+    "fireRate": 0.1,
+    "description": "Shoots bursts of sound waves that will push enemies away with the force of thumping bass when they get too close",
     "image": "/images/weapons/beat-blaster.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "beat-blaster-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "beat-blaster-classic",
+        "name": "Classic",
+        "description": "Standard beat blaster configuration",
+        "bonuses": {},
+        "penalties": {}
       },
       {
-        "id": "beat-blaster-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
+        "id": "beat-blaster-elemental",
+        "name": "Elemental Beat Blaster",
+        "description": "The weapon now applies a damage over time effect at the cost of causing reduced damage",
+        "bonuses": {
+          "damageType": "ELEMENTAL",
+          "statusEffects": "+Damage Over Time +Knockback",
+          "statusEffectChance": "+97%",
+          "statusEffectDamagePerSecond": "+1000/s"
+        },
+        "penalties": {
+          "projectileDamage": "-275"
+        }
       },
       {
-        "id": "beat-blaster-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "beat-blaster-stronger",
+        "name": "Stronger Beat Blaster",
+        "description": "The weapon fires a single projectile with increased projectile damage and an increased chance of knockback",
+        "bonuses": {
+          "projectileDamage": "+1220",
+          "statusEffectChance": "+20%"
+        },
+        "penalties": {
+          "projectileAmount": "-2",
+          "fireRate": "-4.1s"
+        }
       }
     ]
   },
@@ -231,31 +250,44 @@
     "name": "Eggxecutioner",
     "type": "projectile",
     "damageType": "physical",
-    "damage": 1250,
+    "damage": 1350,
+    "explosionRadius": 2.5,
+    "clipSize": 3,
+    "reloadTime": 3.25,
+    "projectileSpeed": 18.5,
     "range": 19,
-    "description": "Eggxplosive projectiles detonate on impact",
+    "description": "Launches eggsplosive projectiles that detonate on impact, or after they reach their maximum range",
     "image": "/images/weapons/eggxecutioner.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "eggxecutioner-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "eggxecutioner-classic",
+        "name": "Classic",
+        "description": "Standard eggxecutioner configuration",
+        "bonuses": {},
+        "penalties": {}
       },
       {
-        "id": "eggxecutioner-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
+        "id": "eggxecutioner-aggressive",
+        "name": "Aggressive Eggxecutioner",
+        "description": "Projectile damage is increased, at the cost of decreased explosion damage",
+        "bonuses": {
+          "projectileDamage": "+200"
+        },
+        "penalties": {
+          "explosionDamage": "-200"
+        }
       },
       {
-        "id": "eggxecutioner-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "eggxecutioner-persistent",
+        "name": "Persistent Eggxecutioner",
+        "description": "Whenever a projectile doesn't hit an enemy tank, a mine is planted at the location of the projectile that explodes if a tank comes nearby. Decreased range.",
+        "bonuses": {
+          "minePlacement": "on miss"
+        },
+        "penalties": {
+          "range": "-4.85m"
+        }
       }
     ]
   },
@@ -265,30 +297,45 @@
     "type": "projectile",
     "damageType": "physical",
     "damage": 2000,
+    "explosionDamage": 2000,
+    "explosionRadius": 2.8,
+    "clipSize": 1,
+    "reloadTime": 1.9,
+    "projectileSpeed": 10,
     "range": 30,
-    "description": "Automatically targets nearby enemies with explosive drill torpedoes",
+    "description": "Automatically targets nearby enemies with explosive torpedoes. The torpedoes may move slow, but they will pursue their quarry relentlessly.",
     "image": "/images/weapons/finisher.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "finisher-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "finisher-classic",
+        "name": "Classic",
+        "description": "Standard finisher configuration",
+        "bonuses": {},
+        "penalties": {}
       },
       {
-        "id": "finisher-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
+        "id": "finisher-seeking",
+        "name": "Seeking Finisher",
+        "description": "The homing effect of projectiles is increased, at the cost of decreased projectile damage",
+        "bonuses": {
+          "homingEffect": "increased"
+        },
+        "penalties": {
+          "projectileDamage": "-400",
+          "explosionDamage": "-400"
+        }
       },
       {
-        "id": "finisher-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "finisher-deadly",
+        "name": "Deadly Finisher",
+        "description": "Killing an enemy grants a temporary increase in movement speed, at the cost of decreased range",
+        "bonuses": {
+          "speedBoostOnKill": "+2.2m/s"
+        },
+        "penalties": {
+          "range": "decreased"
+        }
       }
     ]
   },
@@ -340,31 +387,48 @@
     "name": "Laser Blaster",
     "type": "projectile",
     "damageType": "elemental",
-    "damage": 500,
+    "damage": 550,
+    "projectileDamageIncrease": "1.15x",
+    "clipSize": 4,
+    "reloadTime": 1.92,
+    "projectileSpeed": 11,
     "range": 24,
     "description": "Projectiles get increasingly powerful per clip",
     "image": "/images/weapons/laser-blaster.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "laser-blaster-module-1",
-        "name": "Damage Boost",
-        "damageBonus": 150,
-        "rangeBonus": 0,
-        "description": "Increases weapon damage"
+        "id": "laser-blaster-classic",
+        "name": "Classic",
+        "description": "Standard laser blaster configuration",
+        "bonuses": {},
+        "penalties": {}
       },
       {
-        "id": "laser-blaster-module-2",
-        "name": "Range Boost",
-        "damageBonus": 0,
-        "rangeBonus": 3,
-        "description": "Increases weapon range"
+        "id": "laser-blaster-temperamental",
+        "name": "Temperamental Laser Blaster",
+        "description": "Projectiles have a chance to apply a damage over time effect, at the cost of decreased projectile damage",
+        "bonuses": {
+          "statusEffects": "+Damage Over Time",
+          "statusEffectChance": "80%",
+          "statusEffectDuration": "2s",
+          "statusEffectDamagePerSecond": "1000/s"
+        },
+        "penalties": {
+          "projectileDamage": "-10"
+        }
       },
       {
-        "id": "laser-blaster-module-3",
-        "name": "Balanced Boost",
-        "damageBonus": 75,
-        "rangeBonus": 1,
-        "description": "Balanced damage and range increase"
+        "id": "laser-blaster-explosive",
+        "name": "Explosive Laser Blaster",
+        "description": "The last projectile in each clip explodes, at the cost of decreased overall projectile damage",
+        "bonuses": {
+          "explosionDamage": "+900",
+          "explosionRadius": "+3.35m"
+        },
+        "penalties": {
+          "projectileDamage": "-900"
+        }
       }
     ]
   },

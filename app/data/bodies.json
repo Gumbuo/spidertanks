@@ -37,72 +37,93 @@
   {
     "id": "blink",
     "name": "Blink",
-    "armor": 6540,
-    "speed": 726,
+    "armor": 7062,
+    "speed": 872,
     "energy": 0.259,
+    "passive": "The Relay Drone ability grants your tank increased movement speed for a short duration",
+    "speedOnDeploy": "-10%",
     "description": "Sacrificed much of its health for speed",
     "type": "light",
     "image": "/images/bodies/blink.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "blink-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "blink-realigning-relay",
+        "name": "Realigning Relay Protocols",
+        "description": "The Relay Drone ability costs less energy and you have increased movement speed for a short duration after deploying an ability",
+        "bonuses": {
+          "relayDroneEnergyCost": "reduced",
+          "speedAfterAbility": "increased"
+        },
+        "penalties": {}
       },
       {
-        "id": "blink-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
+        "id": "blink-regenerative-propulsion",
+        "name": "Regenerative Propulsion",
+        "description": "Your tank has increased movement speed if it hasn't been damaged recently and has reduced movement speed if it has been damaged recently",
+        "bonuses": {
+          "speedWhenUndamaged": "increased"
+        },
+        "penalties": {
+          "speedWhenDamaged": "reduced"
+        }
       },
       {
-        "id": "blink-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "blink-repetitive-relay",
+        "name": "Repetitive Relay Protocols",
+        "description": "The Relay Drone ability costs less energy and after using it its cost is reduced to 0 for a short duration",
+        "bonuses": {
+          "relayDroneEnergyCost": "reduced",
+          "relayDroneFreeAfterUse": true
+        },
+        "penalties": {}
       }
     ]
   },
   {
     "id": "chicken",
     "name": "Chicken",
-    "armor": 6810,
-    "speed": 715,
-    "energy": 0.2635,
+    "armor": 7293,
+    "speed": 858,
+    "energy": 0.264,
+    "passive": "Enemy tank bodies explode whenever you destroy them, dealing damage to enemies in a small radius",
+    "bodyExplosionDamage": 500,
+    "bodyExplosionRadius": "5m",
     "description": "Light frame prioritizing velocity",
     "type": "light",
     "image": "/images/bodies/chicken.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "chicken-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "chicken-eggnite-infused",
+        "name": "Eggnite-Infused Payload",
+        "description": "Your tank has increased range, at the cost of reduced projectile speed",
+        "bonuses": {
+          "range": "increased"
+        },
+        "penalties": {
+          "projectileSpeed": "reduced"
+        }
       },
       {
-        "id": "chicken-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
+        "id": "chicken-retributive-bots",
+        "name": "Retributive Bots Compartment",
+        "description": "When your tank is destroyed a few exploding bots are deployed",
+        "bonuses": {
+          "triggerChickenExplosion": true
+        },
+        "penalties": {}
       },
       {
-        "id": "chicken-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "chicken-eggnite-replacement",
+        "name": "Eggnite Payload Replacement",
+        "description": "Your tank has massively increased area of effect at the cost of reduced overall damage",
+        "bonuses": {
+          "areaOfEffect": "+50%"
+        },
+        "penalties": {
+          "damage": "-10%"
+        }
       }
     ]
   },
@@ -261,7 +282,10 @@
     "turretsDamage": "+20%",
     "modifiedTurrets": {
       "description": "Your turrets have improved targeting",
-      "affectedTurrets": ["Artillery Turret", "Cannon Turret"]
+      "affectedTurrets": [
+        "Artillery Turret",
+        "Cannon Turret"
+      ]
     },
     "description": "Turret specialist body that boosts all placed turrets with increased damage and improved targeting",
     "type": "medium",
@@ -586,36 +610,44 @@
   {
     "id": "shark",
     "name": "Shark",
-    "armor": 10050,
-    "speed": 583,
-    "energy": 0.3175,
+    "armor": 10065,
+    "speed": 699,
+    "energy": 0.318,
+    "passive": "Your tank has increased area of effect",
+    "areaOfEffect": "+0%",
     "description": "Lacks speed but makes up in armor and style",
     "type": "heavy",
     "image": "/images/bodies/shark.png",
+    "maxOutCost": 100,
     "modules": [
       {
-        "id": "shark-module-1",
-        "name": "Armor Boost",
-        "armorBonus": 500,
-        "speedBonus": 0,
-        "energyBonus": 0,
-        "description": "Increases armor protection"
+        "id": "shark-kinetic-actuator",
+        "name": "Kinetic Actuator",
+        "description": "Your tank has increased projectile speed",
+        "bonuses": {
+          "projectileSpeed": "increased"
+        },
+        "penalties": {}
       },
       {
-        "id": "shark-module-2",
-        "name": "Speed Boost",
-        "armorBonus": 0,
-        "speedBonus": 30,
-        "energyBonus": 0,
-        "description": "Increases movement speed"
+        "id": "shark-late-stage-propellant",
+        "name": "Late Stage Propellant",
+        "description": "Your tank deals increased damage to distant enemies and reduced damage to nearby enemies",
+        "bonuses": {
+          "distantDamage": "increased"
+        },
+        "penalties": {
+          "closeDamage": "-10%"
+        }
       },
       {
-        "id": "shark-module-3",
-        "name": "Energy Boost",
-        "armorBonus": 0,
-        "speedBonus": 0,
-        "energyBonus": 0.03,
-        "description": "Increases energy regeneration"
+        "id": "shark-kinetic-reporposer",
+        "name": "Kinetic Potential Reporposer",
+        "description": "Your tank has increased movement speed for a duration after destroying an enemy",
+        "bonuses": {
+          "speedOnKill": "+20%"
+        },
+        "penalties": {}
       }
     ]
   },

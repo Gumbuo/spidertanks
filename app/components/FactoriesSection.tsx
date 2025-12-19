@@ -12,6 +12,18 @@ const factories = [
     produces: ["Bolts", "Scrap Metal", "Chips", "Hydraulics"],
     masteryLevels: 30,
     masteryBenefit: "Higher mastery levels allow your factory to produce more efficiently"
+  },
+  {
+    id: "frozen-factory",
+    name: "Frozen Factory",
+    planet: "Frozen",
+    image: "/images/factories/frozen-factory.png",
+    description: "This factory will manufacture components",
+    maxOutCost: 100,
+    productionTime: "24h",
+    produces: ["Chips", "Hydraulics", "Engine", "Energy Core"],
+    masteryLevels: 30,
+    masteryBenefit: "Higher mastery levels allow your factory to produce more efficiently"
   }
 ];
 
