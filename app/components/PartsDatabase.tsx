@@ -137,6 +137,56 @@ const verifiedBodies = [
     modules: [
       { name: "Plasma Shield Transfer", desc: "+15% turret duration, +300% turret armor, greatly increased energy cost" },
       { name: "Aftermarket Turrets", desc: "Increased fire rate, 0 energy cost briefly after placing, -20% damage, reduced duration" }
+    ],
+  {
+    id: "blink",
+    name: "Blink",
+    image: "/images/bodies/blink.png",
+    armor: 7062,
+    speed: "8.72m/s",
+    energy: "0.259/s",
+    passive: "The Relay Drone ability grants your tank increased movement speed for a short duration",
+    specialStat: "Speed on Deploy: -10%",
+    maxOutCost: 100,
+    type: "light",
+    modules: [
+      { name: "Realigning Relay Protocols", desc: "Less Relay Drone energy cost, +speed after ability" },
+      { name: "Regenerative Propulsion", desc: "+speed when undamaged, -speed when damaged" },
+      { name: "Repetitive Relay Protocols", desc: "Less Relay Drone energy cost, 0 cost briefly after use" }
+    ]
+  },
+  {
+    id: "chicken",
+    name: "Chicken",
+    image: "/images/bodies/chicken.png",
+    armor: 7293,
+    speed: "8.58m/s",
+    energy: "0.264/s",
+    passive: "Enemy tank bodies explode whenever you destroy them, dealing damage to enemies in a small radius",
+    specialStat: "Body Explosion: 500 dmg | 5m radius",
+    maxOutCost: 100,
+    type: "light",
+    modules: [
+      { name: "Eggnite-Infused Payload", desc: "+range, -projectile speed" },
+      { name: "Retributive Bots Compartment", desc: "Exploding bots deploy on death" },
+      { name: "Eggnite Payload Replacement", desc: "+50% area of effect, -10% damage" }
+    ]
+  },
+  {
+    id: "shark",
+    name: "Shark",
+    image: "/images/bodies/shark.png",
+    armor: 10065,
+    speed: "6.99m/s",
+    energy: "0.318/s",
+    passive: "Your tank has increased area of effect",
+    specialStat: "Area of Effect: increased",
+    maxOutCost: 100,
+    type: "heavy",
+    modules: [
+      { name: "Kinetic Actuator", desc: "+projectile speed" },
+      { name: "Late Stage Propellant", desc: "+distant damage, -10% close damage" },
+      { name: "Kinetic Potential Reporposer", desc: "+20% speed on kill" }
     ]
   }
 ];
@@ -276,6 +326,83 @@ const verifiedWeapons = [
       { name: "Classic", desc: "Standard repair gun configuration, no modifications" },
       { name: "Vampiric Repair Gun", desc: "Projectiles have lifesteal, can no longer repair allies" },
       { name: "Explosive Repair Gun", desc: "AoE healing 2.5m radius, -100 repair, explosions can't self-repair" }
+    ]
+  },
+  {
+    id: "laser-blaster",
+    name: "Laser Blaster",
+    image: "/images/weapons/laser-blaster.png",
+    damage: 550,
+    damageType: "Elemental",
+    clipSize: 4,
+    reloadTime: "1.92s",
+    projectileSpeed: "11m/s",
+    range: "24m",
+    maxOutCost: 100,
+    description: "Projectiles get increasingly powerful per clip (1.15x increase)",
+    modules: [
+      { name: "Classic", desc: "Standard laser blaster configuration" },
+      { name: "Temperamental Laser Blaster", desc: "80% DoT chance (1000/s for 2s), -10 damage" },
+      { name: "Explosive Laser Blaster", desc: "Last shot explodes (+900 dmg, 3.35m), -900 projectile damage" }
+    ]
+  },
+  {
+    id: "finisher",
+    name: "Finisher",
+    image: "/images/weapons/finisher.png",
+    damage: 2000,
+    damageType: "Physical",
+    clipSize: 1,
+    reloadTime: "1.9s",
+    projectileSpeed: "10m/s",
+    range: "30m",
+    explosionDamage: 2000,
+    explosionRadius: "2.8m",
+    maxOutCost: 100,
+    description: "Auto-targets enemies with homing explosive torpedoes",
+    modules: [
+      { name: "Classic", desc: "Standard finisher configuration" },
+      { name: "Seeking Finisher", desc: "Better homing, -400 projectile & explosion damage" },
+      { name: "Deadly Finisher", desc: "+2.2m/s speed on kill, -range" }
+    ]
+  },
+  {
+    id: "eggxecutioner",
+    name: "Eggxecutioner",
+    image: "/images/weapons/eggxecutioner.png",
+    damage: 1350,
+    damageType: "Physical",
+    clipSize: 3,
+    reloadTime: "3.25s",
+    projectileSpeed: "18.5m/s",
+    range: "19m",
+    explosionRadius: "2.5m",
+    maxOutCost: 100,
+    description: "Launches eggsplosive projectiles that detonate on impact or at max range",
+    modules: [
+      { name: "Classic", desc: "Standard eggxecutioner configuration" },
+      { name: "Aggressive Eggxecutioner", desc: "+200 projectile damage, -200 explosion damage" },
+      { name: "Persistent Eggxecutioner", desc: "Missed shots plant mines, -4.85m range" }
+    ]
+  },
+  {
+    id: "beat-blaster",
+    name: "Beat Blaster",
+    image: "/images/weapons/beat-blaster.png",
+    damage: 750,
+    damageType: "Physical",
+    clipSize: 1,
+    projectileAmount: 3,
+    reloadTime: "1.25s",
+    projectileSpeed: "18.9m/s",
+    range: "19m",
+    fireRate: "0.1/s",
+    maxOutCost: 100,
+    description: "Sound waves push enemies with thumping bass knockback",
+    modules: [
+      { name: "Classic", desc: "Standard beat blaster configuration" },
+      { name: "Elemental Beat Blaster", desc: "ELEMENTAL type, DoT+Knockback, 97% status chance, -275 damage" },
+      { name: "Stronger Beat Blaster", desc: "Single shot +1220 damage, +20% knockback chance" }
     ]
   }
 ];
