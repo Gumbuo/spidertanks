@@ -137,7 +137,8 @@ const verifiedBodies = [
     modules: [
       { name: "Plasma Shield Transfer", desc: "+15% turret duration, +300% turret armor, greatly increased energy cost" },
       { name: "Aftermarket Turrets", desc: "Increased fire rate, 0 energy cost briefly after placing, -20% damage, reduced duration" }
-    ],
+    ]
+  },
   {
     id: "blink",
     name: "Blink",
