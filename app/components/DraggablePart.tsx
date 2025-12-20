@@ -28,7 +28,11 @@ export function DraggablePart({ id, data, type }: DraggablePartProps) {
       {...listeners}
       {...attributes}
       onMouseEnter={playHoverSound}
-      className="bg-gradient-to-b from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 rounded-lg p-3 cursor-grab active:cursor-grabbing hover:border-cyan-500/50 transition-all"
+      className={`rounded-lg p-3 cursor-grab active:cursor-grabbing transition-all ${
+        type === "ability"
+          ? "bg-gradient-to-b from-purple-500/20 to-purple-500/10 border border-purple-500/30 hover:border-purple-500/50"
+          : "bg-gradient-to-b from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30 hover:border-cyan-500/50"
+      }`}
     >
       {/* Part image */}
       <div className="aspect-square bg-black/50 rounded-lg mb-2 flex items-center justify-center overflow-hidden">
@@ -39,7 +43,7 @@ export function DraggablePart({ id, data, type }: DraggablePartProps) {
         />
       </div>
 
-      <div className="text-xs font-bold text-cyan-400 mb-1 truncate">{data.name}</div>
+      <div className={`text-xs font-bold mb-1 truncate ${type === "ability" ? "text-purple-400" : "text-cyan-400"}`}>{data.name}</div>
 
       {type === "body" && (
         <div className="text-[10px] text-gray-400 space-y-0.5">
@@ -56,7 +60,7 @@ export function DraggablePart({ id, data, type }: DraggablePartProps) {
       )}
 
       {type === "ability" && (
-        <div className="text-[10px] text-gray-400 space-y-0.5">
+        <div className="text-[10px] text-purple-300/70 space-y-0.5">
           <div>Energy: {data.energy}</div>
           {data.damage > 0 && <div>DMG: {data.damage}</div>}
         </div>

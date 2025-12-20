@@ -13,6 +13,8 @@ import { useHoverSound } from "../hooks/useHoverSound";
 export interface TankBuild {
   body: typeof bodies[0] | null;
   weapon: typeof weapons[0] | null;
+  ability1: typeof abilities[0] | null;
+  ability2: typeof abilities[0] | null;
   bodyLevel: number;
   weaponLevel: number;
   selectedBodyModule: number | null;
@@ -25,6 +27,8 @@ export default function TankBuilder() {
   const [build, setBuild] = useState<TankBuild>({
     body: null,
     weapon: null,
+    ability1: null,
+    ability2: null,
     bodyLevel: 10,
     weaponLevel: 10,
     selectedBodyModule: null,
@@ -61,12 +65,27 @@ export default function TankBuilder() {
     // Find the item being dragged
     const body = bodies.find((b) => b.id === itemId);
     const weapon = weapons.find((w) => w.id === itemId);
+    const ability = abilities.find((a) => a.id === itemId);
 
     // Update build based on slot
     if (slotId === "body-slot" && body) {
       setBuild({ ...build, body });
     } else if (slotId === "weapon-slot" && weapon) {
       setBuild({ ...build, weapon });
+    } else if (slotId === "ability1-slot" && ability) {
+      // Don't allow same ability in both slots
+      if (build.ability2?.id === ability.id) {
+        setBuild({ ...build, ability1: ability, ability2: null });
+      } else {
+        setBuild({ ...build, ability1: ability });
+      }
+    } else if (slotId === "ability2-slot" && ability) {
+      // Don't allow same ability in both slots
+      if (build.ability1?.id === ability.id) {
+        setBuild({ ...build, ability2: ability, ability1: null });
+      } else {
+        setBuild({ ...build, ability2: ability });
+      }
     }
 
     setActiveId(null);
@@ -90,6 +109,9 @@ export default function TankBuilder() {
       setBuild({ ...build, selectedWeaponModule: moduleIndex });
     }
   };
+
+  // Calculate total energy cost
+  const totalEnergyCost = (build.ability1?.energy || 0) + (build.ability2?.energy || 0);
 
   return (
     <DndContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
@@ -135,11 +157,11 @@ export default function TankBuilder() {
                     onMouseEnter={playHoverSound}
                     className={`px-4 py-2 rounded-lg transition-colors ${
                       activeTab === "abilities"
-                        ? "bg-cyan-500 text-black"
-                        : "bg-cyan-500/20 text-cyan-400 hover:bg-cyan-500/30"
+                        ? "bg-purple-500 text-black"
+                        : "bg-purple-500/20 text-purple-400 hover:bg-purple-500/30"
                     }`}
                   >
-                    Abilities Reference ({abilities.length})
+                    Abilities ({abilities.length})
                   </button>
                 </div>
 
@@ -153,37 +175,10 @@ export default function TankBuilder() {
                     weapons.map((weapon) => (
                       <DraggablePart key={weapon.id} id={weapon.id} data={weapon} type="weapon" />
                     ))}
-                  {activeTab === "abilities" && (
-                    <div className="col-span-full space-y-3">
-                      {abilities.map((ability) => (
-                        <div
-                          key={ability.id}
-                          className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-lg p-4"
-                        >
-                          <div className="flex items-start gap-4">
-                            <div className="w-16 h-16 bg-black/50 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
-                              <img
-                                src={ability.image}
-                                alt={ability.name}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <h4 className="text-lg font-bold text-purple-400 mb-1">{ability.name}</h4>
-                              <p className="text-sm text-gray-300 mb-2">{ability.description}</p>
-                              <div className="flex gap-3 text-xs text-gray-400">
-                                <span>⚡ Energy: <span className="text-cyan-400 font-bold">{ability.energy}</span></span>
-                                <span>⏱️ Duration: <span className="text-cyan-400 font-bold">{ability.lifetime}s</span></span>
-                                {ability.damage > 0 && (
-                                  <span>💥 Damage: <span className="text-orange-400 font-bold">{ability.damage}</span></span>
-                                )}
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  {activeTab === "abilities" &&
+                    abilities.map((ability) => (
+                      <DraggablePart key={ability.id} id={ability.id} data={ability} type="ability" />
+                    ))}
                 </div>
               </div>
             </div>
@@ -248,6 +243,23 @@ export default function TankBuilder() {
                       </div>
                     </div>
                   )}
+
+                  {/* Ability Slots */}
+                  <div className="pt-4 border-t border-purple-500/30">
+                    <h3 className="text-lg font-bold text-purple-400 mb-3">Abilities (2 slots)</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      <BuildSlot id="ability1-slot" label="Ability 1" item={build.ability1} type="ability" />
+                      <BuildSlot id="ability2-slot" label="Ability 2" item={build.ability2} type="ability" />
+                    </div>
+                    {(build.ability1 || build.ability2) && (
+                      <div className="mt-3 p-3 bg-purple-500/10 border border-purple-500/30 rounded-lg">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-400">Total Energy Cost:</span>
+                          <span className="text-purple-400 font-bold">{totalEnergyCost}</span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Body Modules - Show at Level 10 */}
@@ -321,6 +333,8 @@ export default function TankBuilder() {
                   onClick={() => setBuild({
                     body: null,
                     weapon: null,
+                    ability1: null,
+                    ability2: null,
                     bodyLevel: 10,
                     weaponLevel: 10,
                     selectedBodyModule: null,
