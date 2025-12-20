@@ -40,7 +40,7 @@ const builds: Build[] = [
     tier: "S",
     playstyle: "Support/Sustain",
     description: "Heal yourself and allies while dealing damage with Repair Gun.",
-    body: { name: "Titan", module: "Reinforced Hull", reason: "High HP pool to survive while healing" },
+    body: { name: "Titan", module: "Kinetic Stabilizer", reason: "High HP pool + increased damage output" },
     weapon: { name: "Repair Gun", module: "Vampiric Repair Gun", reason: "Damage enemies while healing yourself" },
     abilities: [
       { name: "Repair Zone", reason: "Area team healing for objective control" },
@@ -54,8 +54,8 @@ const builds: Build[] = [
     tier: "S",
     playstyle: "Flanker",
     description: "Hit and run tactics with extreme mobility.",
-    body: { name: "Flea", module: "Lightweight Frame", reason: "Already fast body becomes even faster" },
-    weapon: { name: "Shotgun", module: "Buckshot Shotgun", reason: "High burst damage at close range" },
+    body: { name: "Flea", module: "Speed Boost", reason: "Already fastest body becomes even faster" },
+    weapon: { name: "Shotgun", module: "Damage Boost", reason: "High burst damage at close range" },
     abilities: [
       { name: "Speed Booster", reason: "Stack speed for insane mobility" },
       { name: "Cloak Drone", reason: "Invisible approach for ambushes" }
@@ -63,13 +63,41 @@ const builds: Build[] = [
     synergy: "Flea's speed + Speed Booster + Cloak = invisible flanking nightmare that deletes squishies."
   },
   {
+    id: "anti-healer",
+    name: "Anti-Healer",
+    tier: "S",
+    playstyle: "Counter Pick",
+    description: "Shut down enemy healing with Bandit's -20% anti-repair passive.",
+    body: { name: "Bandit", module: "Energy Absorbing Dash Drive", reason: "Anti-repair on hit + steal 20% energy on dash" },
+    weapon: { name: "Gatling Gun", module: "Rapid Gatling Gun", reason: "High hit rate to apply anti-repair constantly" },
+    abilities: [
+      { name: "Speed Booster", reason: "Chase down healers and supports" },
+      { name: "Grapnel Launcher", reason: "Gap closer for aggressive plays" }
+    ],
+    synergy: "Bandit's -20% anti-repair debuff on EVERY hit counters heal-heavy teams. Energy theft dash denies ability usage."
+  },
+  {
+    id: "chain-killer",
+    name: "Chain Killer",
+    tier: "S",
+    playstyle: "Burst Damage",
+    description: "Enemies explode on death, causing chain reactions in team fights.",
+    body: { name: "Chicken", module: "Eggnite Payload Replacement", reason: "Body explosions + 50% increased AoE" },
+    weapon: { name: "Rocket Artillery", module: "MLRS Rocket Artillery", reason: "10-rocket barrage for team wipes" },
+    abilities: [
+      { name: "Grenade", reason: "Burst damage to trigger explosions" },
+      { name: "Air Strike", reason: "Massive AoE to set up chain kills" }
+    ],
+    synergy: "Kill one enemy, they explode for 500 damage. In team fights, one kill triggers chain explosions."
+  },
+  {
     id: "artillery-sniper",
     name: "Artillery Sniper",
     tier: "A",
     playstyle: "Long Range",
     description: "Maximum range damage dealer that zones entire areas.",
-    body: { name: "Nomad", module: "Enhanced Optics", reason: "Good balance of speed and survivability" },
-    weapon: { name: "Railgun", module: "Charged Railgun", reason: "Massive single-target damage at range" },
+    body: { name: "Nomad", module: "Armor Boost", reason: "Good balance of speed and survivability" },
+    weapon: { name: "Railgun", module: "Range Boost", reason: "6500 damage shots at extended range" },
     abilities: [
       { name: "Relay Drone", reason: "Extend weapon range even further" },
       { name: "Air Strike", reason: "Area denial for objective control" }
@@ -82,8 +110,8 @@ const builds: Build[] = [
     tier: "A",
     playstyle: "Debuff/Control",
     description: "Lock down enemies and control the battlefield.",
-    body: { name: "Titan", module: "Reactive Armor", reason: "Survive while applying CC" },
-    weapon: { name: "Flamethrower", module: "Napalm Flamethrower", reason: "DoT damage while enemies are slowed" },
+    body: { name: "Titan", module: "Equilibrium Plating", reason: "Explode on death for last laugh" },
+    weapon: { name: "Flamethrower", module: "Damage Boost", reason: "DoT damage while enemies are slowed" },
     abilities: [
       { name: "Stun Grenade", reason: "Hard CC for setup" },
       { name: "Vortex Zone", reason: "Pull enemies together for combos" }
@@ -96,13 +124,125 @@ const builds: Build[] = [
     tier: "A",
     playstyle: "Burst Damage",
     description: "Everything explodes. Maximum chaos.",
-    body: { name: "Junker", module: "Explosive Reactive", reason: "Turret synergy + explosion theme" },
-    weapon: { name: "Rocket Launcher", module: "Cluster Rockets", reason: "Massive AoE burst damage" },
+    body: { name: "Junker", module: "Plasma Shield Transfer", reason: "+300% turret armor for durable explosives" },
+    weapon: { name: "Eggxecutioner", module: "Persistent Eggxecutioner", reason: "Explosive projectiles + mine placement on miss" },
     abilities: [
       { name: "Grenade", reason: "More explosions" },
       { name: "Artillery Turret", reason: "Explosive turret with Junker bonus" }
     ],
-    synergy: "Layer explosions: Rockets + Grenades + Artillery Turret = no safe zones for enemies."
+    synergy: "Layer explosions: Eggxecutioner + Grenades + Artillery Turret = no safe zones for enemies."
+  },
+  {
+    id: "graviton-pusher",
+    name: "Graviton Pusher",
+    tier: "A",
+    playstyle: "Debuff/Control",
+    description: "Control enemy positioning with Hurricane's knockback passive.",
+    body: { name: "Hurricane", module: "Graviton Affinity Regulators", reason: "Push enemies on damage + cheaper/longer Vortex & Repulsor" },
+    weapon: { name: "Beat Blaster", module: "Stronger Beat Blaster", reason: "Extra knockback chance on shots" },
+    abilities: [
+      { name: "Repulsor Zone", reason: "Push enemies off objectives" },
+      { name: "Vortex Zone", reason: "Pull enemies into danger zones" }
+    ],
+    synergy: "Hurricane pushes on every hit. Vortex pulls enemies together, then Repulsor scatters them off cliffs."
+  },
+  {
+    id: "distant-sniper",
+    name: "Distant Sniper",
+    tier: "A",
+    playstyle: "Long Range",
+    description: "Muzzle's +10% distant damage makes long-range weapons even deadlier.",
+    body: { name: "Muzzle", module: "Hybrid Propellant", reason: "+10% distant damage + faster reload/projectiles on kill" },
+    weapon: { name: "Crossbow", module: "Precise Crossbow", reason: "2600 damage bolts with increased projectile speed" },
+    abilities: [
+      { name: "Relay Drone", reason: "Extend already long crossbow range" },
+      { name: "Smoke Canister", reason: "Cover for repositioning" }
+    ],
+    synergy: "Muzzle's distant damage bonus stacks with Crossbow's pierce. Kills boost reload speed for rapid follow-ups."
+  },
+  {
+    id: "relay-speedster",
+    name: "Relay Speedster",
+    tier: "A",
+    playstyle: "Flanker",
+    description: "Blink's Relay Drone passive grants speed boost for hit-and-run.",
+    body: { name: "Blink", module: "Realigning Relay Protocols", reason: "Speed boost after deploying ANY ability" },
+    weapon: { name: "Laser Blaster", module: "Temperamental Laser Blaster", reason: "80% chance DoT stacks while you kite" },
+    abilities: [
+      { name: "Relay Drone", reason: "Triggers Blink's speed passive + extends range" },
+      { name: "Speed Booster", reason: "Stack with Blink's passive for insane speed" }
+    ],
+    synergy: "Deploy Relay Drone for speed boost, kite with Laser Blaster DoT. Enemies can't catch you."
+  },
+  {
+    id: "aoe-specialist",
+    name: "AoE Specialist",
+    tier: "A",
+    playstyle: "Area Control",
+    description: "Shark's increased AoE passive amplifies all splash damage.",
+    body: { name: "Shark", module: "Late Stage Propellant", reason: "Increased AoE + bonus distant damage" },
+    weapon: { name: "Fire Artillery", module: "Range Boost", reason: "Ground fire zones with extended AoE" },
+    abilities: [
+      { name: "Air Strike", reason: "Massive strike zone with Shark's AoE boost" },
+      { name: "Grenade", reason: "Bigger explosion radius" }
+    ],
+    synergy: "Shark's AoE passive makes every explosion bigger. Fire Artillery zones become massive danger areas."
+  },
+  {
+    id: "team-healer",
+    name: "Team Healer",
+    tier: "B",
+    playstyle: "Support/Sustain",
+    description: "Pawn's +7% repair aura boosts team sustain in 16m radius.",
+    body: { name: "Pawn", module: "Flux Deployment Boosters", reason: "+7% repair effectiveness aura for team" },
+    weapon: { name: "Repair Artillery", module: "Range Boost", reason: "Arced healing from safety" },
+    abilities: [
+      { name: "Repair Drone", reason: "Personal sustain while healing team" },
+      { name: "Repair Zone", reason: "Stacking heal zones with aura" }
+    ],
+    synergy: "Pawn's +7% repair aura stacks with Repair Zone. Team receives amplified healing when grouped."
+  },
+  {
+    id: "burning-trail",
+    name: "Burning Trail",
+    tier: "B",
+    playstyle: "Flanker",
+    description: "Tracks' Combustible Dash leaves fire behind as you move.",
+    body: { name: "Tracks", module: "Combustible Dash Drive", reason: "Dash leaves burning trail damaging enemies" },
+    weapon: { name: "Flamethrower", module: "Damage Boost", reason: "More fire theme, DoT stacking" },
+    abilities: [
+      { name: "Speed Booster", reason: "More dashes = more burning trails" },
+      { name: "Grenade", reason: "Extra burst damage" }
+    ],
+    synergy: "Dash through enemies leaving fire. Flamethrower adds more DoT. Burning trail build for chaos."
+  },
+  {
+    id: "homing-missile",
+    name: "Homing Missile",
+    tier: "B",
+    playstyle: "Long Range",
+    description: "Finisher's seeking missiles hunt down enemies automatically.",
+    body: { name: "Shark", module: "Kinetic Actuator", reason: "High armor + faster projectiles for missiles" },
+    weapon: { name: "Finisher", module: "Seeking Finisher", reason: "Enhanced homing effect tracks enemies" },
+    abilities: [
+      { name: "Relay Drone", reason: "Extended range for missile tracking" },
+      { name: "Decoy", reason: "Distraction while missiles lock on" }
+    ],
+    synergy: "Fire and forget missiles that chase enemies. Decoy distracts while Finisher locks on targets."
+  },
+  {
+    id: "acid-controller",
+    name: "Acid Controller",
+    tier: "B",
+    playstyle: "Debuff/Control",
+    description: "Stinger's acid slows and damages over time for area denial.",
+    body: { name: "Titan", module: "Disruptive Relay Protocols", reason: "Relay Drone triggers earthquake + slow" },
+    weapon: { name: "Stinger", module: "Damage Boost", reason: "Acid blobs slow + DoT enemies" },
+    abilities: [
+      { name: "Vortex Zone", reason: "Pull enemies into acid pools" },
+      { name: "Relay Drone", reason: "Triggers earthquake for extra slow/damage" }
+    ],
+    synergy: "Vortex pulls enemies together, Stinger's acid melts them. Relay Drone earthquake adds more CC."
   }
 ];
 
@@ -124,7 +264,8 @@ const playstyleColors: Record<string, string> = {
   "Flanker": "bg-red-500/20 text-red-400",
   "Long Range": "bg-blue-500/20 text-blue-400",
   "Debuff/Control": "bg-orange-500/20 text-orange-400",
-  "Burst Damage": "bg-pink-500/20 text-pink-400"
+  "Burst Damage": "bg-pink-500/20 text-pink-400",
+  "Counter Pick": "bg-yellow-500/20 text-yellow-400"
 };
 
 export default function BuildsSection() {
