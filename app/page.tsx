@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import TankBuilder from "./components/TankBuilder";
 import PartsDatabase from "./components/PartsDatabase";
 import FactoriesSection from "./components/FactoriesSection";
+import BuildsSection from "./components/BuildsSection";
 import CommentSection from "./components/CommentSection";
 import { useHoverSound } from "./hooks/useHoverSound";
 
@@ -153,6 +154,11 @@ export default function Home() {
         {/* Factories */}
         <div className="mb-16">
           <FactoriesSection />
+        </div>
+
+        {/* Recommended Builds */}
+        <div className="mb-16">
+          <BuildsSection />
         </div>
 
         {/* Stream Submission CTA */}
