@@ -48,7 +48,7 @@ export function DraggablePart({ id, data, type }: DraggablePartProps) {
       {type === "body" && (
         <div className="text-[10px] text-gray-400 space-y-0.5">
           <div>HP: {data.armor}</div>
-          <div>SPD: {data.speed}</div>
+          <div>SPD: {typeof data.speed === 'number' ? data.speed.toFixed(2) : data.speed}m/s</div>
         </div>
       )}
 

@@ -64,7 +64,7 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
             <h3 className="text-sm font-bold text-gray-400 mb-2">BODY STATS</h3>
             <div className="space-y-2">
               <StatBar label="Armor" value={totalArmor} max={11000} color="red" />
-              <StatBar label="Speed" value={totalSpeed} max={800} color="green" />
+              <StatBar label="Speed (m/s)" value={totalSpeed} max={10} color="green" decimals={2} />
               <StatBar label="Energy/s" value={totalEnergy} max={0.35} color="blue" decimals={3} />
             </div>
           </div>
