@@ -34,10 +34,10 @@ export default function Home() {
       {backgrounds.map((bg, i) => (
         <div
           key={bg}
-          className={`fixed inset-0 bg-contain bg-center bg-no-repeat transition-opacity duration-1000 ${
+          className={`fixed inset-0 bg-no-repeat bg-top transition-opacity duration-1000 ${
             i === bgIndex ? "opacity-100" : "opacity-0"
           }`}
-          style={{ backgroundImage: `url(${bg})`, zIndex: -2 }}
+          style={{ backgroundImage: `url(${bg})`, zIndex: -2, backgroundSize: \"100% auto\" }}
         />
       ))}
       {/* Dark overlay for readability */}
