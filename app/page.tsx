@@ -11,7 +11,6 @@ import { useHoverSound } from "./hooks/useHoverSound";
 
 const backgrounds = [
   "/images/bg-spidergang.jpg",
-  "/images/bg-gumbuo.jpg",
   "/images/bg-spidergang2.jpg",
   "/images/bg-gmb-ape.jpg",
   "/images/bg-gmb-frog.jpg"
