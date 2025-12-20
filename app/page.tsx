@@ -9,12 +9,38 @@ import FactoriesSection from "./components/FactoriesSection";
 import CommentSection from "./components/CommentSection";
 import { useHoverSound } from "./hooks/useHoverSound";
 
+const backgrounds = [
+  "/images/bg-spidergang.jpg",
+  "/images/bg-gumbuo.jpg"
+];
+
 export default function Home() {
   const playHoverSound = useHoverSound();
   const [showSplash, setShowSplash] = useState(true);
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgIndex((prev) => (prev + 1) % backgrounds.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white">
+    <div className="min-h-screen text-white relative">
+      {/* Rotating Background */}
+      {backgrounds.map((bg, i) => (
+        <div
+          key={bg}
+          className={`fixed inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+            i === bgIndex ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ backgroundImage: `url(${bg})`, zIndex: -2 }}
+        />
+      ))}
+      {/* Dark overlay for readability */}
+      <div className="fixed inset-0 bg-black/70" style={{ zIndex: -1 }} />
+
       {/* Splash Screen */}
       {showSplash && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
@@ -35,7 +61,7 @@ export default function Home() {
         </div>
       )}
 
-      <header className="border-b border-cyan-500/20 bg-black/50 backdrop-blur-sm">
+      <header className="border-b border-cyan-500/20 bg-black/50 backdrop-blur-sm relative z-10">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div>
@@ -79,37 +105,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="container mx-auto px-4 py-12 relative">
-        {/* Random Tank Parts Background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
-          {/* Weapons - Left Side */}
-          <img src="/images/weapons/bouncer-gun.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "5%", left: "3%", transform: "rotate(15deg)" }} />
-          <img src="/images/weapons/crossbow.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "20%", left: "8%", transform: "rotate(45deg)" }} />
-          <img src="/images/weapons/beat-blaster.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "38%", left: "2%", transform: "rotate(60deg)" }} />
-          <img src="/images/weapons/blade-spinner.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "55%", left: "10%", transform: "rotate(-30deg)" }} />
-          <img src="/images/weapons/cannon.png" alt="" className="absolute w-32 h-32 object-contain" style={{ top: "72%", left: "5%", transform: "rotate(-20deg)" }} />
-          <img src="/images/weapons/crossbow.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "88%", left: "8%", transform: "rotate(35deg)" }} />
-
-          {/* Weapons - Right Side */}
-          <img src="/images/weapons/cannon.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "8%", right: "5%", transform: "rotate(-25deg)" }} />
-          <img src="/images/weapons/bouncer-gun.png" alt="" className="absolute w-22 h-22 object-contain" style={{ top: "28%", right: "3%", transform: "rotate(40deg)" }} />
-          <img src="/images/weapons/blade-spinner.png" alt="" className="absolute w-26 h-26 object-contain" style={{ top: "45%", right: "8%", transform: "rotate(-15deg)" }} />
-          <img src="/images/weapons/beat-blaster.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "62%", right: "2%", transform: "rotate(55deg)" }} />
-          <img src="/images/weapons/crossbow.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "78%", right: "6%", transform: "rotate(-45deg)" }} />
-          <img src="/images/weapons/cannon.png" alt="" className="absolute w-18 h-18 object-contain" style={{ top: "92%", right: "4%", transform: "rotate(20deg)" }} />
-
-          {/* Tank Bodies - Scattered */}
-          <img src="/images/bodies/bandit.png" alt="" className="absolute w-32 h-32 object-contain" style={{ top: "12%", right: "18%", transform: "rotate(-15deg)" }} />
-          <img src="/images/bodies/crab.png" alt="" className="absolute w-28 h-28 object-contain" style={{ top: "32%", left: "18%", transform: "rotate(25deg)" }} />
-          <img src="/images/bodies/chicken.png" alt="" className="absolute w-24 h-24 object-contain" style={{ top: "48%", right: "20%", transform: "rotate(-40deg)" }} />
-          <img src="/images/bodies/flea.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "65%", left: "22%", transform: "rotate(10deg)" }} />
-          <img src="/images/bodies/blink.png" alt="" className="absolute w-26 h-26 object-contain" style={{ top: "82%", right: "22%", transform: "rotate(-25deg)" }} />
-          <img src="/images/bodies/bandit.png" alt="" className="absolute w-22 h-22 object-contain" style={{ top: "95%", left: "25%", transform: "rotate(30deg)" }} />
-          <img src="/images/bodies/crab.png" alt="" className="absolute w-20 h-20 object-contain" style={{ top: "18%", left: "25%", transform: "rotate(-35deg)" }} />
-          <img src="/images/bodies/chicken.png" alt="" className="absolute w-18 h-18 object-contain" style={{ top: "75%", right: "30%", transform: "rotate(50deg)" }} />
-        </div>
-
-        <div className="text-center mb-16 relative z-10">
+      <main className="container mx-auto px-4 py-12 relative z-10">
+        <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
             Spider Tanks: Cores of Chaos
           </h2>
@@ -118,7 +115,7 @@ export default function Home() {
 
         {/* Official Trailer */}
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-lg p-6">
+          <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-lg p-6 backdrop-blur-sm">
             <div className="flex items-center justify-center gap-2 mb-4">
               <span className="text-2xl">🎬</span>
               <h2 className="text-3xl font-bold text-red-400">Watch the Official Trailer</h2>
@@ -158,7 +155,7 @@ export default function Home() {
 
         {/* Stream Submission CTA */}
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-lg p-6 text-center">
+          <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-lg p-6 text-center backdrop-blur-sm">
             <div className="flex items-center justify-center gap-2 mb-3">
               <span className="text-2xl">📺</span>
               <h3 className="text-2xl font-bold text-orange-400">Want Your Stream in Our Strategy Guides?</h3>
