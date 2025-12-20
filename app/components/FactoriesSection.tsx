@@ -24,6 +24,18 @@ const factories = [
     produces: ["Chips", "Hydraulics", "Engine", "Energy Core"],
     masteryLevels: 30,
     masteryBenefit: "Higher mastery levels allow your factory to produce more efficiently"
+  },
+  {
+    id: "dust-factory",
+    name: "Dust Factory",
+    planet: "Dust",
+    image: "/images/factories/dust-factory.png",
+    description: "This factory will manufacture components",
+    maxOutCost: 99,
+    productionTime: "24h",
+    produces: ["Bolts", "Scrap Metal", "Chips", "Hydraulics", "Engine", "Energy Core"],
+    masteryLevels: 30,
+    masteryBenefit: "Higher mastery levels allow your factory to produce more efficiently"
   }
 ];
 
