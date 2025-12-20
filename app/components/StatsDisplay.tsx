@@ -13,16 +13,6 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
   const activeBodyMod = selectedBodyModule !== null && body?.modules ? body.modules[selectedBodyModule] : null;
   const activeWeaponMod = selectedWeaponModule !== null && weapon?.modules ? weapon.modules[selectedWeaponModule] : null;
 
-  // Scale stat based on part's individual level (assuming data is level 10)
-  // Level 1 = 50% of stats, Level 10 = 100% of stats
-  const scaleBodyStat = (baseStat: number) => {
-    return baseStat * (0.5 + (bodyLevel / 10) * 0.5);
-  };
-
-  const scaleWeaponStat = (baseStat: number) => {
-    return baseStat * (0.5 + (weaponLevel / 10) * 0.5);
-  };
-
   // Helper to safely get module bonus (handles both old and new formats)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getModBonus = (mod: any, key: string): number => {
@@ -33,12 +23,12 @@ export function StatsDisplay({ build }: StatsDisplayProps) {
     return 0;
   };
 
-  // Calculate total stats with level scaling and module bonuses
-  const totalArmor = scaleBodyStat(body?.armor || 0) + getModBonus(activeBodyMod, 'armorBonus');
-  const totalSpeed = scaleBodyStat(body?.speed || 0) + getModBonus(activeBodyMod, 'speedBonus');
-  const totalEnergy = scaleBodyStat(body?.energy || 0) + getModBonus(activeBodyMod, 'energyBonus');
-  const weaponDamage = scaleWeaponStat(weapon?.damage || 0) + getModBonus(activeWeaponMod, 'damageBonus');
-  const weaponRange = scaleWeaponStat(weapon?.range || 0) + getModBonus(activeWeaponMod, 'rangeBonus');
+  // Stats are flat - level is mastery for unlocking content, not stat scaling
+  const totalArmor = (body?.armor || 0) + getModBonus(activeBodyMod, 'armorBonus');
+  const totalSpeed = (body?.speed || 0) + getModBonus(activeBodyMod, 'speedBonus');
+  const totalEnergy = (body?.energy || 0) + getModBonus(activeBodyMod, 'energyBonus');
+  const weaponDamage = (weapon?.damage || 0) + getModBonus(activeWeaponMod, 'damageBonus');
+  const weaponRange = (weapon?.range || 0) + getModBonus(activeWeaponMod, 'rangeBonus');
 
   return (
     <div className="bg-black/50 border border-cyan-500/30 rounded-lg p-6">

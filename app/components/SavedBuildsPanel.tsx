@@ -342,7 +342,7 @@ export function SavedBuildsPanel({
                       {currentBuild.ability2Id && <span>A2: {currentBuild.ability2Id}</span>}
                     </div>
                     <div className="text-xs text-gray-500 mt-1">
-                      Body Lv.{currentBuild.bodyLevel} | Weapon Lv.{currentBuild.weaponLevel}
+                      Body Mastery: {currentBuild.bodyLevel} | Weapon Mastery: {currentBuild.weaponLevel}
                     </div>
                   </div>
 

@@ -243,7 +243,7 @@ export default function TankBuilder() {
                   {build.body && (
                     <div className="mt-4 p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
-                        <label className="text-sm font-bold text-gray-400">BODY LEVEL</label>
+                        <label className="text-sm font-bold text-gray-400">BODY MASTERY</label>
                         <span className="text-xl font-bold text-cyan-400">{build.bodyLevel}</span>
                       </div>
                       <input
@@ -270,7 +270,7 @@ export default function TankBuilder() {
                   {build.weapon && (
                     <div className="mt-4 p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
                       <div className="flex items-center justify-between mb-2">
-                        <label className="text-sm font-bold text-gray-400">WEAPON LEVEL</label>
+                        <label className="text-sm font-bold text-gray-400">WEAPON MASTERY</label>
                         <span className="text-xl font-bold text-cyan-400">{build.weaponLevel}</span>
                       </div>
                       <input
