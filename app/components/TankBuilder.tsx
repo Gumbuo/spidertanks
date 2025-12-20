@@ -8,7 +8,19 @@ import abilities from "../data/abilities.json";
 import { DraggablePart } from "./DraggablePart";
 import { BuildSlot } from "./BuildSlot";
 import { StatsDisplay } from "./StatsDisplay";
+import { SavedBuildsPanel } from "./SavedBuildsPanel";
 import { useHoverSound } from "../hooks/useHoverSound";
+
+interface BuildData {
+  bodyId: string | null;
+  weaponId: string | null;
+  ability1Id: string | null;
+  ability2Id: string | null;
+  bodyLevel: number;
+  weaponLevel: number;
+  selectedBodyModule: number | null;
+  selectedWeaponModule: number | null;
+}
 
 export interface TankBuild {
   body: typeof bodies[0] | null;
@@ -38,6 +50,41 @@ export default function TankBuilder() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"bodies" | "weapons" | "abilities">("bodies");
   const [activeItem, setActiveItem] = useState<any>(null);
+  const [showSavedBuilds, setShowSavedBuilds] = useState(false);
+
+  // Serialize current build to IDs for saving
+  const serializeBuild = (): BuildData => ({
+    bodyId: build.body?.id || null,
+    weaponId: build.weapon?.id || null,
+    ability1Id: build.ability1?.id || null,
+    ability2Id: build.ability2?.id || null,
+    bodyLevel: build.bodyLevel,
+    weaponLevel: build.weaponLevel,
+    selectedBodyModule: build.selectedBodyModule,
+    selectedWeaponModule: build.selectedWeaponModule,
+  });
+
+  // Load a saved build from IDs
+  const loadSavedBuild = (savedBuild: BuildData) => {
+    const body = savedBuild.bodyId ? bodies.find(b => b.id === savedBuild.bodyId) || null : null;
+    const weapon = savedBuild.weaponId ? weapons.find(w => w.id === savedBuild.weaponId) || null : null;
+    const ability1 = savedBuild.ability1Id ? abilities.find(a => a.id === savedBuild.ability1Id) || null : null;
+    const ability2 = savedBuild.ability2Id ? abilities.find(a => a.id === savedBuild.ability2Id) || null : null;
+
+    setBuild({
+      body,
+      weapon,
+      ability1,
+      ability2,
+      bodyLevel: savedBuild.bodyLevel,
+      weaponLevel: savedBuild.weaponLevel,
+      selectedBodyModule: savedBuild.selectedBodyModule,
+      selectedWeaponModule: savedBuild.selectedWeaponModule,
+    });
+  };
+
+  // Check if current build has any parts
+  const hasCurrentBuild = !!(build.body || build.weapon);
 
   function handleDragStart(event: DragStartEvent) {
     const itemId = event.active.id as string;
@@ -329,6 +376,17 @@ export default function TankBuilder() {
                   </div>
                 )}
 
+                {/* Save/Load Buttons */}
+                <div className="mt-6 pt-6 border-t border-cyan-500/30 space-y-3">
+                  <button
+                    onClick={() => setShowSavedBuilds(true)}
+                    onMouseEnter={playHoverSound}
+                    className="w-full px-4 py-3 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded-lg hover:bg-cyan-500/30 transition-colors font-bold flex items-center justify-center gap-2"
+                  >
+                    <span>My Builds</span>
+                  </button>
+                </div>
+
                 <button
                   onClick={() => setBuild({
                     body: null,
@@ -369,6 +427,15 @@ export default function TankBuilder() {
           </div>
         ) : null}
       </DragOverlay>
+
+      {/* Saved Builds Panel */}
+      <SavedBuildsPanel
+        isOpen={showSavedBuilds}
+        onClose={() => setShowSavedBuilds(false)}
+        onLoadBuild={loadSavedBuild}
+        currentBuild={serializeBuild()}
+        hasCurrentBuild={hasCurrentBuild}
+      />
     </DndContext>
   );
 }
