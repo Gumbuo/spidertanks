@@ -203,6 +203,20 @@ const builds: Build[] = [
     synergy: "Pawn's +7% repair aura stacks with Repair Zone. Team receives amplified healing when grouped."
   },
   {
+    id: "immortal-support",
+    name: "Immortal Support",
+    tier: "S",
+    playstyle: "Support/Sustain",
+    description: "Plate's armor regeneration + resistance aura makes your team nearly unkillable.",
+    body: { name: "Plate", module: "Regeneration Optimization Core", reason: "+200% armor regen near allies + 12.5% repair effectiveness aura" },
+    weapon: { name: "Repair Gun", module: "Vampiric Repair Gun", reason: "Heal allies while damaging enemies" },
+    abilities: [
+      { name: "Repair Zone", reason: "Stacking heals with Plate's repair aura" },
+      { name: "Shield Projector", reason: "Block damage + resistance aura stacking" }
+    ],
+    synergy: "Plate regenerates armor near allies while providing +10% resistance aura. Combined with Repair Zone and Shield Projector, your team becomes extremely tanky."
+  },
+  {
     id: "burning-trail",
     name: "Burning Trail",
     tier: "B",

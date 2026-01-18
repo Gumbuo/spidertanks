@@ -918,5 +918,42 @@
         "penalties": {}
       }
     ]
+  },
+  {
+    "id": "plate",
+    "name": "Plate",
+    "armor": 10005,
+    "speed": 6.996,
+    "energy": 0.31,
+    "passive": "Your tank regenerates its armor as long as any ally is nearby",
+    "proximityArmorRegeneration": "+200%",
+    "resistanceAuraOnAllies": "+10%",
+    "auraRadius": "10m",
+    "description": "Support heavy body that regenerates armor near allies and provides resistance aura to teammates",
+    "type": "heavy",
+    "image": "/images/bodies/plate.png",
+    "maxOutCost": 57,
+    "planet": "Salacia",
+    "modules": [
+      {
+        "id": "plate-regeneration-optimization",
+        "name": "Regeneration Optimization Core",
+        "description": "Your tank provides increased repair effectiveness to itself and any allies in its proximity",
+        "bonuses": {
+          "repairingReceivedAuraOnAllies": "+12.5%",
+          "auraRadius": "10m"
+        },
+        "penalties": {}
+      },
+      {
+        "id": "plate-hardening-particle",
+        "name": "Hardening Particle Diffuser",
+        "description": "When your tank is destroyed you leave behind a resistance zone that increases allies physical and elemental resistance",
+        "bonuses": {
+          "triggerResistanceZone": true
+        },
+        "penalties": {}
+      }
+    ]
   }
 ]
