@@ -189,6 +189,22 @@ const verifiedBodies = [
       { name: "Late Stage Propellant", desc: "+distant damage, -10% close damage" },
       { name: "Kinetic Potential Reporposer", desc: "+20% speed on kill" }
     ]
+  },
+  {
+    id: "plate",
+    name: "Plate",
+    image: "/images/bodies/plate.png",
+    armor: 10005,
+    speed: "6.996m/s",
+    energy: "0.31/s",
+    passive: "Your tank regenerates its armor as long as any ally is nearby",
+    specialStat: "Armor Regen: +200% | Resistance Aura: +10%",
+    maxOutCost: 57,
+    type: "heavy",
+    modules: [
+      { name: "Regeneration Optimization Core", desc: "+12.5% repair aura on allies, 10m radius" },
+      { name: "Hardening Particle Diffuser", desc: "Leave resistance zone on death for allies" }
+    ]
   }
 ];
 
